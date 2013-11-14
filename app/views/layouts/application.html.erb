@@ -10,7 +10,7 @@
       <meta name="description" content="">
       <meta name="viewport" content ="width=device-width; initial-scale=1.0;">
 
-      <%= stylesheet_link_tag "normalize", "main", media: "all", "data-turbolinks-track" => true %>
+      <%= stylesheet_link_tag "normalize", "main", "bootstrap.min.css", media: "all", "data-turbolinks-track" => true %>
 
 		  <%= csrf_meta_tags %>
 
@@ -18,16 +18,21 @@
     </head>
     
     <body>
+    	<div class="pos_wrapper  <%= params[:controller] == 'dashboard' && user_signed_in? ? '' : 'login_form' %>">
+    		<% if notice %>
+	    		<p class="notice"><%= notice %></p>
+	    	<% end %>
+	    	<% if alert %>
+	      	<p class="alert"><%= alert %></p>
+	      <% end %>
 
-    	<p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-
-			<%= yield %>
+				<%= yield %>
+			</div>
 
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-      <%= javascript_include_tag "main", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "bootstrap.min.js", "main", "data-turbolinks-track" => true %>
     </body>
 </html>

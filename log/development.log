@@ -306,3 +306,1588 @@ Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 10:46:20 -0700
 
 
 Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 10:46:20 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 10:48:19 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 10:48:19 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 10:48:19 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 10:48:19 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 10:48:19 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 10:50:10 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 10:50:10 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 10:50:10 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 10:50:10 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 10:50:10 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 10:50:38 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 10:50:38 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 10:50:38 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 10:50:38 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 10:50:38 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 10:51:41 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 10:51:41 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 10:51:41 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 10:51:41 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 10:51:41 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 10:51:55 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 10:51:55 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 10:51:55 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 10:51:55 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 10:51:55 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 10:52:59 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 10:52:59 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 10:52:59 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 10:52:59 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 10:52:59 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 10:53:15 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 10:53:15 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 10:53:15 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 10:53:15 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 10:53:15 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:07:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 201ms (Views: 172.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:07:06 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:07:06 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:07:06 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:07:06 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:07:06 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:07:06 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:07:09 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:07:09 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:07:09 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:07:09 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:07:09 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:07:09 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:07:09 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:08:05 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:05 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:05 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:05 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:05 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:05 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:05 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:08:34 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:34 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:34 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:34 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:34 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:34 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:34 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:08:52 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:52 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:52 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:52 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:52 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:52 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:52 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:08:58 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:58 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:58 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:58 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:08:58 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:58 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:08:58 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:09:08 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 77ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:09:08 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:09:08 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:09:08 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:09:08 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:09:08 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:09:08 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:09:24 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:09:25 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:09:25 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:09:25 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:09:25 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:09:25 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:09:25 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:10:21 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:10:21 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:10:21 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:10:21 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:10:21 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:10:21 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:10:21 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:10:44 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:10:44 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:10:44 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:10:44 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:10:44 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:10:44 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:10:44 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:14:36 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (124.0ms)
+Completed 200 OK in 139ms (Views: 138.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:14:36 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:14:36 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:14:36 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:14:36 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:14:36 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:14:36 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:15:01 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:15:01 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:15:01 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:15:01 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:15:01 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:15:01 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:15:01 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:15:24 -0700
+Processing by DashboardController#index as HTML
+ERROR: compiling _app_views_dashboard_index_html_erb__465535160910047756_70355361483400 RAISED /Users/impulsedev/Rails/pushvendor_pos/app/views/dashboard/index.html.erb:15: syntax error, unexpected =>, expecting keyword_end
+...> user_session_path), :class => "form-signin" do |f| @output...
+...                               ^
+/Users/impulsedev/Rails/pushvendor_pos/app/views/dashboard/index.html.erb:15: syntax error, unexpected keyword_do, expecting keyword_end
+...th), :class => "form-signin" do |f| @output_buffer.safe_appe...
+...                               ^
+/Users/impulsedev/Rails/pushvendor_pos/app/views/dashboard/index.html.erb:26: syntax error, unexpected keyword_ensure, expecting end-of-input
+Function body:           def _app_views_dashboard_index_html_erb__465535160910047756_70355361483400(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "dashboard/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new; if user_signed_in? 
+@output_buffer.safe_append='	<h1>Dashboard</h1>
+'; else 
+@output_buffer.safe_append='	<div class="container">
+      <form class="form-signin">
+        <h2 class="form-signin-heading">PushVendor</h2>
+        <input type="text" class="form-control" placeholder="Email address" required autofocus>
+        <input type="password" class="form-control" placeholder="Password" required>
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+      ';@output_buffer.append=  form_for("user", :url => user_session_path), :class => "form-signin" do |f| @output_buffer.safe_append='
+	      ';@output_buffer.append=( f.text_field :email );@output_buffer.safe_append='
+	      ';@output_buffer.append=( f.password_field :password );@output_buffer.safe_append='
+	      ';@output_buffer.append=( f.check_box :remember_me );@output_buffer.safe_append='
+	      ';@output_buffer.append=( f.label :remember_me );@output_buffer.safe_append='
+	      ';@output_buffer.append=( f.submit 'Sign in' );@output_buffer.safe_append='
+	      ';@output_buffer.append=( link_to "Forgot your password?", new_password_path('user') );@output_buffer.safe_append='
+';	     end 
+@output_buffer.safe_append='
+    </div>
+'; end ;@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `module_eval'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/template.rb:299:in `compile'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/template.rb:248:in `block in compile!'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `synchronize'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/template.rb:236:in `compile!'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/template.rb:142:in `block in render'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/notifications.rb:161:in `instrument'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/template.rb:141:in `render'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/impulsedev/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:403:in `_run__4233135133665030904__process_action__callbacks'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activerecord-4.0.1/lib/active_record/migration.rb:369:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__1238973072953449603__call__callbacks'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/impulsedev/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/impulsedev/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/impulsedev/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered dashboard/index.html.erb within layouts/application (17.6ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (/Users/impulsedev/Rails/pushvendor_pos/app/views/dashboard/index.html.erb:15: syntax error, unexpected =>, expecting keyword_end
+...> user_session_path), :class => "form-signin" do |f| @output...
+...                               ^
+/Users/impulsedev/Rails/pushvendor_pos/app/views/dashboard/index.html.erb:15: syntax error, unexpected keyword_do, expecting keyword_end
+...th), :class => "form-signin" do |f| @output_buffer.safe_appe...
+...                               ^
+/Users/impulsedev/Rails/pushvendor_pos/app/views/dashboard/index.html.erb:26: syntax error, unexpected keyword_ensure, expecting end-of-input):
+    12:         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    13:       </form>
+    14: 
+    15:       <%= form_for("user", :url => user_session_path), :class => "form-signin" do |f| %>
+    16: 	      <%= f.text_field :email %>
+    17: 	      <%= f.password_field :password %>
+    18: 	      <%= f.check_box :remember_me %>
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.1) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.1) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.1) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.1) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.1) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.1) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.1) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/impulsedev/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:403:in `_run__4233135133665030904__process_action__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.1) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.1) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.1) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.1) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:373:in `_run__1238973072953449603__call__callbacks'
+  activesupport (4.0.1) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/impulsedev/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/impulsedev/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/impulsedev/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:15:39 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (wrong number of arguments (3 for 1..2)):
+    12:         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    13:       </form>
+    14: 
+    15:       <%= form_for("user", { :url => user_session_path }, :class => "form-signin") do |f| %>
+    16: 	      <%= f.text_field :email %>
+    17: 	      <%= f.password_field :password %>
+    18: 	      <%= f.check_box :remember_me %>
+  app/views/dashboard/index.html.erb:15:in `_app_views_dashboard_index_html_erb__465535160910047756_70355342402120'
+
+
+  Rendered /Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:16:19 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:16:19 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:16:19 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:16:19 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:16:19 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:16:19 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:16:19 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:17:23 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:17:23 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:17:23 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:17:23 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:17:23 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:17:23 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:17:23 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:17:51 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:17:51 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:17:51 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:17:51 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:17:51 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:17:51 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:17:51 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:18:06 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:18:06 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:18:06 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:18:06 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:18:06 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:18:06 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:18:06 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:18:40 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:18:40 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:18:40 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:18:40 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:18:40 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:18:40 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:18:40 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:19:48 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:19:49 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:19:49 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:19:49 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:19:49 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:19:49 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:19:49 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:19:54 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:19:54 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:19:54 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:19:54 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:19:54 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:19:54 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:19:54 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:20:09 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:09 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:09 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:09 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:09 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:09 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:09 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:20:27 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:27 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:27 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:27 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:27 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:27 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:27 -0700
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-11-14 13:20:34 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tLludjXg55IB756LIUmnvFwm2PU7Q/Eo4FPTj9NQu3Q=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+Completed 401 Unauthorized in 3ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tLludjXg55IB756LIUmnvFwm2PU7Q/Eo4FPTj9NQu3Q=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  Rendered /Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/devise-3.2.1/app/views/devise/shared/_links.erb (2.1ms)
+  Rendered /Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/devise-3.2.1/app/views/devise/sessions/new.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 76ms (Views: 53.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:34 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:34 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:34 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:34 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:34 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:34 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:20:37 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:37 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:37 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:37 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:37 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:37 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:37 -0700
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-11-14 13:20:50 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tLludjXg55IB756LIUmnvFwm2PU7Q/Eo4FPTj9NQu3Q=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+Completed 401 Unauthorized in 2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tLludjXg55IB756LIUmnvFwm2PU7Q/Eo4FPTj9NQu3Q=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  Rendered /Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/devise-3.2.1/app/views/devise/shared/_links.erb (0.5ms)
+  Rendered /Users/impulsedev/.rvm/gems/ruby-2.0.0-p195@pushvendor_pos/gems/devise-3.2.1/app/views/devise/sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:50 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:50 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:50 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:50 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:50 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:50 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:20:55 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:55 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:55 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:20:55 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:55 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:55 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:20:55 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:21:47 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:21:47 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:21:47 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:21:47 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:21:47 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:21:47 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:21:47 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:21:55 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:21:55 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:21:55 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:21:55 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:21:55 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:21:55 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:21:56 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:22:01 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:22:01 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:22:01 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:22:01 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:22:01 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:22:01 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:22:01 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:23:02 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:23:02 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:23:02 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:23:02 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:23:02 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:23:02 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:23:02 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:23:15 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:23:15 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:23:15 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:23:15 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:23:15 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:23:15 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:23:15 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:24:04 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:24:04 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:24:04 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:24:04 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:24:04 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:24:04 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:24:04 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:25:54 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:25:54 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:25:54 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:25:54 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:25:54 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:25:54 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:25:54 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:26:21 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:26:21 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:26:21 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:26:21 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:26:21 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:26:21 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:26:21 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:27:08 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:27:08 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:27:08 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:27:08 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:27:08 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:27:08 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:27:08 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:27:31 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:27:31 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:27:31 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:27:31 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:27:31 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:27:31 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:27:31 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:27:50 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:27:50 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:27:50 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:27:50 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:27:50 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:27:50 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:27:50 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:28:24 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:28:25 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:28:25 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:28:25 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:28:25 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:28:25 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:28:25 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:29:03 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:29:03 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:29:03 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:29:03 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:29:03 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:29:03 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:29:03 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:29:21 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:29:21 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:29:21 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:29:21 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:29:21 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:29:21 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:29:21 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:31:00 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:31:00 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:31:00 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:31:00 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:31:00 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:31:00 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:31:00 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:31:32 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:31:32 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:31:32 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:31:32 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:31:32 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:31:32 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:31:32 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:31:53 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:31:53 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:31:53 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:31:53 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:31:53 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:31:53 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:31:53 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:32:30 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:32:30 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:32:30 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:32:30 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:32:30 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:32:30 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:32:30 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:32:41 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 101ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:32:41 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:32:41 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:32:41 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:32:41 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:32:41 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:32:42 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:32:57 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:32:57 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:32:57 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:32:57 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:32:57 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:32:57 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:32:57 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:34:29 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:34:29 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:34:29 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:34:29 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:34:29 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:34:29 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:34:29 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:34:39 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:34:39 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:34:39 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:34:39 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:34:39 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:34:39 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:34:39 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-14 13:34:58 -0700
+Processing by DashboardController#index as HTML
+  Rendered dashboard/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-14 13:34:58 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:34:58 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-14 13:34:58 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-14 13:34:58 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-14 13:34:58 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-14 13:34:58 -0700
