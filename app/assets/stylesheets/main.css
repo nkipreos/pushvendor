@@ -243,9 +243,13 @@ body .pos_wrapper {
   -moz-background-clip: padding;
   border-radius: 13px;
   background-clip: padding-box;
+  margin-top: 45px;
+  padding: 20px;
 }
 body .pos_wrapper.login_form {
   background: none;
+  margin-top: 0px;
+  padding: 0px;
 }
 /* ==========================================================================
    Login Form
