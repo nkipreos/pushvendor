@@ -18,6 +18,11 @@
     </head>
     
     <body>
+
+    	<% if user_signed_in? %>
+    		<%= render :partial => 'modules/menu' %>
+    	<% end %>
+
     	<div class="pos_wrapper  <%= params[:controller] == 'dashboard' && user_signed_in? ? '' : 'login_form' %>">
     		<% if notice %>
 	    		<p class="notice"><%= notice %></p>
