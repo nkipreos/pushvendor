@@ -247,30 +247,6 @@ body .pos_wrapper {
 body .pos_wrapper.login_form {
   background: none;
 }
-body .pos_wrapper.login_form .container {
-  margin-top: 20%;
-}
-body .pos_wrapper.login_form .container .form-signin {
-  background: #ddd;
-  -webkit-border-radius: 12px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 12px;
-  -moz-background-clip: padding;
-  border-radius: 12px;
-  background-clip: padding-box;
-  -webkit-box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
-  -moz-box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
-  box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
-}
-body .pos_wrapper.login_form .container .form-signin .form-signin-heading {
-  position: absolute;
-  margin-top: -60px;
-  color: #ddd;
-}
-body .pos_wrapper.login_form .container .form-signin .copyright {
-  position: absolute;
-  margin-top: 30px;
-}
 /* ==========================================================================
    Login Form
    ========================================================================== */
@@ -307,6 +283,28 @@ body .pos_wrapper.login_form .container .form-signin .copyright {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+.form-signin {
+  margin-top: 20%;
+  background: #ddd;
+  -webkit-border-radius: 12px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 12px;
+  -moz-background-clip: padding;
+  border-radius: 12px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
+  -moz-box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
+  box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
+}
+.form-signin .form-signin-heading {
+  position: absolute;
+  margin-top: -60px;
+  color: #ddd;
+}
+.form-signin .copyright {
+  position: absolute;
+  margin-top: 30px;
 }
 /* ==========================================================================
    Forms
