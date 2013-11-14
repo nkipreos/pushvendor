@@ -11,7 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131114173358) do
+ActiveRecord::Schema.define(version: 20131114233345) do
+
+  create_table "contacts", force: true do |t|
+    t.string   "email_address"
+    t.string   "phone_number"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.integer  "customer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customers", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sales", force: true do |t|
+    t.decimal  "total_amount",    precision: 8, scale: 2
+    t.decimal  "tax_paid",        precision: 8, scale: 2
+    t.decimal  "amount_paid",     precision: 8, scale: 2
+    t.boolean  "paid"
+    t.string   "payment_type_id"
+    t.integer  "customer_id"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
