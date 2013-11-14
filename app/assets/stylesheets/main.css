@@ -232,19 +232,10 @@ hr {
   clear: both;
 }
 body {
-  background: #444 !important;
   padding: 10px;
 }
 body .pos_wrapper {
-  background: #ddd;
-  -webkit-border-radius: 13px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 13px;
-  -moz-background-clip: padding;
-  border-radius: 13px;
-  background-clip: padding-box;
-  margin-top: 45px;
-  padding: 20px;
+  margin-top: 45px !important;
 }
 body .pos_wrapper.login_form {
   background: none;
@@ -290,21 +281,18 @@ body .pos_wrapper.login_form {
 }
 .form-signin {
   margin-top: 20%;
-  background: #ddd;
+  background: #EAEAEA;
   -webkit-border-radius: 12px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 12px;
   -moz-background-clip: padding;
   border-radius: 12px;
   background-clip: padding-box;
-  -webkit-box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
-  -moz-box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
-  box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
 }
 .form-signin .form-signin-heading {
   position: absolute;
   margin-top: -60px;
-  color: #ddd;
+  color: #666;
 }
 .form-signin .copyright {
   position: absolute;
