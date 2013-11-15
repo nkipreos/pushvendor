@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 
 gem 'devise'
+gem 'protected_attributes'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

@@ -1,4 +1,8 @@
 PushvendorPos::Application.routes.draw do
+  resources :line_items
+
+  resources :items
+
   resources :contacts
 
   resources :customers
