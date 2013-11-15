@@ -1,25 +1,23 @@
-<h1>Listing customers</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @customers.each do |customer| %>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Last Name</th>
+        <th>First Name</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr>
+          <td><%= customer.last_name %></td>
+          <td><%= customer.first_name %></td>
+          <td><%= link_to 'Show', customer %> | <%= link_to 'Edit', edit_customer_path(customer) %> | <%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
 
 <%= link_to 'New Customer', new_customer_path %>

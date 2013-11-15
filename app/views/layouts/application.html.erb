@@ -23,7 +23,7 @@
     		<%= render :partial => 'modules/menu' %>
     	<% end %>
 
-    	<div class="pos_wrapper  <%= params[:controller] == 'dashboard' && user_signed_in? ? '' : 'login_form' %>">
+    	<div class="pos_wrapper">
     		<% if notice %>
 	    		<p class="notice"><%= notice %></p>
 	    	<% end %>
