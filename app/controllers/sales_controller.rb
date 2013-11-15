@@ -16,12 +16,14 @@ class SalesController < ApplicationController
   def new
     @sale = Sale.new
     @sale.line_items.build
+    @sale.items.build
   end
 
   # GET /sales/1/edit
   def edit
     @sale = Sale.find(params[:id])
     @sale.line_items.build
+    @sale.items.build
   end
 
   # POST /sales

@@ -237,11 +237,6 @@ body {
 body .pos_wrapper {
   margin-top: 60px !important;
 }
-body .pos_wrapper.login_form {
-  background: none;
-  margin-top: 0px;
-  padding: 0px;
-}
 /* ==========================================================================
    Login Form
    ========================================================================== */
