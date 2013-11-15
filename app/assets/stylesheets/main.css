@@ -235,7 +235,7 @@ body {
   padding: 10px;
 }
 body .pos_wrapper {
-  margin-top: 45px !important;
+  margin-top: 60px !important;
 }
 body .pos_wrapper.login_form {
   background: none;
@@ -297,6 +297,9 @@ body .pos_wrapper.login_form {
 .form-signin .copyright {
   position: absolute;
   margin-top: 30px;
+}
+.clearboth {
+  clear: both;
 }
 /* ==========================================================================
    Forms
