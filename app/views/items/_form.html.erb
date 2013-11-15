@@ -1,0 +1,68 @@
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          Name
+        </span>
+        <%= f.text_field :name, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          Description
+        </span>
+        <%= f.text_field :description, :class => "form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          Price
+        </span>
+        <%= f.text_field :price, :class => "form-control" %>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          Stock Amount
+        </span>
+        <%= f.text_field :stock_amount, :class => "form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          Cost Price
+        </span>
+        <%= f.text_field :cost_price, :class => "form-control" %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,5 +1,5 @@
 <%= form_for(@sale) do |f| %>
-  <% if @sale.errors.any? %>
+<% if @sale.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
 
@@ -10,8 +10,62 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
+  <% for i in 1..3 %>
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="input-group">
+          <span class="input-group-addon">
+            SKU
+          </span>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="input-group">
+          <span class="input-group-addon">
+            Item
+          </span>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="input-group">
+          <span class="input-group-addon">
+            Price
+          </span>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="input-group">
+          <span class="input-group-addon">
+            Quantity
+          </span>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="input-group">
+          <span class="input-group-addon">
+            Total
+          </span>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      + <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Something else here</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Separated link</a></li>
+    </ul>
   </div>
+  <div class="clearboth"></div>
+  <%= f.submit %>
 <% end %>

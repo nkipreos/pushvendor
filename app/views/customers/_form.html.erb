@@ -4,12 +4,88 @@
       <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
 
       <ul>
-      <% @customer.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @customer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          First Name
+        </span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          Last Name
+        </span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          Phone
+        </span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          Email
+        </span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          Address
+        </span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          City
+        </span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          State
+        </span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="input-group">
+        <span class="input-group-addon">
+          Zip
+        </span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+  </div>
 
   <div class="actions">
     <%= f.submit %>
