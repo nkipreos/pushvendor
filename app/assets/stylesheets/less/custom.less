@@ -5,6 +5,15 @@ body {
 		margin-top:60px !important;
 		
 	}
+  .btn {
+    .box-shadow(7px 8px 0px rgba(0, 0, 0, 0.39));
+    &.btn-success {
+      .box-shadow(7px 8px 0px rgba(0, 0, 0, 0.39));
+    }
+  }
+  .navbar {
+    .box-shadow(0px 8px 0px rgba(0, 0, 0, 0.39));
+  }
 }
 
 
@@ -51,7 +60,7 @@ body {
 	margin-top:10%;
 	background: #F0F0F0;
 	.border-radius(12px);
-	// .box-shadow(0 1px 10px rgba(20,20,20,0.5));
+	.box-shadow(0 1px 10px rgba(20,20,20,0.5));
 	.form-signin-heading {
 		position: absolute;
 		margin-top:-60px;
@@ -60,9 +69,22 @@ body {
 	.copyright {
 		position: absolute;
 		margin-top:30px;
+    color:#fff;
 	}
 }
 
 .clearboth {
 	clear:both;
+}
+
+.pos_wrapper {
+  .panel {
+    .box-shadow(7px 8px 0px rgba(0, 0, 0, 0.39));
+    &.col-sm-6 {
+      padding:0px;
+    }
+  }
+  .btn {
+    .box-shadow(7px 8px 0px rgba(0, 0, 0, 0.39));
+  }
 }

@@ -1,112 +1,118 @@
-<%= form_for :search, :url => search_items_url, :html => { :method => :get } do |f| %>
-  <%= f.text_field :item_name, :class => "form-control", :placeholder => "Search" %>
-  <%= submit_tag "search", :class => "btn btn-primary btn-lg" %>
-<% end %>
+<div class="panel panel-default">
+  <div class="panel-heading">New Sale</div> 
+    <div class="panel-body">
+      <%= form_for :search, :url => search_items_url, :html => { :method => :get } do |f| %>
+        <%= f.text_field :item_name, :class => "form-control", :placeholder => "Search" %>
+        <%= submit_tag "search", :class => "btn btn-primary btn-lg" %>
+      <% end %>
 
 
-<%= form_for(@sale) do |f| %>
-<% if @sale.errors.any? %>
-    <div id="error_explanation">
-      <div class="panel panel-danger">
-        <div class="panel-heading">
-          <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
-        </div>
-        <div class="panel-body">
-          <ul>
-          <% @sale.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
+      <%= form_for(@sale) do |f| %>
+      <% if @sale.errors.any? %>
+          <div id="error_explanation">
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
+              </div>
+              <div class="panel-body">
+                <ul>
+                <% @sale.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <div class="sale_line_items">
+          <%= f.fields_for :items do |e| %>
+            <div class="row">
+              <div class="col-sm-2">
+                <label>Sku</label>
+                <%= e.text_field :sku, :class => "form-control", :placeholder => "SKU" %>
+              </div>
+              <div class="col-sm-3">
+                <label>Item</label>
+                <%= e.text_field :name, :class => "form-control", :placeholder => "Item" %>
+              </div>
+              <div class="col-sm-3">
+                <label>Description</label>
+                <%= e.text_field :description, :class => "form-control", :placeholder => "Description" %>
+              </div>
+              <div class="col-sm-2">
+                <label>Price</label>
+                <%= e.text_field :price, :class => "form-control", :placeholder => "Price" %>
+              </div>
+              <div class="col-sm-2">
+                <label>Quantity</label>
+                <%= e.text_field :price, :class => "form-control", :placeholder => "Quantity" %>
+              </div>
+            </div>
           <% end %>
-          </ul>
         </div>
-      </div>
-    </div>
-  <% end %>
 
-  <div class="sale_line_items">
-    <%= f.fields_for :items do |e| %>
-      <div class="row">
-        <div class="col-sm-2">
-          <label>Sku</label>
-          <%= e.text_field :sku, :class => "form-control", :placeholder => "SKU" %>
+        <div class="row">
+          <div class="col-sm-2">
+            <button type="button" class="btn btn-primary add_line_item">+</button>
+          </div>
         </div>
-        <div class="col-sm-3">
-          <label>Item</label>
-          <%= e.text_field :name, :class => "form-control", :placeholder => "Item" %>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="badge">$14.99</span>
+                Total
+              </li>
+              <li class="list-group-item">
+                <span class="badge">$14.99</span>
+                Tax
+              </li>
+              <li class="list-group-item">
+                <span class="badge">$14.99</span>
+                Discount %
+              </li>
+              <li class="list-group-item">
+                <span class="badge">$14.99</span>
+                Grand Total
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-sm-3">
-          <label>Description</label>
-          <%= e.text_field :description, :class => "form-control", :placeholder => "Description" %>
+
+        <hr />
+
+        <%= f.fields_for :customers do |e| %>
+          <div class="row">
+            <div class="col-sm-6">
+              <label>First Name</label>
+              <%= e.text_field :first_name, :class => "form-control", :placeholder => "First Name" %>
+            </div>
+            <div class="col-sm-6">
+              <label>Last Name</label>
+              <%= e.text_field :last_name, :class => "form-control", :placeholder => "Last Name" %>
+            </div>
+          </div>
+        <% end %>
+
+        <hr />
+
+        <div class="row">
+          <div class="col-sm-12">
+            <label>Comments</label>
+            <%= f.text_area :comments, :class => "form-control", :placeholder => "Comments" %>
+          </div>
         </div>
-        <div class="col-sm-2">
-          <label>Price</label>
-          <%= e.text_field :price, :class => "form-control", :placeholder => "Price" %>
+
+        <hr />
+
+        <div class="row">
+          <div class="col-sm-12">
+            <%= f.submit 'Update Sale', :class => "btn btn-success btn-lg" %>
+          </div>
         </div>
-        <div class="col-sm-2">
-          <label>Quantity</label>
-          <%= e.text_field :price, :class => "form-control", :placeholder => "Quantity" %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-2">
-      <button type="button" class="btn btn-primary add_line_item">+</button>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-12">
-      <ul class="list-group">
-        <li class="list-group-item">
-          <span class="badge">$14.99</span>
-          Total
-        </li>
-        <li class="list-group-item">
-          <span class="badge">$14.99</span>
-          Tax
-        </li>
-        <li class="list-group-item">
-          <span class="badge">$14.99</span>
-          Discount %
-        </li>
-        <li class="list-group-item">
-          <span class="badge">$14.99</span>
-          Grand Total
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <hr />
-
-  <%= f.fields_for :customers do |e| %>
-    <div class="row">
-      <div class="col-sm-6">
-        <label>First Name</label>
-        <%= e.text_field :first_name, :class => "form-control", :placeholder => "First Name" %>
-      </div>
-      <div class="col-sm-6">
-        <label>Last Name</label>
-        <%= e.text_field :last_name, :class => "form-control", :placeholder => "Last Name" %>
-      </div>
-    </div>
-  <% end %>
-
-  <hr />
-
-  <div class="row">
-    <div class="col-sm-12">
-      <label>Comments</label>
-      <%= f.text_area :comments, :class => "form-control", :placeholder => "Comments" %>
+      <% end %>
     </div>
   </div>
-
-  <hr />
-
-  <div class="row">
-    <div class="col-sm-12">
-      <%= f.submit 'Update Sale', :class => "btn btn-primary btn-lg" %>
-    </div>
-  </div>
-<% end %>
+</div>
