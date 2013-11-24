@@ -1,13 +1,22 @@
 PushvendorPos::Application.routes.draw do
   resources :line_items
 
-  resources :items
+  resources :items do
+    get 'search'
+    collection do
+      get 'search'
+    end
+  end
 
   resources :contacts
 
   resources :customers
 
-  resources :sales
+  resources :sales do
+    collection do
+      get 'add_line_item'
+    end
+  end
 
   get "dashboard/index"
   devise_for :users

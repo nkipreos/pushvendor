@@ -11,58 +11,50 @@
     </div>
   <% end %>
 
+<div class="panel panel-default">
+  <div class="panel-heading">New Item Details</div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Name of Item</label>
+          <%= f.text_field :name, :class => "form-control" %>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Description</label>
+          <%= f.text_field :description, :class => "form-control" %>
+        </div>
+      </div>
+    </div>
 
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="input-group">
-        <span class="input-group-addon">
-          Name
-        </span>
-        <%= f.text_field :name, :class => "form-control" %>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Price</label>
+          <%= f.text_field :price, :class => "form-control" %>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Stock Amount</label>
+          <%= f.text_field :stock_amount, :class => "form-control" %>
+        </div>
       </div>
     </div>
-    <div class="col-sm-6">
-      <div class="input-group">
-        <span class="input-group-addon">
-          Description
-        </span>
-        <%= f.text_field :description, :class => "form-control" %>
-      </div>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="input-group">
-        <span class="input-group-addon">
-          Price
-        </span>
-        <%= f.text_field :price, :class => "form-control" %>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="input-group">
-        <span class="input-group-addon">
-          Stock Amount
-        </span>
-        <%= f.text_field :stock_amount, :class => "form-control" %>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="input-group">
-        <span class="input-group-addon">
-          Cost Price
-        </span>
-        <%= f.text_field :cost_price, :class => "form-control" %>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Cost Price</label>
+          <%= f.text_field :cost_price, :class => "form-control" %>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <button type="button" class="btn btn-primary">Default</button>
 <% end %>
