@@ -1,45 +1,57 @@
+<%= form_for :search, :url => search_items_url, :html => { :method => :get } do |f| %>
+  <%= f.text_field :item_name, :class => "form-control", :placeholder => "Search" %>
+  <%= submit_tag "search", :class => "btn btn-primary btn-lg" %>
+<% end %>
+
+
 <%= form_for(@sale) do |f| %>
 <% if @sale.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
-
-      <ul>
-      <% @sale.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-
-  <%= f.fields_for :items do |e| %>
-    <div class="row">
-      <div class="col-sm-2">
-        <label>Sku</label>
-        <%= e.text_field :sku, :class => "form-control", :placeholder => "SKU" %>
-      </div>
-      <div class="col-sm-3">
-        <label>Item</label>
-        <%= e.text_field :name, :class => "form-control", :placeholder => "Item" %>
-      </div>
-      <div class="col-sm-3">
-        <label>Description</label>
-        <%= e.text_field :description, :class => "form-control", :placeholder => "Description" %>
-      </div>
-      <div class="col-sm-2">
-        <label>Price</label>
-        <%= e.text_field :price, :class => "form-control", :placeholder => "Price" %>
-      </div>
-      <div class="col-sm-2">
-        <label>Quantity</label>
-        <%= e.text_field :price, :class => "form-control", :placeholder => "Quantity" %>
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
+        </div>
+        <div class="panel-body">
+          <ul>
+          <% @sale.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
       </div>
     </div>
   <% end %>
+
+  <div class="sale_line_items">
+    <%= f.fields_for :items do |e| %>
+      <div class="row">
+        <div class="col-sm-2">
+          <label>Sku</label>
+          <%= e.text_field :sku, :class => "form-control", :placeholder => "SKU" %>
+        </div>
+        <div class="col-sm-3">
+          <label>Item</label>
+          <%= e.text_field :name, :class => "form-control", :placeholder => "Item" %>
+        </div>
+        <div class="col-sm-3">
+          <label>Description</label>
+          <%= e.text_field :description, :class => "form-control", :placeholder => "Description" %>
+        </div>
+        <div class="col-sm-2">
+          <label>Price</label>
+          <%= e.text_field :price, :class => "form-control", :placeholder => "Price" %>
+        </div>
+        <div class="col-sm-2">
+          <label>Quantity</label>
+          <%= e.text_field :price, :class => "form-control", :placeholder => "Quantity" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
   <div class="row">
     <div class="col-sm-2">
-      <button type="button" class="btn btn-primary">+</button>
+      <button type="button" class="btn btn-primary add_line_item">+</button>
     </div>
   </div>
 
