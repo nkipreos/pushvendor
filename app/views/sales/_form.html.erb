@@ -12,10 +12,15 @@
       <!-- Tab panes -->
       <div class="tab-content">
         <div class="tab-pane active" id="sale">
-          <%= form_for :update_line_item_options, :url => update_line_item_options_sales_url, :html => { :method => :get, :remote => true } do |f| %>
-            <%= f.text_field :item_name, :class => "form-control", :placeholder => "Search" %>
-            <!-- <%= submit_tag "search", :class => "btn btn-primary btn-lg" %> -->
-          <% end %>
+          <p>Find Items</p>
+          <div class="row">
+            <div class="col-sm-4">
+              <%= form_for :update_line_item_options, :url => update_line_item_options_sales_url, :html => { :method => :get, :remote => true } do |f| %>
+                <%= f.text_field :item_name, :class => "form-control", :placeholder => "Search" %>
+                <%= submit_tag "search", :class => "btn btn-primary btn-lg" %>
+              <% end %>
+            </div>
+          </div>
           <%= form_for(@sale) do |f| %>
           <% if @sale.errors.any? %>
               <div id="error_explanation">

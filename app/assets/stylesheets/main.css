@@ -261,6 +261,9 @@ body .navbar {
   padding: 15px;
   margin: 0 auto;
 }
+.form-signin button.btn {
+  box-shadow: none;
+}
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
@@ -299,9 +302,9 @@ body .navbar {
   -moz-background-clip: padding;
   border-radius: 12px;
   background-clip: padding-box;
-  -webkit-box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
-  -moz-box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
-  box-shadow: 0 1px 10px rgba(20, 20, 20, 0.5);
+  -webkit-box-shadow: 7px 8px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 7px 8px 0px rgba(0, 0, 0, 0.39);
+  box-shadow: 7px 8px 0px rgba(0, 0, 0, 0.39);
 }
 .form-signin .form-signin-heading {
   position: absolute;
