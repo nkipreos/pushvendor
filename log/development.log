@@ -28725,3 +28725,494 @@ Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:09:
 
 
 Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:09:32 -0700
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2013-11-25 13:11:18 -0700
+Processing by SalesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered sales/_form.html.erb (5.0ms)
+  Rendered sales/new.html.erb within layouts/application (6.1ms)
+  Rendered modules/_menu.html.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:11:18 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:11:18 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:11:18 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:11:18 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:11:18 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:11:18 -0700
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2013-11-25 13:11:54 -0700
+Processing by SalesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered sales/_form.html.erb (6.6ms)
+  Rendered sales/new.html.erb within layouts/application (7.6ms)
+  Rendered modules/_menu.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:11:54 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:11:54 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:11:54 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:11:54 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:11:54 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:11:54 -0700
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2013-11-25 13:12:51 -0700
+Processing by SalesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered sales/_form.html.erb (5.2ms)
+  Rendered sales/new.html.erb within layouts/application (6.6ms)
+  Rendered modules/_menu.html.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:12:51 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:12:51 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:12:51 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:12:51 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:12:51 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:12:51 -0700
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2013-11-25 13:13:32 -0700
+Processing by SalesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered sales/_form.html.erb (5.7ms)
+  Rendered sales/new.html.erb within layouts/application (6.6ms)
+  Rendered modules/_menu.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 15.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:13:32 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:13:32 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:13:32 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:13:32 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:13:32 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:13:32 -0700
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2013-11-25 13:14:18 -0700
+Processing by SalesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered sales/_form.html.erb (5.8ms)
+  Rendered sales/new.html.erb within layouts/application (6.9ms)
+  Rendered modules/_menu.html.erb (0.2ms)
+Completed 200 OK in 22ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:14:18 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:14:18 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:14:18 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:14:18 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:14:18 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:14:18 -0700
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2013-11-25 13:14:54 -0700
+Processing by SalesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered sales/_form.html.erb (5.4ms)
+  Rendered sales/new.html.erb within layouts/application (6.3ms)
+  Rendered modules/_menu.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 61.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:14:54 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:14:54 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:14:54 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:14:54 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:14:54 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:14:54 -0700
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2013-11-25 13:15:32 -0700
+Processing by SalesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered sales/_form.html.erb (5.8ms)
+  Rendered sales/new.html.erb within layouts/application (7.2ms)
+  Rendered modules/_menu.html.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:15:32 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:15:32 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:15:32 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:15:32 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:15:32 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:15:32 -0700
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2013-11-25 13:15:45 -0700
+Processing by SalesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered sales/_form.html.erb (7.4ms)
+  Rendered sales/new.html.erb within layouts/application (12.4ms)
+  Rendered modules/_menu.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:15:45 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:15:45 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:15:45 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:15:45 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:15:45 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:15:45 -0700
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2013-11-25 13:16:19 -0700
+Processing by SalesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered sales/_form.html.erb (6.4ms)
+  Rendered sales/new.html.erb within layouts/application (53.1ms)
+  Rendered modules/_menu.html.erb (0.2ms)
+Completed 200 OK in 67ms (Views: 61.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:19 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:19 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:19 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:19 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:19 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:19 -0700
+
+
+Started GET "/items" for 127.0.0.1 at 2013-11-25 13:16:26 -0700
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (8.4ms)
+  Rendered modules/_menu.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:26 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:26 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:26 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:26 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:26 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:26 -0700
+
+
+Started GET "/sales" for 127.0.0.1 at 2013-11-25 13:16:28 -0700
+Processing by SalesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSale Load (0.2ms)[0m  SELECT "sales".* FROM "sales"
+  Rendered sales/index.html.erb within layouts/application (6.3ms)
+  Rendered modules/_menu.html.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:28 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:28 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:28 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:28 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:28 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:28 -0700
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2013-11-25 13:16:29 -0700
+Processing by SalesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered sales/_form.html.erb (3.4ms)
+  Rendered sales/new.html.erb within layouts/application (4.3ms)
+  Rendered modules/_menu.html.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:29 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:29 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:29 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:29 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:29 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:29 -0700
+
+
+Started GET "/customers" for 127.0.0.1 at 2013-11-25 13:16:52 -0700
+Processing by CustomersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (4.0ms)
+  Rendered modules/_menu.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:52 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:52 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:52 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:52 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:52 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:52 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-25 13:16:54 -0700
+Processing by DashboardController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered dashboard/index.html.erb within layouts/application (0.2ms)
+  Rendered modules/_menu.html.erb (0.3ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:54 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:54 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:54 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:54 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:54 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:54 -0700
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-11-25 13:16:56 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3001/
+Completed 302 Found in 79ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-25 13:16:56 -0700
+Processing by DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-25 13:16:56 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:56 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:56 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:56 -0700
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:16:56 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:56 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:16:56 -0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-25 13:18:20 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:18:20 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:18:20 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:18:20 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:18:20 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:18:20 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:18:20 -0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-25 13:19:34 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:19:34 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:19:34 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:19:34 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:19:34 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:19:34 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:19:34 -0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-25 13:20:01 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2013-11-25 13:20:01 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-11-25 13:20:01 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-11-25 13:20:01 -0700
+
+
+Started GET "/assets/vendor/modernizr-2.6.2-respond-1.1.0.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:20:01 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-11-25 13:20:01 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-11-25 13:20:01 -0700
