@@ -15,6 +15,7 @@ PushvendorPos::Application.routes.draw do
   resources :sales do
     collection do
       get 'add_line_item'
+      get 'update_line_item_options'
     end
   end
 

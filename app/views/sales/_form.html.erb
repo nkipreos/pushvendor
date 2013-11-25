@@ -1,11 +1,11 @@
 <div class="panel panel-default">
   <div class="panel-heading">New Sale</div> 
     <div class="panel-body">
-      <%= form_for :search, :url => search_items_url, :html => { :method => :get } do |f| %>
+
+      <%= form_for :update_line_item_options, :url => update_line_item_options_sales_url, :html => { :method => :get, :remote => true } do |f| %>
         <%= f.text_field :item_name, :class => "form-control", :placeholder => "Search" %>
         <%= submit_tag "search", :class => "btn btn-primary btn-lg" %>
       <% end %>
-
 
       <%= form_for(@sale) do |f| %>
       <% if @sale.errors.any? %>
@@ -25,59 +25,64 @@
           </div>
         <% end %>
 
-        <div class="sale_line_items">
-          <%= f.fields_for :items do |e| %>
-            <div class="row">
-              <div class="col-sm-2">
-                <label>Sku</label>
-                <%= e.text_field :sku, :class => "form-control", :placeholder => "SKU" %>
-              </div>
-              <div class="col-sm-3">
-                <label>Item</label>
-                <%= e.text_field :name, :class => "form-control", :placeholder => "Item" %>
-              </div>
-              <div class="col-sm-3">
-                <label>Description</label>
-                <%= e.text_field :description, :class => "form-control", :placeholder => "Description" %>
-              </div>
-              <div class="col-sm-2">
-                <label>Price</label>
-                <%= e.text_field :price, :class => "form-control", :placeholder => "Price" %>
-              </div>
-              <div class="col-sm-2">
-                <label>Quantity</label>
-                <%= e.text_field :price, :class => "form-control", :placeholder => "Quantity" %>
-              </div>
+        <hr />
+    
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <%= f.fields_for :items do |e| %>
+                <tr>
+                  <td><%= e.text_field :sku, :class => "form-control", :placeholder => "SKU" %></td>
+                  <td><%= e.text_field :name, :class => "form-control", :placeholder => "Item" %></td>
+                  <td><%= e.text_field :description, :class => "form-control", :placeholder => "Description" %></td>
+                  <td><%= e.text_field :price, :class => "form-control", :placeholder => "Quantity" %></td>
+                  <td><%= e.text_field :price, :class => "form-control", :placeholder => "Price" %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+
+        <hr />
+
+        <div class="row">
+          <div class="col-sm-3">
+            <label>Amount</label>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control">
             </div>
-          <% end %>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-2">
-            <button type="button" class="btn btn-primary add_line_item">+</button>
           </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-12">
-            <ul class="list-group">
-              <li class="list-group-item">
-                <span class="badge">$14.99</span>
-                Total
-              </li>
-              <li class="list-group-item">
-                <span class="badge">$14.99</span>
-                Tax
-              </li>
-              <li class="list-group-item">
-                <span class="badge">$14.99</span>
-                Discount %
-              </li>
-              <li class="list-group-item">
-                <span class="badge">$14.99</span>
-                Grand Total
-              </li>
-            </ul>
+          <div class="col-sm-3">
+            <label>Discount</label>
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <span class="input-group-addon">%</span>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <label>Tax</label>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <label class="text-success">Total</label>
+            <div class="input-group has-success">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control">
+            </div>
           </div>
         </div>
 
