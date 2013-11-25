@@ -1,123 +1,134 @@
 <div class="panel panel-default">
   <div class="panel-heading">New Sale</div> 
     <div class="panel-body">
+      
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs">
+        <li><a href="#sale" data-toggle="tab">Sale</a></li>
+        <li><a href="#customer" data-toggle="tab">Customer</a></li>
+        <li><a href="#comments" data-toggle="tab">Comments</a></li>
+      </ul>
 
-      <%= form_for :update_line_item_options, :url => update_line_item_options_sales_url, :html => { :method => :get, :remote => true } do |f| %>
-        <%= f.text_field :item_name, :class => "form-control", :placeholder => "Search" %>
-        <%= submit_tag "search", :class => "btn btn-primary btn-lg" %>
-      <% end %>
-
-      <%= form_for(@sale) do |f| %>
-      <% if @sale.errors.any? %>
-          <div id="error_explanation">
-            <div class="panel panel-danger">
-              <div class="panel-heading">
-                <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="sale">
+          <%= form_for :update_line_item_options, :url => update_line_item_options_sales_url, :html => { :method => :get, :remote => true } do |f| %>
+            <%= f.text_field :item_name, :class => "form-control", :placeholder => "Search" %>
+            <!-- <%= submit_tag "search", :class => "btn btn-primary btn-lg" %> -->
+          <% end %>
+          <%= form_for(@sale) do |f| %>
+          <% if @sale.errors.any? %>
+              <div id="error_explanation">
+                <div class="panel panel-danger">
+                  <div class="panel-heading">
+                    <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
+                  </div>
+                  <div class="panel-body">
+                    <ul>
+                    <% @sale.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="panel-body">
-                <ul>
-                <% @sale.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-                <% end %>
-                </ul>
+            <% end %>
+
+            <hr />
+        
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <%= f.fields_for :items do |e| %>
+                    <tr>
+                      <td><%= e.text_field :sku, :class => "form-control", :placeholder => "SKU" %></td>
+                      <td><%= e.text_field :name, :class => "form-control", :placeholder => "Item" %></td>
+                      <td><%= e.text_field :description, :class => "form-control", :placeholder => "Description" %></td>
+                      <td><%= e.text_field :price, :class => "form-control", :placeholder => "Quantity" %></td>
+                      <td><%= e.text_field :price, :class => "form-control", :placeholder => "Price" %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+
+            <hr />
+
+            <div class="row">
+              <div class="col-sm-3">
+                <label>Amount</label>
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <label>Discount</label>
+                <div class="input-group">
+                  <input type="text" class="form-control">
+                  <span class="input-group-addon">%</span>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <label>Tax</label>
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <label class="text-success">Total</label>
+                <div class="input-group has-success">
+                  <span class="input-group-addon">$</span>
+                  <input type="text" class="form-control">
+                </div>
               </div>
             </div>
-          </div>
-        <% end %>
-
-        <hr />
-    
-        <div class="table-responsive">
-          <table class="table table-striped table-bordered table-hover">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Item</th>
-                <th>Description</th>
-                <th>Quantity</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <%= f.fields_for :items do |e| %>
-                <tr>
-                  <td><%= e.text_field :sku, :class => "form-control", :placeholder => "SKU" %></td>
-                  <td><%= e.text_field :name, :class => "form-control", :placeholder => "Item" %></td>
-                  <td><%= e.text_field :description, :class => "form-control", :placeholder => "Description" %></td>
-                  <td><%= e.text_field :price, :class => "form-control", :placeholder => "Quantity" %></td>
-                  <td><%= e.text_field :price, :class => "form-control", :placeholder => "Price" %></td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
         </div>
 
-        <hr />
-
-        <div class="row">
-          <div class="col-sm-3">
-            <label>Amount</label>
-            <div class="input-group">
-              <span class="input-group-addon">$</span>
-              <input type="text" class="form-control">
+        <div class="tab-pane" id="customer">
+          <%= f.fields_for :customers do |e| %>
+            <div class="row">
+              <div class="col-sm-6">
+                <label>First Name</label>
+                <%= e.text_field :first_name, :class => "form-control", :placeholder => "First Name" %>
+              </div>
+              <div class="col-sm-6">
+                <label>Last Name</label>
+                <%= e.text_field :last_name, :class => "form-control", :placeholder => "Last Name" %>
+              </div>
             </div>
-          </div>
-          <div class="col-sm-3">
-            <label>Discount</label>
-            <div class="input-group">
-              <input type="text" class="form-control">
-              <span class="input-group-addon">%</span>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <label>Tax</label>
-            <div class="input-group">
-              <span class="input-group-addon">$</span>
-              <input type="text" class="form-control">
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <label class="text-success">Total</label>
-            <div class="input-group has-success">
-              <span class="input-group-addon">$</span>
-              <input type="text" class="form-control">
-            </div>
-          </div>
+          <% end %>
         </div>
 
-        <hr />
-
-        <%= f.fields_for :customers do |e| %>
+        <div class="tab-pane" id="comments">
           <div class="row">
-            <div class="col-sm-6">
-              <label>First Name</label>
-              <%= e.text_field :first_name, :class => "form-control", :placeholder => "First Name" %>
+            <div class="col-sm-12">
+              <label>Comments</label>
+              <%= f.text_area :comments, :class => "form-control", :placeholder => "Comments" %>
             </div>
-            <div class="col-sm-6">
-              <label>Last Name</label>
-              <%= e.text_field :last_name, :class => "form-control", :placeholder => "Last Name" %>
-            </div>
-          </div>
-        <% end %>
-
-        <hr />
-
-        <div class="row">
-          <div class="col-sm-12">
-            <label>Comments</label>
-            <%= f.text_area :comments, :class => "form-control", :placeholder => "Comments" %>
           </div>
         </div>
-
-        <hr />
 
         <div class="row">
           <div class="col-sm-12">
             <%= f.submit 'Update Sale', :class => "btn btn-success btn-lg" %>
           </div>
         </div>
-      <% end %>
+
+        <% end %>
+      </div>
+      
     </div>
   </div>
 </div>
