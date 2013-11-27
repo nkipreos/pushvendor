@@ -4,7 +4,7 @@
       
       <!-- Nav tabs -->
       <ul class="nav nav-tabs">
-        <li><a href="#sale" data-toggle="tab">Sale</a></li>
+        <li class="active"><a href="#sale" data-toggle="tab">Sale</a></li>
         <li><a href="#customer" data-toggle="tab">Customer</a></li>
         <li><a href="#comments" data-toggle="tab">Comments</a></li>
       </ul>
@@ -12,13 +12,17 @@
       <!-- Tab panes -->
       <div class="tab-content">
         <div class="tab-pane active" id="sale">
-          <p>Find Items</p>
-          <div class="row">
+          <div class="row item_search_wrapper">
             <div class="col-sm-4">
-              <%= form_for :update_line_item_options, :url => update_line_item_options_sales_url, :html => { :method => :get, :remote => true } do |f| %>
-                <%= f.text_field :item_name, :class => "form-control", :placeholder => "Search" %>
-                <%= submit_tag "search", :class => "btn btn-primary btn-lg" %>
+
+              <%= form_for :search, :url => url_for(:controller => "sales", :action => "update_line_item_options", :format => :js), :method => "get", :remote => true do |f| %>
+                <%= f.text_field :item_name, :class => "form-control item_search_input", :placeholder => "Search Items" %>
+                <%= submit_tag "search", :class => "btn btn-primary btn-lg item_search" %>
               <% end %>
+            </div>
+            <div class="col-sm-8">
+              <div class="searched_items">
+              </div>
             </div>
           </div>
           <%= form_for(@sale) do |f| %>
@@ -74,7 +78,7 @@
                 <label>Amount</label>
                 <div class="input-group">
                   <span class="input-group-addon">$</span>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" readonly>
                 </div>
               </div>
               <div class="col-sm-3">
@@ -88,14 +92,14 @@
                 <label>Tax</label>
                 <div class="input-group">
                   <span class="input-group-addon">$</span>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" readonly>
                 </div>
               </div>
               <div class="col-sm-3">
                 <label class="text-success">Total</label>
                 <div class="input-group has-success">
                   <span class="input-group-addon">$</span>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" readonly>
                 </div>
               </div>
             </div>

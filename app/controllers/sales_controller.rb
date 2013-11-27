@@ -66,11 +66,9 @@ class SalesController < ApplicationController
     end
   end
 
-  def search
+  def update_line_item_options
     respond_to do |format|
-      format.html { render }
-      format.json { render json: @sale}
-      format.js { head :no_content }
+      format.js
     end
   end
 
