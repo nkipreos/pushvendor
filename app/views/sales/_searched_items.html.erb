@@ -1,0 +1,28 @@
+<div class="searched_items">	
+	<% @available_items =  Item.find(:all, :conditions => ['name LIKE ?', "%#{params[:search][:item_name]}%"], :limit => 5) %>
+	<div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Item</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Add</th>
+        </tr>
+      </thead>
+
+      <tbody>
+      	<% for item in @available_items %>
+          <tr>
+            <td><%= item.sku %></td>
+            <td><%= item.name %></td>
+            <td><%= item.description %></td>
+            <td><%= item.price %></td>
+            <td>Add +</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
