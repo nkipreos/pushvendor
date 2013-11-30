@@ -14,9 +14,8 @@ class SalesController < ApplicationController
 
   # GET /sales/new
   def new
-    @sale = Sale.new
-    @sale.line_items.build
-    @sale.items.build
+    @sale = Sale.create
+    redirect_to :controller => 'sales', :action => 'edit', :id => @sale.id
   end
 
   # GET /sales/1/edit
@@ -67,14 +66,16 @@ class SalesController < ApplicationController
   end
 
   def update_line_item_options
+
+
     respond_to do |format|
       format.js
     end
   end
 
   def add_searched_item
-    # sale = Sale.create(params[:sale])
-    # sale.save
+    @sale = Sale.find(params[:sale_id])
+    LineItem.create(:item_id => params[:item_id], :sale_id => @sale.id)
 
     respond_to do |format|
       format.js

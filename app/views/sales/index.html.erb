@@ -19,8 +19,8 @@
             <td><%= sale.id %></td>
             <td><%= sale.customer.blank? ? '-' : sale.customer.last_name %></td>
             <td><%= sale.total_amount %></td>
-            <td><%= sale.tax_paid %></td>
-            <td><%= sale.amount_paid %></td>
+            <td><%= sale.total_amount %></td>
+            <td><%= sale.total_amount %></td>
             <td><%= link_to 'Show', sale %> | <%= link_to 'Edit', edit_sale_path(sale) %> | <%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>

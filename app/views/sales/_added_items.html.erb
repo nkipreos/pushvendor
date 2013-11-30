@@ -12,15 +12,7 @@
 
     <tbody>
 
-      <%= f.fields_for :items do |e| %>
-        <tr>
-          <td><%= e.text_field :sku, :class => "form-control", :placeholder => "SKU" %></td>
-          <td><%= e.text_field :name, :class => "form-control", :placeholder => "Item" %></td>
-          <td><%= e.text_field :description, :class => "form-control", :placeholder => "Description" %></td>
-          <td><%= e.text_field :price, :class => "form-control", :placeholder => "Quantity" %></td>
-          <td><%= e.text_field :price, :class => "form-control", :placeholder => "Price" %></td>
-        </tr>
-      <% end %>
+      
 
      <!-- Added Items -->
       <% unless @sale.blank? %>

@@ -17,6 +17,7 @@
 
               <%= form_for :search, :url => url_for(:controller => "sales", :action => "update_line_item_options", :format => :js), :method => "get", :remote => true do |f| %>
                 <%= f.text_field :item_name, :class => "form-control item_search_input", :placeholder => "Search Items" %>
+                <%= f.hidden_field :sale_id, :value => @sale.id %>
                 <%= submit_tag "search", :class => "btn btn-primary btn-lg item_search" %>
               <% end %>
             </div>
