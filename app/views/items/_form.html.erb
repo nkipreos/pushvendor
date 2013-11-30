@@ -12,19 +12,19 @@
   <% end %>
 
 <div class="panel panel-default">
-  <div class="panel-heading">New Item Details</div>
+  <div class="panel-heading">Item Details</div>
   <div class="panel-body">
     <div class="row">
       <div class="col-sm-6">
         <div class="form-group">
-          <label>Name of Item</label>
-          <%= f.text_field :name, :class => "form-control", :placeholder => "Item Name" %>
+          <label>SKU</label>
+          <%= f.text_field :sku, :class => "form-control", :placeholder => "Item Sku" %>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="form-group">
-          <label>Description</label>
-          <%= f.text_field :description, :class => "form-control", :placeholder => "Item Description" %>
+          <label>Name of Item</label>
+          <%= f.text_field :name, :class => "form-control", :placeholder => "Item Name" %>
         </div>
       </div>
     </div>
@@ -49,6 +49,12 @@
         <div class="form-group">
           <label>Cost Price</label>
           <%= f.text_field :cost_price, :class => "form-control", :placeholder => "Cost of Item" %>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Description</label>
+          <%= f.text_area :description, :class => "form-control", :placeholder => "Item Description" %>
         </div>
       </div>
     </div>

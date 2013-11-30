@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131115042701) do
+ActiveRecord::Schema.define(version: 20131130191933) do
 
   create_table "contacts", force: true do |t|
     t.string   "email_address"
@@ -45,19 +45,24 @@ ActiveRecord::Schema.define(version: 20131115042701) do
 
   create_table "line_items", force: true do |t|
     t.integer  "item_id"
-    t.integer  "quantity",   default: 1
-    t.integer  "price"
+    t.integer  "quantity",                           default: 1
+    t.decimal  "price",      precision: 8, scale: 2
     t.integer  "sale_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  create_table "payments", force: true do |t|
+    t.integer  "sale_id"
+    t.decimal  "amount",       precision: 8, scale: 2
+    t.string   "payment_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sales", force: true do |t|
-    t.decimal  "total_amount",    precision: 8, scale: 2
-    t.decimal  "tax_paid",        precision: 8, scale: 2
-    t.decimal  "amount_paid",     precision: 8, scale: 2
-    t.boolean  "paid"
-    t.string   "payment_type_id"
+    t.decimal  "total_amount",     precision: 8, scale: 2
+    t.decimal  "remaining_amount"
     t.integer  "customer_id"
     t.text     "comments"
     t.datetime "created_at"
