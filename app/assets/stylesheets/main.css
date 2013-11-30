@@ -262,6 +262,10 @@ body .navbar {
 .item_search_wrapper form {
   margin-top: 30px;
 }
+.add_to_current_sale {
+  cursor: pointer;
+  color: #428BCA;
+}
 /* ==========================================================================
    Login Form
    ========================================================================== */

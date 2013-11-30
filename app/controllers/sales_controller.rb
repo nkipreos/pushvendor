@@ -72,6 +72,15 @@ class SalesController < ApplicationController
     end
   end
 
+  def add_searched_item
+    # sale = Sale.create(params[:sale])
+    # sale.save
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sale
