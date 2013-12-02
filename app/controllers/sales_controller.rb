@@ -21,7 +21,8 @@ class SalesController < ApplicationController
   # GET /sales/1/edit
   def edit
     @sale = Sale.find(params[:id])
-
+    @sale.line_items.build
+    # @sale.items.build
   end
 
   # POST /sales
