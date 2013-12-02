@@ -6,25 +6,27 @@
           <th>#</th>
           <th>Item</th>
           <th>Description</th>
-          <th>Quantity</th>
           <th>Price</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
         </tr>
       </thead>
 
       <tbody>
-       <!-- Added Items -->
-        <% unless @sale.blank? || @sale.items.blank? %>
-          <% for item in @sale.items %>
+        <%= form_for(@sale) do |f| %>
+          <%= f.fields_for :items do |e| %>
             <tr>
-              <td class="sku"><%= item.sku %></td>
-              <td><%= item.name %></td>
-              <td><%= item.description %></td>
-              <td><%= item.stock_amount %></td>
-              <td><%= item.price %></td>
+              <td><%= e.text_field :sku, :class => "form-control", :placeholder => "SKU", :readonly => true %></td>
+              <td><%= e.text_field :name, :class => "form-control", :placeholder => "Item", :readonly => true %></td>
+              <td><%= e.text_field :description, :class => "form-control", :placeholder => "Description", :readonly => true %></td>
+              <td><%= e.text_field :price, :class => "form-control", :placeholder => "Price" %></td>
+              <%= e.fields_for :line_items do |g| %>
+                <td><%= g.text_field :quantity, :class => "form-control", :placeholder => "Quantity" %></td>
+                <td><%= g.text_field :price, :class => "form-control", :placeholder => "Total Price", :readonly => true %></td>
+              <% end %>
             </tr>
           <% end %>
         <% end %>
-
 
       </tbody>
     </table>
