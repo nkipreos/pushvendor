@@ -26,6 +26,7 @@
               </div>
             </div>
           </div>
+          
           <%= form_for(@sale) do |f| %>
           <% if @sale.errors.any? %>
               <div id="error_explanation">
@@ -46,7 +47,7 @@
 
             <hr />
             <div class="added_items">
-              <%= render :partial => 'added_items', :locals=>{:f=>f} %>
+              <%= render :partial => 'added_items' %>
             </div>
 
             <hr />
