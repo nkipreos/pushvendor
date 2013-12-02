@@ -21,8 +21,7 @@ class SalesController < ApplicationController
   # GET /sales/1/edit
   def edit
     @sale = Sale.find(params[:id])
-    @sale.line_items.build
-    @sale.items.build
+
   end
 
   # POST /sales
@@ -44,6 +43,7 @@ class SalesController < ApplicationController
   # PATCH/PUT /sales/1
   # PATCH/PUT /sales/1.json
   def update
+
     respond_to do |format|
       if @sale.update(sale_params)
         format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
@@ -66,7 +66,7 @@ class SalesController < ApplicationController
   end
 
   def update_line_item_options
-
+    @available_items = Item.find(:all, :conditions => ['name ILIKE ?', "%#{params[:search][:item_name]}%"], :limit => 5)
 
     respond_to do |format|
       format.js
@@ -74,11 +74,14 @@ class SalesController < ApplicationController
   end
 
   def add_searched_item
+    line_item = LineItem.new(:item_id => params[:item_id], :sale_id => params[:sale_id])
+    line_item.save
     @sale = Sale.find(params[:sale_id])
-    LineItem.create(:item_id => params[:item_id], :sale_id => @sale.id)
 
     respond_to do |format|
-      format.js
+      if line_item.save
+        format.js
+      end
     end
   end
 
