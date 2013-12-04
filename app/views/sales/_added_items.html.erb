@@ -20,7 +20,7 @@
               <td><%= e.text_field :name, :class => "form-control", :placeholder => "Item", :readonly => true %></td>
               <td><%= e.text_field :description, :class => "form-control", :placeholder => "Description", :readonly => true %></td>
               <td><%= e.text_field :price, :class => "form-control", :placeholder => "Price" %></td>
-              <td><input class="form-control" type="text" value="<%= LineItem.where(:sale_id => @sale.id, :item_id => e.object.id).first.quantity %>" placeholder="Quantity" readonly="readonly"></td>
+              <td><input class="form-control" type="text" value="<%= LineItem.where(:sale_id => @sale.id, :item_id => e.object.id).first.quantity %>" placeholder="Quantity" readonly="readonly"><div class="glyphicon .glyphicon-circle-arrow-up"></div></td>
               <td><input class="form-control" type="text" value="<%= LineItem.where(:sale_id => @sale.id, :item_id => e.object.id).first.price %>" placeholder="Total Price" readonly="readonly"></td>
             </tr>
           <% end %>
