@@ -17,6 +17,7 @@ class SalesController < ApplicationController
     @sale = Sale.find(params[:id])
     @sale.line_items.build
     # @sale.items.build
+
   end
 
   def create
@@ -66,7 +67,6 @@ class SalesController < ApplicationController
 
   # Add a searched Item
   def add_searched_item
-    
     existing_line_item = LineItem.where("item_id = ? AND sale_id = ?", params[:item_id], params[:sale_id]).first
     
     if existing_line_item.blank?
@@ -83,18 +83,59 @@ class SalesController < ApplicationController
 
     @sale = Sale.find(params[:sale_id])
 
-    amount = 0.00
+    update_totals
 
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  # Remove Item
+  def remove_item
+    @sale = Sale.find(params[:sale_id])
+    update_totals
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  # Add one Item
+  def add_item
+    @sale = Sale.find(params[:sale_id])
+    update_totals
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  # Destroy Line Item
+  def destroy_line_item
+    @sale = Sale.find(params[:sale_id])
+    update_totals
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  # Update Sale Totals
+  def update_totals
+    tax_amount = 0.0825
+
+    @sale = Sale.find(params[:sale_id])
+
+    amount = 0.00
     for line_item in @sale.line_items
       amount += line_item.price
     end
 
     @sale.amount = amount
-    @sale.save
+    @sale.tax = amount * tax_amount
+    @sale.total_amount = amount + (amount * tax_amount)
 
-    respond_to do |format|
-      format.js
-    end
+    @sale.save
   end
 
   private

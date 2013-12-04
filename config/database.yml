@@ -8,15 +8,28 @@
 #   database: db/development.sqlite3
 #   pool: 5
 #   timeout: 5000
+
+# For Home Use
+# development:
+#   adapter: postgresql
+#   encoding: utf8
+#   database: pushvendor_pos
+#   pool: 5
+#   username: postgres
+#   password: freeride
+#   port: 5432 
+#   host: localhost
+
+# For Work Use
 development:
   adapter: postgresql
-  encoding: utf8
+  encoding: unicode
   database: pushvendor_pos
   pool: 5
   username: postgres
   password: freeride
-  port: 5432 
   host: localhost
+  port: 5433
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
