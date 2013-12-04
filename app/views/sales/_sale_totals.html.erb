@@ -1,0 +1,35 @@
+<div class="sale_items">  
+  <%= form_for(@sale) do |f| %>
+    <div class="row">
+      <div class="col-sm-3">
+        <label>Amount</label>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+
+          <%= f.text_field :amount, :class => "form-control", :readonly => true %>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <label>Discount</label>
+        <div class="input-group">
+          <%= f.text_field :discount, :class => "form-control" %>
+          <span class="input-group-addon">%</span>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <label>Tax</label>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <%= f.text_field :tax, :class => "form-control", :readonly => true %>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <label class="text-success">Total</label>
+        <div class="input-group has-success">
+          <span class="input-group-addon">$</span>
+          <%= f.text_field :total_amount, :class => "form-control", :readonly => true %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

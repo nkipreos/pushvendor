@@ -1,32 +1,24 @@
 class SalesController < ApplicationController
   before_action :set_sale, only: [:show, :edit, :update, :destroy]
 
-  # GET /sales
-  # GET /sales.json
   def index
     @sales = Sale.all
   end
 
-  # GET /sales/1
-  # GET /sales/1.json
   def show
   end
 
-  # GET /sales/new
   def new
     @sale = Sale.create
     redirect_to :controller => 'sales', :action => 'edit', :id => @sale.id
   end
 
-  # GET /sales/1/edit
   def edit
     @sale = Sale.find(params[:id])
     @sale.line_items.build
     # @sale.items.build
   end
 
-  # POST /sales
-  # POST /sales.json
   def create
     @sale = Sale.new(sale_params)
 
@@ -41,8 +33,7 @@ class SalesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /sales/1
-  # PATCH/PUT /sales/1.json
+
   def update
 
     respond_to do |format|
@@ -56,8 +47,6 @@ class SalesController < ApplicationController
     end
   end
 
-  # DELETE /sales/1
-  # DELETE /sales/1.json
   def destroy
     @sale.destroy
     respond_to do |format|
@@ -66,6 +55,7 @@ class SalesController < ApplicationController
     end
   end
 
+  # searched Items
   def update_line_item_options
     @available_items = Item.find(:all, :conditions => ['name ILIKE ?', "%#{params[:search][:item_name]}%"], :limit => 5)
 
@@ -74,15 +64,36 @@ class SalesController < ApplicationController
     end
   end
 
+  # Add a searched Item
   def add_searched_item
-    line_item = LineItem.new(:item_id => params[:item_id], :sale_id => params[:sale_id])
-    line_item.save
+    
+    existing_line_item = LineItem.where("item_id = ? AND sale_id = ?", params[:item_id], params[:sale_id]).first
+    
+    if existing_line_item.blank?
+      line_item = LineItem.new(:item_id => params[:item_id], :sale_id => params[:sale_id], :quantity => params[:quantity])
+      line_item.price = 0.00
+      line_item.price = line_item.quantity * line_item.item.price
+      line_item.save
+    else
+      existing_line_item.quantity += 1
+      existing_line_item.price = 0.00
+      existing_line_item.price = existing_line_item.quantity * existing_line_item.item.price
+      existing_line_item.save
+    end
+
     @sale = Sale.find(params[:sale_id])
 
+    amount = 0.00
+
+    for line_item in @sale.line_items
+      amount += line_item.price
+    end
+
+    @sale.amount = amount
+    @sale.save
+
     respond_to do |format|
-      if line_item.save
-        format.js
-      end
+      format.js
     end
   end
 

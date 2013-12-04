@@ -27,7 +27,7 @@
             </div>
           </div>
           <%= form_for(@sale) do |f| %>
-          <% if @sale.errors.any? %>
+            <% if @sale.errors.any? %>
               <div id="error_explanation">
                 <div class="panel panel-danger">
                   <div class="panel-heading">
@@ -50,37 +50,10 @@
             </div>
 
             <hr />
-
-            <div class="row">
-              <div class="col-sm-3">
-                <label>Amount</label>
-                <div class="input-group">
-                  <span class="input-group-addon">$</span>
-                  <input type="text" class="form-control" readonly>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <label>Discount</label>
-                <div class="input-group">
-                  <input type="text" class="form-control">
-                  <span class="input-group-addon">%</span>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <label>Tax</label>
-                <div class="input-group">
-                  <span class="input-group-addon">$</span>
-                  <input type="text" class="form-control" readonly>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <label class="text-success">Total</label>
-                <div class="input-group has-success">
-                  <span class="input-group-addon">$</span>
-                  <input type="text" class="form-control" readonly>
-                </div>
-              </div>
+            <div class="sale_totals">
+              <%= render :partial => 'sale_totals', :locals=>{:f=>f} %>
             </div>
+            
         </div>
 
         <div class="tab-pane" id="customer">
@@ -107,11 +80,11 @@
           </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-sm-12">
             <%= f.submit 'Update Sale', :class => "btn btn-success btn-lg" %>
           </div>
-        </div>
+        </div> -->
 
         <% end %>
       </div>
