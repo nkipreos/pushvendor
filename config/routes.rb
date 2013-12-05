@@ -10,6 +10,8 @@ PushvendorPos::Application.routes.draw do
 
   resources :contacts
 
+  resources :configurations
+
   resources :customers
 
   resources :sales do
