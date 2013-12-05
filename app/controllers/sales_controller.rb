@@ -17,7 +17,7 @@ class SalesController < ApplicationController
     @sale = Sale.find(params[:id])
     @sale.line_items.build
     # @sale.items.build
-
+    @popular_items = Item.all(:limit => 5)
   end
 
   # def create
