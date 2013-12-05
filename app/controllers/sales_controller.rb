@@ -5,8 +5,8 @@ class SalesController < ApplicationController
     @sales = Sale.all
   end
 
-  def show
-  end
+  # def show
+  # end
 
   def new
     @sale = Sale.create
@@ -20,33 +20,33 @@ class SalesController < ApplicationController
 
   end
 
-  def create
-    @sale = Sale.new(sale_params)
+  # def create
+  #   @sale = Sale.new(sale_params)
 
-    respond_to do |format|
-      if @sale.save
-        format.html { redirect_to @sale, notice: 'Sale was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @sale }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @sale.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @sale.save
+  #       format.html { redirect_to @sale, notice: 'Sale was successfully created.' }
+  #       format.json { render action: 'show', status: :created, location: @sale }
+  #     else
+  #       format.html { render action: 'new' }
+  #       format.json { render json: @sale.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
 
-  def update
+  # def update
 
-    respond_to do |format|
-      if @sale.update(sale_params)
-        format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @sale.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @sale.update(sale_params)
+  #       format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
+  #       format.json { head :no_content }
+  #     else
+  #       format.html { render action: 'edit' }
+  #       format.json { render json: @sale.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   def destroy
     @sale.destroy
@@ -66,19 +66,20 @@ class SalesController < ApplicationController
   end
 
   # Add a searched Item
-  def add_searched_item
+  def create_line_item
     existing_line_item = LineItem.where("item_id = ? AND sale_id = ?", params[:item_id], params[:sale_id]).first
     
     if existing_line_item.blank?
       line_item = LineItem.new(:item_id => params[:item_id], :sale_id => params[:sale_id], :quantity => params[:quantity])
-      line_item.price = 0.00
-      line_item.price = line_item.quantity * line_item.item.price
+      line_item.price = line_item.item.price
       line_item.save
+
+      update_line_item_totals(line_item)
     else
       existing_line_item.quantity += 1
-      existing_line_item.price = 0.00
-      existing_line_item.price = existing_line_item.quantity * existing_line_item.item.price
       existing_line_item.save
+
+      update_line_item_totals(existing_line_item)
     end
 
     @sale = Sale.find(params[:sale_id])
@@ -90,6 +91,7 @@ class SalesController < ApplicationController
     end
   end
 
+
   # Remove Item
   def remove_item
     @sale = Sale.find(params[:sale_id])
@@ -97,6 +99,8 @@ class SalesController < ApplicationController
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
     line_item.quantity -= 1
     line_item.save
+
+    update_line_item_totals(line_item)
 
     update_totals
 
@@ -111,14 +115,23 @@ class SalesController < ApplicationController
 
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
     line_item.quantity += 1
-
+    line_item.price = line_item.item.price
     line_item.save
+
+    update_line_item_totals(line_item)
 
     update_totals
 
     respond_to do |format|
       format.js
     end
+  end
+
+
+  # update Total For Line Items
+  def update_line_item_totals(line_item)
+    line_item.total_price = line_item.price * line_item.quantity
+    line_item.save
   end
 
   # Destroy Line Item
@@ -137,14 +150,14 @@ class SalesController < ApplicationController
 
     @sale = Sale.find(params[:sale_id])
 
-    amount = 0.00
+    @sale.amount = 0.00
+
     for line_item in @sale.line_items
-      amount += line_item.price
+      @sale.amount += line_item.total_price
     end
 
-    @sale.amount = amount
-    @sale.tax = amount * tax_amount
-    @sale.total_amount = amount + (amount * tax_amount)
+    @sale.tax = @sale.amount * tax_amount
+    @sale.total_amount = @sale.amount + (@sale.amount * tax_amount)
 
     @sale.save
   end
