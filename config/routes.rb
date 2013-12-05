@@ -17,6 +17,8 @@ PushvendorPos::Application.routes.draw do
       get 'update_line_item_options'
       get 'add_searched_item'
       get 'update_totals'
+      get 'add_item'
+      get 'remove_item'
     end
   end
 

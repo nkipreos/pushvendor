@@ -345,6 +345,21 @@ body .navbar {
   -moz-box-shadow: 7px 8px 0px rgba(0, 0, 0, 0.39);
   box-shadow: 7px 8px 0px rgba(0, 0, 0, 0.39);
 }
+.amount .form-control {
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;
+}
+.amount .adjust {
+  display: inline-block;
+  width: 10%;
+  vertical-align: top;
+  float: right;
+  text-align: center;
+}
+.amount .adjust a {
+  display: block;
+}
 /* ==========================================================================
    Forms
    ========================================================================== */

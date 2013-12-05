@@ -93,6 +93,11 @@ class SalesController < ApplicationController
   # Remove Item
   def remove_item
     @sale = Sale.find(params[:sale_id])
+
+    line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
+    line_item.quantity -= 1
+    line_item.save
+
     update_totals
 
     respond_to do |format|
@@ -103,6 +108,12 @@ class SalesController < ApplicationController
   # Add one Item
   def add_item
     @sale = Sale.find(params[:sale_id])
+
+    line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
+    line_item.quantity += 1
+
+    line_item.save
+
     update_totals
 
     respond_to do |format|
