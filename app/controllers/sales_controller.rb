@@ -5,9 +5,6 @@ class SalesController < ApplicationController
     @sales = Sale.paginate(:page => params[:page], :per_page => 20)
   end
 
-  # def show
-  # end
-
   def new
     @sale = Sale.create
     redirect_to :controller => 'sales', :action => 'edit', :id => @sale.id
@@ -20,30 +17,13 @@ class SalesController < ApplicationController
     @popular_items = Item.all(:limit => 5)
   end
 
-  # def create
-  #   @sale = Sale.new(sale_params)
-
-  #   respond_to do |format|
-  #     if @sale.save
-  #       format.html { redirect_to @sale, notice: 'Sale was successfully created.' }
-  #       format.json { render action: 'show', status: :created, location: @sale }
-  #     else
-  #       format.html { render action: 'new' }
-  #       format.json { render json: @sale.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
-
   def update
 
     params[:sale_id] = @sale.id
 
     respond_to do |format|
       if @sale.update(sale_params)
-        for line_item in @sale.line_items
-          update_line_item_totals(line_item)
-        end
+        
         update_totals
         format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
         format.json { head :no_content }
