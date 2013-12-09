@@ -1,35 +1,35 @@
-<div class="sale_totals">  
-  <%= form_for(@sale) do |f| %>
-    <div class="row">
-      <div class="col-sm-3">
-        <label>Amount</label>
-        <div class="input-group">
-          <span class="input-group-addon">$</span>
+<%= fields_for @sale do |f|%>
+  <div class="sale_totals">  
+      <div class="row">
+        <div class="col-sm-3">
+          <label>Amount</label>
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
 
-          <%= f.text_field :amount, :class => "form-control", :readonly => true %>
+            <%= f.text_field :amount, :class => "form-control", :readonly => true %>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <label>Discount</label>
+          <div class="input-group">
+            <%= f.select :discount, [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75], {}, { :class => "form-control" } %>
+            <span class="input-group-addon">%</span>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <label>Tax</label>
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <%= f.text_field :tax, :class => "form-control", :readonly => true %>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <label class="text-success">Total</label>
+          <div class="input-group has-success">
+            <span class="input-group-addon">$</span>
+            <%= f.text_field :total_amount, :class => "form-control", :readonly => true %>
+          </div>
         </div>
       </div>
-      <div class="col-sm-3">
-        <label>Discount</label>
-        <div class="input-group">
-          <%= f.text_field :discount, :class => "form-control" %>
-          <span class="input-group-addon">%</span>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <label>Tax</label>
-        <div class="input-group">
-          <span class="input-group-addon">$</span>
-          <%= f.text_field :tax, :class => "form-control", :readonly => true %>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <label class="text-success">Total</label>
-        <div class="input-group has-success">
-          <span class="input-group-addon">$</span>
-          <%= f.text_field :total_amount, :class => "form-control", :readonly => true %>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
