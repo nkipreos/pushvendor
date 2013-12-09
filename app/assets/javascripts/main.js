@@ -4,7 +4,7 @@ $(document).ready(function(){
 	  $('.item_search').click();
 	});
 
-	$('#sale_discount').on("change", function(){
+	$('.sale_discount').on("change", function(){
 	  $('.sale_submit').click();
 	});	
 
