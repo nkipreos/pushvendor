@@ -37,8 +37,14 @@ class SalesController < ApplicationController
 
   def update
 
+    params[:sale_id] = @sale.id
+
     respond_to do |format|
       if @sale.update(sale_params)
+        for line_item in @sale.line_items
+          update_line_item_totals(line_item)
+        end
+        update_totals
         format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
         format.json { head :no_content }
       else
@@ -157,7 +163,14 @@ class SalesController < ApplicationController
     end
 
     @sale.tax = @sale.amount * tax_amount
-    @sale.total_amount = @sale.amount + (@sale.amount * tax_amount)
+    total_amount = @sale.amount + (@sale.amount * tax_amount)
+
+    if @sale.discount.blank?
+      @sale.total_amount = total_amount
+    else
+      discount_amount = total_amount * @sale.discount
+      @sale.total_amount = total_amount - discount_amount
+    end
 
     @sale.save
   end
