@@ -4,11 +4,11 @@ $(document).ready(function(){
 	  $('.item_search').click();
 	});
 
-	$('.sale_discount').on("change", function(){
+	$(document).on("change", '.sale_discount', function(){
 	  $('.sale_submit').click();
 	});	
 
-	$('.price_control').on("change", function(){
+	$(document).on("change", '.price_control', function(){
 	  $('.sale_submit').click();
 	});	
 

@@ -15,19 +15,22 @@
       <tbody>
         <%= fields_for @sale do |f|%>
           <%= f.fields_for :items do |e| %>
+            <% @line_item = LineItem.where(:sale_id => @sale.id, :item_id => e.object.id).first %>
             <tr>
               <td><%= e.text_field :sku, :class => "form-control", :placeholder => "SKU", :readonly => true %></td>
               <td><%= e.text_field :name, :class => "form-control", :placeholder => "Item", :readonly => true %></td>
               <td><%= e.text_field :description, :class => "form-control", :placeholder => "Description", :readonly => true %></td>
-              <td><input class="form-control price_control" type="text" value="<%= LineItem.where(:sale_id => @sale.id, :item_id => e.object.id).first.price %>" placeholder="Price"></td>
+              <td>
+                <input class="form-control price_control" type="text" value="<%= @line_item.price %>" placeholder="Price">
+              </td>
               <td class="amount">
-                <input class="form-control" type="text" value="<%= LineItem.where(:sale_id => @sale.id, :item_id => e.object.id).first.quantity %>" placeholder="Quantity" readonly="readonly">
+                <input class="form-control" type="text" value="<%= @line_item.quantity %>" placeholder="Quantity" readonly="readonly">
                 <div class="adjust">
                   <%= link_to "+", url_for(:controller => 'sales', :action => 'add_item', :item_id => e.object.id, :sale_id => @sale.id), :remote => true %>
                   <%= link_to "-", url_for(:controller => 'sales', :action => 'remove_item', :item_id => e.object.id, :sale_id => @sale.id), :remote => true %>
                 </div>
               </td>
-              <td><input class="form-control" type="text" value="<%= LineItem.where(:sale_id => @sale.id, :item_id => e.object.id).first.total_price %>" placeholder="Total Price" readonly="readonly"></td>
+              <td><input class="form-control" type="text" value="<%= @line_item.total_price %>" placeholder="Total Price" readonly="readonly"></td>
             </tr>
           <% end %>
         <% end %>
