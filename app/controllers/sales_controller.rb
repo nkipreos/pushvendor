@@ -35,18 +35,18 @@ class SalesController < ApplicationController
   # end
 
 
-  # def update
+  def update
 
-  #   respond_to do |format|
-  #     if @sale.update(sale_params)
-  #       format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
-  #       format.json { head :no_content }
-  #     else
-  #       format.html { render action: 'edit' }
-  #       format.json { render json: @sale.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+    respond_to do |format|
+      if @sale.update(sale_params)
+        format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @sale.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   def destroy
     @sale.destroy

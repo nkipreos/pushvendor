@@ -13,13 +13,13 @@
       </thead>
 
       <tbody>
-        <%= form_for(@sale) do |f| %>
+        <%= fields_for @sale do |f|%>
           <%= f.fields_for :items do |e| %>
             <tr>
               <td><%= e.text_field :sku, :class => "form-control", :placeholder => "SKU", :readonly => true %></td>
               <td><%= e.text_field :name, :class => "form-control", :placeholder => "Item", :readonly => true %></td>
               <td><%= e.text_field :description, :class => "form-control", :placeholder => "Description", :readonly => true %></td>
-              <td><input class="form-control" type="text" value="<%= LineItem.where(:sale_id => @sale.id, :item_id => e.object.id).first.price %>" placeholder="Price" readonly="readonly"></td>
+              <td><input class="form-control" type="text" value="<%= LineItem.where(:sale_id => @sale.id, :item_id => e.object.id).first.price %>" placeholder="Price"></td>
               <td class="amount">
                 <input class="form-control" type="text" value="<%= LineItem.where(:sale_id => @sale.id, :item_id => e.object.id).first.quantity %>" placeholder="Quantity" readonly="readonly">
                 <div class="adjust">
@@ -31,7 +31,6 @@
             </tr>
           <% end %>
         <% end %>
-
       </tbody>
     </table>
   </div>
