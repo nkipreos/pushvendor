@@ -1,0 +1,11 @@
+<h4 class="text-primary">Payments</h4>
+
+<%= fields_for @sale do |f|%>
+  <%= f.fields_for :payments do |e| %>
+  	<%= e.text_field :payment_type, :class => "form-control", :placeholder => "Payment Type", :readonly => true %>
+  	<%= e.text_field :amount, :class => "form-control", :placeholder => "Amount", :readonly => true %>
+  	<%= e.text_field :created_at, :class => "form-control", :placeholder => "Created At", :readonly => true %>
+  <% end %>
+<% end %>
+
+<h4 class="text-primary">Remaining Balance</h4>
