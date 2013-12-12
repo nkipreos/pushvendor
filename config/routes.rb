@@ -8,6 +8,12 @@ PushvendorPos::Application.routes.draw do
     end
   end
 
+  resources :payments do
+    collection do
+      get 'make_payment'
+    end
+  end
+
   resources :contacts
 
   resources :configurations
