@@ -26,8 +26,13 @@
               <td class="amount">
                 <input class="form-control" type="text" value="<%= @line_item.quantity %>" placeholder="Quantity" readonly="readonly">
                 <div class="adjust">
-                  <%= link_to "+", url_for(:controller => 'sales', :action => 'add_item', :item_id => e.object.id, :sale_id => @sale.id), :remote => true %>
-                  <%= link_to "-", url_for(:controller => 'sales', :action => 'remove_item', :item_id => e.object.id, :sale_id => @sale.id), :remote => true %>
+                  <%= link_to url_for(:controller => 'sales', :action => 'add_item', :item_id => e.object.id, :sale_id => @sale.id), :remote => true do %>
+                    <span class="glyphicon glyphicon-plus"></span>
+
+                  <% end %>
+                  <%= link_to url_for(:controller => 'sales', :action => 'remove_item', :item_id => e.object.id, :sale_id => @sale.id), :remote => true do %>
+                    <span class="glyphicon glyphicon-minus"></span>
+                  <% end %>
                 </div>
               </td>
               <td><input class="form-control" type="text" value="<%= @line_item.total_price %>" placeholder="Total Price" readonly="readonly"></td>
