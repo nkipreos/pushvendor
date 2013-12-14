@@ -8,22 +8,17 @@
 
             <%= f.text_field :amount, :class => "form-control", :readonly => true %>
           </div>
-        </div>
-        <div class="col-sm-3">
           <label>Discount</label>
           <div class="input-group">
             <%= f.select :discount, [[0,0.0], [5, 0.05], [10, 0.10], [15, 0.15], [20, 0.20], [25, 0.25], [30, 0.30], [35, 0.35], [40, 0.40], [45, 0.45], [50, 0.50], [55, 0.55], [60, 0.60], [65, 0.65], [70, 0.70], [75, 0.75]], {}, { :class => "form-control sale_discount" } %>
             <span class="input-group-addon">%</span>
           </div>
-        </div>
-        <div class="col-sm-3">
           <label>Tax</label>
           <div class="input-group">
             <span class="input-group-addon">$</span>
             <%= f.text_field :tax, :class => "form-control", :readonly => true %>
           </div>
-        </div>
-        <div class="col-sm-3">
+          <hr />
           <label class="text-success">Total</label>
           <div class="input-group has-success">
             <span class="input-group-addon">$</span>
@@ -33,3 +28,10 @@
       </div>
   </div>
 <% end %>
+
+<% unless @sale.total_amount.blank? %>
+  <!-- Button trigger modal -->
+  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Make Payment
+  </button>  
+<% end %> 

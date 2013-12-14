@@ -1,1 +1,2 @@
-alert('payment made!');
+$('.sale_payments').replaceWith("<%= escape_javascript render(:file => 'sales/_sale_payments.html.erb') %>");
+$('.make_payment').replaceWith("<%= escape_javascript render(:file => 'payments/_payment.html.erb') %>");
