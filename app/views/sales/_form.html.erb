@@ -7,7 +7,6 @@
         <li class="active"><a href="#sale" data-toggle="tab">Sale</a></li>
         <li><a href="#customer" data-toggle="tab">Customer</a></li>
         <li><a href="#comments" data-toggle="tab">Comments</a></li>
-        <li><a href="#payments" data-toggle="tab">Payments</a></li>
       </ul>
 
       <!-- Tab panes -->
@@ -81,11 +80,14 @@
               <%= render :partial => 'added_items', :locals=>{:f=>f} %>
             </div>
 
-            <h4 class="text-primary"><span class="glyphicon glyphicon-usd"></span> Sale Totals</h4>
-            <hr />
-            <div class="sale_totals">
-              <%= render :partial => 'sale_totals', :locals=>{:f=>f} %>
-            </div>         
+            <div class="row">
+              <div class="sale_totals col-sm-4">
+                <%= render :partial => 'sale_totals', :locals=>{:f=>f} %>
+              </div>
+              <div class="sale_payments col-sm-8">
+                <%= render :partial => 'sale_payments', :locals => {:f => f} %>
+              </div>  
+            </div>       
         </div>
 
         <div class="tab-pane" id="customer">
@@ -111,13 +113,6 @@
             </div>
           </div>
         </div>
-
-        <div class="tab-pane" id="payments">
-          <div class="sale_payments">
-            <%= render :partial => 'sale_payments', :locals => {:f => f} %>
-          </div>
-        </div>
-
 
         <%= f.submit 'Update Sale', :class => "btn btn-success btn-lg sale_submit" %>
 
