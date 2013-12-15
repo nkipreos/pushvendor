@@ -1,1 +1,2 @@
-$('.sale_totals').replaceWith("<%= escape_javascript render(:file => 'sales/_sale_totals.html.erb') %>");
+$('.sale_totals').html("<%= escape_javascript render(:file => 'sales/_sale_totals.html.erb') %>");
+$('.sale_payments').html("<%= escape_javascript render(:file => 'sales/_sale_payments.html.erb') %>");

@@ -1,7 +1,7 @@
-<%= fields_for @sale do |f|%>
-  <div class="sale_totals">  
-      <div class="row">
-        <div class="col-sm-3">
+<h4 class="text-primary"><span class="glyphicon glyphicon-usd"></span> Sale Totals</h4>
+                <hr />
+
+<%= fields_for @sale do |f|%>  
           <label>Amount</label>
           <div class="input-group">
             <span class="input-group-addon">$</span>
@@ -24,14 +24,10 @@
             <span class="input-group-addon">$</span>
             <%= f.text_field :total_amount, :class => "form-control", :readonly => true %>
           </div>
-        </div>
-      </div>
-  </div>
+      <% unless @sale.total_amount.blank? %>
+        <!-- Button trigger modal -->
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          Make Payment
+        </button>  
+      <% end %> 
 <% end %>
-
-<% unless @sale.total_amount.blank? %>
-  <!-- Button trigger modal -->
-  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Make Payment
-  </button>  
-<% end %> 
