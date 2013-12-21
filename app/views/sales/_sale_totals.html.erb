@@ -23,11 +23,5 @@
           <div class="input-group has-success">
             <span class="input-group-addon">$</span>
             <%= f.text_field :total_amount, :class => "form-control", :readonly => true %>
-          </div>
-      <% unless @sale.total_amount.blank? %>
-        <!-- Button trigger modal -->
-        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-          Make Payment
-        </button>  
-      <% end %> 
+          </div> 
 <% end %>
