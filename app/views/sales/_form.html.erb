@@ -90,33 +90,17 @@
             </div>       
         </div>
 
+        <%= f.submit 'Update Sale', :class => "btn btn-success btn-lg sale_submit" %>
+        <% end %>
+        
         <div class="tab-pane" id="customer">
-          <%= f.fields_for :customers do |e| %>
-            <div class="row">
-              <div class="col-sm-6">
-                <label>First Name</label>
-                <%= e.text_field :first_name, :class => "form-control", :placeholder => "First Name" %>
-              </div>
-              <div class="col-sm-6">
-                <label>Last Name</label>
-                <%= e.text_field :last_name, :class => "form-control", :placeholder => "Last Name" %>
-              </div>
-            </div>
-          <% end %>
+          <%= render :partial => 'customer_info' %>
         </div>
 
         <div class="tab-pane" id="comments">
-          <div class="row">
-            <div class="col-sm-12">
-              <label>Comments</label>
-              <%= f.text_area :comments, :class => "form-control", :placeholder => "Comments" %>
-            </div>
-          </div>
+          
         </div>
 
-        <%= f.submit 'Update Sale', :class => "btn btn-success btn-lg sale_submit" %>
-
-        <% end %>
 
         <!-- Modal -->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    set_item
   end
 
   # GET /items/new
@@ -19,6 +20,7 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    set_item
   end
 
   # POST /items

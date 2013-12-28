@@ -52,6 +52,14 @@ class SalesController < ApplicationController
     end
   end
 
+  def update_customer_options
+    @available_customers = Customer.find(:all, :conditions => ['last_name ILIKE ?', "%#{params[:search][:item_name]}%"], :limit => 5)
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   # Add a searched Item
   def create_line_item
     existing_line_item = LineItem.where("item_id = ? AND sale_id = ?", params[:item_id], params[:sale_id]).first

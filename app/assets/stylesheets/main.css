@@ -253,7 +253,8 @@ body .navbar {
   -moz-box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.39);
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.39);
 }
-.item_search {
+.item_search,
+.customer_search {
   display: none !important;
 }
 .item_search_wrapper {
