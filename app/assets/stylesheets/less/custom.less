@@ -13,6 +13,11 @@ body {
   }
   .navbar {
     .box-shadow(0px 8px 0px rgba(0, 0, 0, 0.39));
+    a {
+      &:hover {
+        color: #444 !important;
+      }
+    }
   }
 }
 
@@ -30,6 +35,29 @@ body {
 .add_to_current_sale {
 
   color:#428BCA;
+}
+
+
+/* ==========================================================================
+   Dashboard
+   ========================================================================== */
+
+
+.dashboard_menu {
+  padding:0px !important;
+  margin: 12px auto;
+  background: #fff;
+  .border-radius(4px);
+  .box-shadow(7px 8px 0px rgba(0, 0, 0, 0.39));
+  .nav {
+    a {
+      color: #777;
+      &:hover {
+        background:none !important;
+        color: #444;
+      }
+    }
+  }
 }
 
 /* ==========================================================================
