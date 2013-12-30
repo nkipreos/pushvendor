@@ -1,21 +1,36 @@
 body {
 	padding: 10px;
-  background: #2A6496 !important;
+  background: #fff !important;
 	.pos_wrapper {
 		margin-top:60px !important;
 		
 	}
-  .btn {
-    .box-shadow(7px 8px 0px rgba(0, 0, 0, 0.39));
-    &.btn-success {
-      .box-shadow(7px 8px 0px rgba(0, 0, 0, 0.39));
-    }
-  }
   .navbar {
-    .box-shadow(0px 8px 0px rgba(0, 0, 0, 0.39));
-    a {
-      &:hover {
-        color: #444 !important;
+    background: #428BCA;
+    .container {
+      a {
+        color:#fff;
+        &:hover {
+          color: #ddd !important;
+        }
+      }
+      .nav {
+        color:#fff;
+        a {
+          color: #fff;
+          .caret {
+            border-bottom-color: #fff;
+            border-top-color: #fff;
+          }
+        }
+      }
+      .dropdown-menu {
+        a {
+          color:#777;
+          &:hover {
+            color:#444 !important;
+          }
+        }
       }
     }
   }
@@ -46,9 +61,8 @@ body {
 .dashboard_menu {
   padding:0px !important;
   margin: 12px auto;
-  background: #fff;
+  background: #efefef;
   .border-radius(4px);
-  .box-shadow(7px 8px 0px rgba(0, 0, 0, 0.39));
   .nav {
     a {
       color: #777;
@@ -112,12 +126,12 @@ body {
 	.form-signin-heading {
 		position: absolute;
 		margin-top:-60px;
-		color:#fff;
+		color:#777;
 	}
 	.copyright {
 		position: absolute;
 		margin-top:30px;
-    color:#fff;
+    color:#777;
 	}
 }
 
@@ -127,13 +141,13 @@ body {
 
 .pos_wrapper {
   .panel {
-    .box-shadow(7px 8px 0px rgba(0, 0, 0, 0.39));
+  
     &.col-sm-6 {
       padding:0px;
     }
   }
   .btn {
-    .box-shadow(7px 8px 0px rgba(0, 0, 0, 0.39));
+
   }
 }
 
