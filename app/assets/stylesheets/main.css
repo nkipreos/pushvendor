@@ -253,6 +253,9 @@ body .navbar {
   -moz-box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.39);
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.39);
 }
+body .navbar a:hover {
+  color: #444 !important;
+}
 .item_search,
 .customer_search {
   display: none !important;
@@ -265,6 +268,30 @@ body .navbar {
 }
 .add_to_current_sale {
   color: #428BCA;
+}
+/* ==========================================================================
+   Dashboard
+   ========================================================================== */
+.dashboard_menu {
+  padding: 0px !important;
+  margin: 12px auto;
+  background: #fff;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 7px 8px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 7px 8px 0px rgba(0, 0, 0, 0.39);
+  box-shadow: 7px 8px 0px rgba(0, 0, 0, 0.39);
+}
+.dashboard_menu .nav a {
+  color: #777;
+}
+.dashboard_menu .nav a:hover {
+  background: none !important;
+  color: #444;
 }
 /* ==========================================================================
    Login Form

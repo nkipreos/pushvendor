@@ -1,39 +1,42 @@
 <% if user_signed_in? %>
+	
+	<div class="dashboard_menu">
+		<ul class="nav nav-pills">
+		  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Employees</a></li>
+		  <li><a href="#"><span class="glyphicon glyphicon-stats"></span> Reports</a></li>
+		  <li><a href="/configurations"><span class="glyphicon glyphicon-adjust"></span> Configuration</a></li>
+		</ul>
+	</div>
+
+	<div class="panel panel-default">
+	  <div class="panel-heading">Last 10 Sales</div>
+
+	  <table class="table">
+	  	<tr>
+	  		<th>Customer</th>
+	  		<th>Total</th>
+	  		<th>Remaining</th>
+	  		<th></th>
+	  	</tr>
+	  	<% for sale in @recent_sales %>
+	    	<tr class="<%= sale.payments.blank? ? '' : 'success' %>">
+	    		<td></td>
+	    		<td>
+	    			<%= sale.total_amount.blank? ? 'No items added yet' : sale.total_amount %>
+	    		</td>
+	    		<td></td>
+	    		<td><%= link_to 'Show', sale %> | <%= link_to 'Edit', edit_sale_path(sale) %> | <%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	    	</tr>
+	    <% end %>
+	  </table>
+	</div>
+
 	<div class="panel panel-default">
 	  <!-- Default panel contents -->
-	  <div class="panel-heading">Dashboard</div>
-	  <div class="panel-body">
-	    <p></p>
-	  </div>
-
-	  <!-- Table -->
-	  <table class="table col-sm-6">
-	    
-	  </table>
-	</div>
-
-	<div class="panel panel-default col-sm-6">
-	  <!-- Default panel contents -->
-	  <div class="panel-heading">Recent Sales</div>
-	  <div class="panel-body">
-	    <p></p>
-	  </div>
-
-	  <!-- Table -->
-	  <table class="table col-sm-6">
-	    
-	  </table>
-	</div>
-
-	<div class="panel panel-default col-sm-6">
-	  <!-- Default panel contents -->
 	  <div class="panel-heading">Popular Items</div>
-	  <div class="panel-body">
-	    <p></p>
-	  </div>
 
 	  <!-- Table -->
-	  <table class="table col-sm-6">
+	  <table class="table">
 	    
 	  </table>
 	</div>
