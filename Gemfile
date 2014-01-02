@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 
 gem 'devise'
+gem "cancan"
 gem 'protected_attributes'
 gem 'will_paginate', '~> 3.0'
 
