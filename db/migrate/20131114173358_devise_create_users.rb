@@ -36,6 +36,17 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
+      ## Permissions
+      # possible abilities
+      t.boolean :can_update_users, :default => false
+      t.boolean :can_update_items, :default => true
+
+      t.boolean :can_update_configuration, :default => false
+      t.boolean :can_view_reports, :default => false
+
+      t.boolean :can_update_sale_discount, :default => false
+      t.boolean :can_remove_sales, :default => false
+
 
       t.timestamps
     end

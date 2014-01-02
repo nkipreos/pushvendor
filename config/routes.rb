@@ -1,4 +1,5 @@
 PushvendorPos::Application.routes.draw do
+
   resources :line_items
 
   resources :items do
@@ -16,7 +17,11 @@ PushvendorPos::Application.routes.draw do
 
   resources :contacts
 
-  resources :configurations
+  resources :configurations do 
+    collection do 
+      get 'update'
+    end
+  end
 
   resources :customers
 
@@ -33,6 +38,11 @@ PushvendorPos::Application.routes.draw do
 
   get "dashboard/index"
   devise_for :users
+  resources :users do
+    collection do
+      post 'new_user'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
