@@ -2,6 +2,28 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+
+    if user.can_update_configuration == true
+        can :manage, StoreConfiguration
+    end
+
+    if user.can_update_users == true
+        can :manage, User
+    end
+
+    if user.can_view_reports == true
+        # can :manage, Report
+    end
+
+    if user.can_update_sale_discount == true
+    end
+
+    if user.can_remove_sales == true
+        can :manage, Sale
+    end
+
+
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

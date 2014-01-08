@@ -1,10 +1,13 @@
 class ConfigurationsController < ApplicationController
+
 	def index
 		@configuration = StoreConfiguration.find(1)
+    authorize! :read, @configuration
 	end
 
 	def update
 		set_configuration
+    authorize! :read, @configuration
 
 		respond_to do |format|
       if @configuration.update(configuration_params)
