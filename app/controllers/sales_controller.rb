@@ -11,15 +11,16 @@ class SalesController < ApplicationController
   end
 
   def edit
+    get_popular_items
+
     @sale = Sale.find(params[:id])
     @sale.line_items.build
     @sale.payments.build
     # @sale.items.build
-    @popular_items = Item.all(:limit => 5)
   end
 
   def update
-
+    get_popular_items
     params[:sale_id] = @sale.id
 
     respond_to do |format|
@@ -36,6 +37,8 @@ class SalesController < ApplicationController
   end
 
   def destroy
+
+    authorize! :read, @sale
     @sale.destroy
     respond_to do |format|
       format.html { redirect_to sales_url }
@@ -45,6 +48,7 @@ class SalesController < ApplicationController
 
   # searched Items
   def update_line_item_options
+    get_popular_items
     @available_items = Item.find(:all, :conditions => ['name ILIKE ?', "%#{params[:search][:item_name]}%"], :limit => 5)
 
     respond_to do |format|
@@ -53,6 +57,7 @@ class SalesController < ApplicationController
   end
 
   def update_customer_options
+    get_popular_items
     @available_customers = Customer.find(:all, :conditions => ['last_name ILIKE ?', "%#{params[:search][:item_name]}%"], :limit => 5)
 
     respond_to do |format|
@@ -62,6 +67,7 @@ class SalesController < ApplicationController
 
   # Add a searched Item
   def create_line_item
+    get_popular_items
     existing_line_item = LineItem.where("item_id = ? AND sale_id = ?", params[:item_id], params[:sale_id]).first
     
     if existing_line_item.blank?
@@ -89,6 +95,7 @@ class SalesController < ApplicationController
 
   # Remove Item
   def remove_item
+    get_popular_items
     @sale = Sale.find(params[:sale_id])
 
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
@@ -106,6 +113,7 @@ class SalesController < ApplicationController
 
   # Add one Item
   def add_item
+    get_popular_items
     @sale = Sale.find(params[:sale_id])
 
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
@@ -173,5 +181,9 @@ class SalesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def sale_params
       params[:sale]
+    end
+
+    def get_popular_items
+      @popular_items = Item.all(:limit => 5)
     end
 end

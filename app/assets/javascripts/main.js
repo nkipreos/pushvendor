@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
-	$('.item_search_input').on("keypress", function(){
+	$(document).on("keypress", '.item_search_input', function(){
 	  $('.item_search').click();
 	});
 
-	$('.customer_search_input').on("keypress", function(){
+	$(document).on("keypress", '.customer_search_input', function(){
 	  $('.customer_search').click();
 	});
 

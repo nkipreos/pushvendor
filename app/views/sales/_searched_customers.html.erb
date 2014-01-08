@@ -20,7 +20,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td class="add_to_current_sale"><%= link_to url_for(:controller => 'sales', :action => 'create_customer_association', :item_id => item.id, :sale_id => params[:id], :quantity => 1), :remote => true do %><p><span class="glyphicon glyphicon-plus"></span></p><% end %></td>
+            <td class="add_to_current_sale"><%= link_to url_for(:controller => 'sales', :action => 'create_customer_association', :item_id => item.id, :sale_id => params[:sale_id], :quantity => 1), :remote => true do %><p><span class="glyphicon glyphicon-plus"></span></p><% end %></td>
           </tr>
         <% end %>
       </tbody>
