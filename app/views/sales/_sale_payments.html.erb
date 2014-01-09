@@ -25,16 +25,22 @@
 
   <h4 class="text-primary">
 
-<span class="glyphicon glyphicon-shopping-cart"></span> Balance</h4>
+<% if @sale.get_sale_totals <= 0.00 %>
+  <div class="alert alert-success">Payment Complete</div>
+<% else %>
+  <span class="glyphicon glyphicon-shopping-cart"></span> Balance</h4>
 
-<%= "$#{@sale.get_sale_totals}" %>
+  <div class="alert alert-danger">
+    <%= "$#{@sale.get_sale_totals}" %>
+  </div>
 
 
-<hr />
+  <hr />
 
-<% unless @sale.total_amount.blank? %>
-  <!-- Button trigger modal -->
-  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Make Payment
-  </button>  
+  <% unless @sale.total_amount.blank? %>
+    <!-- Button trigger modal -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+      Make Payment
+    </button>  
+  <% end %>
 <% end %>

@@ -8,11 +8,11 @@ $(document).ready(function(){
 	  $('.customer_search').click();
 	});
 
-	$(document).on("change", '.sale_discount', function(){
+	$('.sale_totals').on("change", '.sale_discount', function(){
 	  $('.sale_submit').click();
 	});	
 
-	$(document).on("change", '.price_control', function(){
+	$('.edit_sale').on("change", '.price_control', function(){
 	  $('.sale_submit').click();
 	});
 
