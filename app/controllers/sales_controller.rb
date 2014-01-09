@@ -75,11 +75,13 @@ class SalesController < ApplicationController
       line_item.price = line_item.item.price
       line_item.save
 
+      remove_item_from_stock(params[:item_id], 1)
       update_line_item_totals(line_item)
     else
       existing_line_item.quantity += 1
       existing_line_item.save
 
+      remove_item_from_stock(params[:item_id], 1)
       update_line_item_totals(existing_line_item)
     end
 
@@ -100,9 +102,14 @@ class SalesController < ApplicationController
 
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
     line_item.quantity -= 1
-    line_item.save
+    if line_item.quantity <= 0
+      line_item.destroy
+    else
+      line_item.save
+      update_line_item_totals(line_item)
+    end
 
-    update_line_item_totals(line_item)
+    return_item_to_stock(params[:item_id], 1)
 
     update_totals
 
@@ -121,6 +128,7 @@ class SalesController < ApplicationController
     line_item.price = line_item.item.price
     line_item.save
 
+    remove_item_from_stock(params[:item_id], 1)
     update_line_item_totals(line_item)
 
     update_totals
@@ -186,4 +194,17 @@ class SalesController < ApplicationController
     def get_popular_items
       @popular_items = Item.all(:limit => 5)
     end
+
+    def remove_item_from_stock(item_id, quantity)
+      item = Item.find(item_id)
+      item.stock_amount = item.stock_amount - quantity
+      item.save
+    end
+
+    def return_item_to_stock(item_id, quantity)
+      item = Item.find(item_id)
+      item.stock_amount = item.stock_amount + quantity
+      item.save
+    end
+
 end
