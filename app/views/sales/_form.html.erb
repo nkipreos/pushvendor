@@ -78,11 +78,13 @@
                 </div>
               <% end %>
 
-              <h4 class="text-primary"><span class="glyphicon glyphicon-tags"></span> Items</h4>
-              <hr />
-              <div class="added_items">
-                <%= render :partial => 'added_items', :locals=>{:f=>f} %>
-              </div>
+              <% unless @sale.items.blank? %>
+                <h4 class="text-primary"><span class="glyphicon glyphicon-tags"></span> Items</h4>
+                <hr />
+                <div class="added_items">
+                  <%= render :partial => 'added_items', :locals=>{:f=>f} %>
+                </div>
+              <% end %>
 
               <div class="row">
                 <div class="sale_totals col-sm-4">
@@ -99,7 +101,11 @@
         <% end %>
         
         <div class="tab-pane" id="customer">
-          <%= render :partial => 'customer_info' %>
+          <%= render :partial => 'customer_info', :object => @sale %>
+
+          <div class="added_customer">
+            <%= render :partial => 'added_customer' %>
+          </div>
         </div>
 
         <div class="tab-pane" id="comments">

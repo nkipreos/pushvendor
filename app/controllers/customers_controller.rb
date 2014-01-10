@@ -15,13 +15,11 @@ class CustomersController < ApplicationController
   # GET /customers/new
   def new
     @customer = Customer.new
-    @customer.contacts.build
   end
 
   # GET /customers/1/edit
   def edit
     @customer = Customer.find(params[:id])
-    @customer.contacts.build
   end
 
   # POST /customers

@@ -58,7 +58,20 @@ class SalesController < ApplicationController
 
   def update_customer_options
     get_popular_items
-    @available_customers = Customer.find(:all, :conditions => ['last_name ILIKE ?', "%#{params[:search][:item_name]}%"], :limit => 5)
+    @available_customers = Customer.find(:all, :conditions => ['last_name ILIKE ?', "%#{params[:search][:customer_name]}%"], :limit => 5)
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def create_customer_association
+    @sale = Sale.find(params[:sale_id])
+    unless @sale.blank? || params[:customer_id].blank?
+      @sale.customer_id = params[:customer_id]
+      @sale.save
+    end
+
 
     respond_to do |format|
       format.js
@@ -157,7 +170,8 @@ class SalesController < ApplicationController
 
   # Update Sale Totals
   def update_totals
-    tax_amount = 0.0825
+
+    tax_amount = get_tax_rate
 
     @sale = Sale.find(params[:sale_id])
 
@@ -205,6 +219,15 @@ class SalesController < ApplicationController
       item = Item.find(item_id)
       item.stock_amount = item.stock_amount + quantity
       item.save
+    end
+
+    def get_tax_rate
+      @configuration = StoreConfiguration.find(1)
+      if @configuration.tax_rate.blank?
+        return 0.00
+      else
+        return @configuration.tax_rate.to_f * 0.01
+      end
     end
 
 end

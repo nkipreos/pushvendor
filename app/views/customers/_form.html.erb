@@ -25,44 +25,41 @@
         </div>
       </div>
 
-      <%= f.fields_for :contacts do |e| %>
         <div class="row">
           <div class="col-sm-6">
             <label>Phone Number</label>
-            <%= e.text_field :phone_number, :class => "form-control", :placeholder => "Phone Number" %>
+            <%= f.text_field :phone_number, :class => "form-control", :placeholder => "Phone Number" %>
           </div>
           <div class="col-sm-6">
             <label>Email Address</label>
-            <%= e.text_field :email_address, :class => "form-control", :id =>  "exampleInputEmail1", :placeholder => "Email Address" %>
+            <%= f.text_field :email_address, :class => "form-control", :id =>  "exampleInputEmail1", :placeholder => "Email Address" %>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-6">
             <label>Address</label>
-            <%= e.text_field :address, :class => "form-control", :placeholder => "Address" %>
+            <%= f.text_field :address, :class => "form-control", :placeholder => "Address" %>
           </div>
           <div class="col-sm-6">
             <label>City</label>
-            <%= e.text_field :city, :class => "form-control", :placeholder => "City" %>
+            <%= f.text_field :city, :class => "form-control", :placeholder => "City" %>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-6">
             <label>State</label>
-            <%= e.text_field :state, :class => "form-control", :placeholder => "State" %>
+            <%= f.text_field :state, :class => "form-control", :placeholder => "State" %>
           </div>
           <div class="col-sm-6">
             <label>Zip</label>
-            <%= e.text_field :zip, :class => "form-control", :placeholder => "Zip" %>
+            <%= f.text_field :zip, :class => "form-control", :placeholder => "Zip" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <%= f.submit 'Update Customer', :class => "btn btn-success btn-lg" %>
           </div>
         </div>
       <% end %>
-
-      <div class="row">
-        <div class="col-sm-12">
-          <%= f.submit 'Update Customer', :class => "btn btn-success btn-lg" %>
-        </div>
-      </div>
-    <% end %>
   </div>
-</div>  
+</div> 
