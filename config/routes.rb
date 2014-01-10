@@ -15,8 +15,6 @@ PushvendorPos::Application.routes.draw do
     end
   end
 
-  resources :contacts
-
   resources :configurations do 
     collection do 
       get 'update'
@@ -33,6 +31,7 @@ PushvendorPos::Application.routes.draw do
       get 'update_totals'
       get 'add_item'
       get 'remove_item'
+      get 'create_customer_association'
     end
   end
 

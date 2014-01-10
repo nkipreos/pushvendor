@@ -1,0 +1,3 @@
+<% unless @sale.customer.blank? %>
+  <%= "#{@sale.customer.last_name}, #{@sale.customer.first_name}" %>
+<% end %>
