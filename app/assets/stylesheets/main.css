@@ -388,6 +388,12 @@ body .navbar .container .dropdown-menu a:hover {
   border: none !important;
   background: #fff !important;
 }
+.row .sale_totals .input-group.total_price_output .price_output {
+  background: none;
+  border: none;
+  font-size: 3em;
+  height: auto;
+}
 /* ==========================================================================
    Forms
    ========================================================================== */
