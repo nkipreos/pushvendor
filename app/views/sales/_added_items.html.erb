@@ -21,10 +21,10 @@
               <td><%= e.text_field :name, :class => "form-control", :placeholder => "Item", :readonly => true %></td>
               <td><%= e.text_field :description, :class => "form-control", :placeholder => "Description", :readonly => true %></td>
               <td>
-                <input class="form-control price_control" type="text" value="<%= @line_item.price %>" placeholder="Price">
+                <%= text_field(:line_item, :price, :class => 'form-control price_control', onchange: "$('.sale_submit').click();") %>
               </td>
               <td class="amount">
-                <input class="form-control" type="text" value="<%= @line_item.quantity %>" placeholder="Quantity" readonly="readonly">
+                <%= text_field(:line_item, :quantity, :class => 'form-control price_control', :readonly => 'readonly') %>
                 <div class="adjust">
                   <%= link_to url_for(:controller => 'sales', :action => 'add_item', :item_id => e.object.id, :sale_id => @sale.id), :remote => true do %>
                     <span class="glyphicon glyphicon-plus"></span>

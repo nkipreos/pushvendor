@@ -12,6 +12,7 @@ class SalesController < ApplicationController
 
   def edit
     get_popular_items
+    get_popular_customers
 
     @sale = Sale.find(params[:id])
     @sale.line_items.build
@@ -207,6 +208,10 @@ class SalesController < ApplicationController
 
     def get_popular_items
       @popular_items = Item.all(:limit => 5)
+    end
+
+    def get_popular_customers
+      @popular_customers = Customer.all(:limit => 5)
     end
 
     def remove_item_from_stock(item_id, quantity)

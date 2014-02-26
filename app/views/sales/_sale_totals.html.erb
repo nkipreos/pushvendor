@@ -20,8 +20,8 @@
   </div>
   <hr />
   <label class="text-success">Total Price</label>
-  <div class="input-group has-success">
-    <span class="input-group-addon">$</span>
-    <%= f.text_field :total_amount, :class => "form-control", :readonly => true %>
+  <div class="input-group has-success total_price_output">
+    <span class="input-group-addon price_output">$</span>
+    <%= f.text_field :total_amount, :class => "form-control price_output", :readonly => true %>
   </div> 
 <% end %>

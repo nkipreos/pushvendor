@@ -8,13 +8,13 @@ $(document).ready(function(){
 	  $('.customer_search').click();
 	});
 
-	$('.sale_totals').on("change", '.sale_discount', function(){
-	  $('.sale_submit').click();
-	});	
+	// $('.sale_totals').on("change", '.sale_discount', function(){
+	//   $('.sale_submit').click();
+	// });	
 
-	$('.edit_sale').on("change", '.price_control', function(){
-	  $('.sale_submit').click();
-	});
+	// $('.edit_sale').on("change", '.price_control', function(){
+	//   $('.sale_submit').click();
+	// });
 
 
 });
