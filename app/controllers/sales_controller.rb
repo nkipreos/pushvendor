@@ -17,6 +17,8 @@ class SalesController < ApplicationController
     @sale = Sale.find(params[:id])
     @sale.line_items.build
     @sale.payments.build
+
+    @custom_item = Item.new
     # @sale.items.build
   end
 
@@ -106,6 +108,9 @@ class SalesController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  def create_cutsom_item
   end
 
 
