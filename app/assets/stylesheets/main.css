@@ -394,6 +394,13 @@ body .navbar .container .dropdown-menu a:hover {
   font-size: 3em;
   height: auto;
 }
+.custom_item_link {
+  color: #3085db;
+  cursor: pointer;
+}
+.create_an_item {
+  display: none;
+}
 /* ==========================================================================
    Forms
    ========================================================================== */

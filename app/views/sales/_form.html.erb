@@ -21,6 +21,7 @@
                 <%= f.hidden_field :sale_id, :value => @sale.id %>
                 <%= submit_tag "search", :class => "btn btn-primary btn-lg item_search" %>
               <% end %>
+              <div class='custom_item_link'>Create Custom Item</div>
             </div>
             <div class="col-sm-8">
               <div class="searched_items">
@@ -55,6 +56,31 @@
                 <% end %>
               </div>
             </div>
+          </div>
+
+          <div class="create_an_item">
+            <%= form_for :custom_item, :url => url_for(:controller => "sales", :action => "create_cutsom_item", :format => :js), :method => "get", :remote => true do |f| %>
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Add</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><%= f.text_field :name, :class => "form-control", :placeholder => "Name" %></td>
+                    <td><%= f.text_field :description, :class => "form-control", :placeholder => "Description" %></td>
+                    <td><%= f.text_field :price, :class => "form-control", :placeholder => "Price" %></td>
+                    <td><%= f.text_field :stock_amount, :class => "form-control", :placeholder => "Quantity" %></td>
+                    <td><%= link_to url_for(:controller => 'sales', :action => 'create_line_item', :item_id => 1, :sale_id => @sale.id, :quantity => 1), :remote => true do %> <p><span class="glyphicon glyphicon-plus"></span></p><% end %></td>
+                  </tr>
+                </tbody>
+              </table>
+            <% end %>
           </div>
 
           <% if @sale.items.blank? %>

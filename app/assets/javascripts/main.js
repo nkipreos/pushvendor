@@ -8,6 +8,10 @@ $(document).ready(function(){
 	  $('.customer_search').click();
 	});
 
+	$('.custom_item_link').on("click", function(){
+		$('.create_an_item').toggle();
+	});
+
 	// $('.sale_totals').on("change", '.sale_discount', function(){
 	//   $('.sale_submit').click();
 	// });	
