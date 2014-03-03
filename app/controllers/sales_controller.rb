@@ -110,9 +110,6 @@ class SalesController < ApplicationController
     end
   end
 
-  def create_cutsom_item
-  end
-
 
   # Remove Item
   def remove_item
@@ -151,6 +148,28 @@ class SalesController < ApplicationController
     update_line_item_totals(line_item)
 
     update_totals
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def create_custom_item
+    get_popular_items
+    @sale = Sale.find(params[:sale_id])
+
+    custom_item = Item.new
+    custom_item.sku = "CI#{(rand(5..30) + rand(5..30)) * 11}_#{(rand(5..30) + rand(5..30)) * 11}"
+    custom_item.name = params[:custom_item][:name]
+    custom_item.description = params[:custom_item][:description]
+    custom_item.price = params[:custom_item][:price]
+    custom_item.stock_amount = params[:custom_item][:stock_amount]
+
+    custom_item.save
+
+    custom_line_item = LineItem.new(:item_id => custom_item.id, :sale_id => @sale.id, :quantity => custom_item.stock_amount, :price => custom_item.price )
+    custom_line_item.total_price = custom_item.price * custom_item.stock_amount
+    custom_line_item.save
 
     respond_to do |format|
       format.js

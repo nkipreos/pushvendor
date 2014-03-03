@@ -8,7 +8,7 @@ $(document).ready(function(){
 	  $('.customer_search').click();
 	});
 
-	$('.custom_item_link').on("click", function(){
+	$(document).on("click", '.custom_item_link', function(){
 		$('.create_an_item').toggle();
 	});
 

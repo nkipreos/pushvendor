@@ -32,7 +32,7 @@ PushvendorPos::Application.routes.draw do
       get 'add_item'
       get 'remove_item'
       get 'create_customer_association'
-      get 'create_cutsom_item'
+      get 'create_custom_item'
     end
   end
 
