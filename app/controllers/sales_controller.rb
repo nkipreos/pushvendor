@@ -171,6 +171,8 @@ class SalesController < ApplicationController
     custom_line_item.total_price = custom_item.price * custom_item.stock_amount
     custom_line_item.save
 
+    update_totals
+
     respond_to do |format|
       format.js
     end

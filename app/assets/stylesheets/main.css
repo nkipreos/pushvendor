@@ -399,7 +399,8 @@ body .navbar .container .dropdown-menu a:hover {
   cursor: pointer;
 }
 .create_an_item {
-  display: none;
+  /*display: none;*/
+
 }
 /* ==========================================================================
    Forms

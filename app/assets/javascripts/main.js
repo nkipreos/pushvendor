@@ -8,8 +8,8 @@ $(document).ready(function(){
 	  $('.customer_search').click();
 	});
 
-	$(document).on("click", '.custom_item_link', function(){
-		$('.create_an_item').toggle();
+	$(document).on("click", '.close_custom_modal', function(){
+		$('#customItem').modal('hide');
 	});
 
 	// $('.sale_totals').on("change", '.sale_discount', function(){
