@@ -37,6 +37,7 @@ PushvendorPos::Application.routes.draw do
       get 'create_custom_customer'
       get 'add_comment'
       post 'override_price'
+      post 'sale_discount'
     end
   end
 
