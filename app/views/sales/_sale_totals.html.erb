@@ -13,7 +13,7 @@
     <%= f.select :discount, [['0%',0.0], ['5%', 0.05], ['10%', 0.10], ['15%', 0.15], ['20%', 0.20], ['25%', 0.25], ['30%', 0.30], ['35%', 0.35], ['40%', 0.40], ['45%', 0.45], ['50%', 0.50], ['55%', 0.55], ['60%', 0.60], ['65%', 0.65], ['70%', 0.70], ['75%', 0.75]], {}, { :class => "form-control sale_discount" } %>
     <span class="input-group-addon">$<%= @sale.discount.blank? ? 0 : @sale.get_discounted_amount %></span>
   </div>
-  <label>Tax(8.25%)</label>
+  <label>Tax(<%= @configurations.tax_rate.blank? ? 'not configured' : @configurations.tax_rate %>)</label>
   <div class="input-group">
     <span class="input-group-addon">$</span>
     <%= f.text_field :tax, :class => "form-control", :readonly => true %>

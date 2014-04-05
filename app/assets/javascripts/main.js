@@ -12,13 +12,17 @@ $(document).ready(function(){
 		$('#customItem').modal('hide');
 	});
 
-	// $('.sale_totals').on("change", '.sale_discount', function(){
-	//   $('.sale_submit').click();
-	// });	
 
-	// $('.edit_sale').on("change", '.price_control', function(){
-	//   $('.sale_submit').click();
-	// });
+	$(document).on("change", "#line_item_price", function(){
+		$.ajax({
+	        type: "POST",
+	        url: '/sales/', //sumbits it to the given url of the form
+	        data: valuesToSubmit,
+	        dataType: "JSON" 
+	    }).success(function(data){
+	          alert('changed');
+	    });
+	});
 
 
 });

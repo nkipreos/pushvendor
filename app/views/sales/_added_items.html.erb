@@ -21,7 +21,7 @@
               <td><%= e.text_field :name, :class => "form-control", :placeholder => "Item", :readonly => true %></td>
               <td><%= e.text_field :description, :class => "form-control", :placeholder => "Description", :readonly => true %></td>
               <td>
-                <%= text_field(:line_item, :price, :class => 'form-control price_control', onchange: "$('.sale_submit').click();") %>
+                <%= text_field(:line_item, :price, :class => 'form-control price_control') %>
               </td>
               <td class="amount">
                 <%= text_field(:line_item, :quantity, :class => 'form-control price_control', :readonly => 'readonly') %>
