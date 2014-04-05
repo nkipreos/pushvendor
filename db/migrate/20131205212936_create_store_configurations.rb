@@ -12,7 +12,7 @@ class CreateStoreConfigurations < ActiveRecord::Migration
     	t.string :zip
 
     	t.integer :currency
-    	t.string :tax_rate
+    	t.decimal :tax_rate, :precision => 8, :scale => 2
 
       t.timestamps
     end

@@ -1,5 +1,6 @@
 class SalesController < ApplicationController
   before_action :set_sale, only: [:show, :edit, :update, :destroy]
+  before_action :set_configurations
 
   def index
     @sales = Sale.paginate(:page => params[:page], :per_page => 20, :order => 'id DESC')
@@ -19,11 +20,13 @@ class SalesController < ApplicationController
     @sale.payments.build
 
     @custom_item = Item.new
+    @custom_customer = Customer.new
     # @sale.items.build
   end
 
   def update
     get_popular_items
+
     params[:sale_id] = @sale.id
 
     respond_to do |format|
@@ -178,11 +181,41 @@ class SalesController < ApplicationController
     end
   end
 
+  def create_custom_customer
+    get_popular_items
+    @sale = Sale.find(params[:sale_id])
+
+    custom_customer = Customer.new
+    custom_customer.first_name = params[:custom_customer][:first_name]
+    custom_customer.last_name = params[:custom_customer][:last_name]
+    custom_customer.email_address = params[:custom_customer][:email_address]
+    custom_customer.phone_number = params[:custom_customer][:phone_number]
+    custom_customer.address = params[:custom_customer][:address]
+    custom_customer.city = params[:custom_customer][:city]
+    custom_customer.state = params[:custom_customer][:state]
+    custom_customer.zip = params[:custom_customer][:zip]
+
+    custom_customer.save
+
+    @sale.customer_id = custom_customer.id
+    @sale.save
+
+    update_totals
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
 
   # update Total For Line Items
   def update_line_item_totals(line_item)
     line_item.total_price = line_item.price * line_item.quantity
     line_item.save
+  end
+
+  def update_line_item_price
+    line_item = LineItem.find(params[:line_item_id])
   end
 
   # Destroy Line Item
@@ -253,11 +286,10 @@ class SalesController < ApplicationController
     end
 
     def get_tax_rate
-      @configuration = StoreConfiguration.find(1)
-      if @configuration.tax_rate.blank?
+      if @configurations.tax_rate.blank?
         return 0.00
       else
-        return @configuration.tax_rate.to_f * 0.01
+        return @configurations.tax_rate.to_f * 0.01
       end
     end
 
