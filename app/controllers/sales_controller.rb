@@ -214,8 +214,23 @@ class SalesController < ApplicationController
     line_item.save
   end
 
-  def update_line_item_price
-    line_item = LineItem.find(params[:line_item_id])
+  # def update_line_item_price
+  #   line_item = LineItem.find(params[:line_item_id])
+  # end
+
+  def override_price
+    @sale = Sale.find(params[:override_price][:sale_id])
+    item = Item.where(:sku => params[:override_price][:line_item_sku] ).first
+    line_item = LineItem.where(:sale_id => params[:override_price][:sale_id], :item_id => item.id).first
+    line_item.price = params[:override_price][:price]
+    line_item.save
+
+    update_line_item_totals(line_item)
+    update_totals
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   # Destroy Line Item
@@ -233,7 +248,7 @@ class SalesController < ApplicationController
 
     tax_amount = get_tax_rate
 
-    @sale = Sale.find(params[:sale_id])
+    @sale ||= Sale.find(params[:sale_id])
 
     @sale.amount = 0.00
 
@@ -254,7 +269,18 @@ class SalesController < ApplicationController
     @sale.save
   end
 
+  def add_comment
+    @sale = Sale.find(params[:sale_id])
+    @sale.comments = params[:sale_comments][:comments]
+    @sale.save
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_sale
       @sale = Sale.find(params[:id])

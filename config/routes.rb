@@ -1,5 +1,6 @@
 PushvendorPos::Application.routes.draw do
 
+
   resources :line_items
 
   resources :items do
@@ -34,6 +35,8 @@ PushvendorPos::Application.routes.draw do
       get 'create_customer_association'
       get 'create_custom_item'
       get 'create_custom_customer'
+      get 'add_comment'
+      post 'override_price'
     end
   end
 

@@ -15,13 +15,19 @@ $(document).ready(function(){
 
 	$(document).on("change", "#line_item_price", function(){
 		$.ajax({
-	        type: "POST",
-	        url: '/sales/', //sumbits it to the given url of the form
-	        data: valuesToSubmit,
-	        dataType: "JSON" 
-	    }).success(function(data){
-	          alert('changed');
-	    });
+      type: "POST",
+      url: '/sales/override_price', //sumbits it to the given url of the form
+      data: {override_price: { price: $(this).val(), line_item_sku: $(this).parent().parent().find('.line_item_sku').val(), sale_id: $(document).find('.sale_id').html() }},
+      dataType: "script",
+      success: function() {
+      	console.log('price updated');
+      }
+    });
+  	// alert('price');
+	});
+
+	$(document).on("change", "#sale_comments_comments", function(){
+		$('.sale_comments').click();
 	});
 
 
