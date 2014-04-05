@@ -26,6 +26,19 @@ $(document).ready(function(){
   	// alert('price');
 	});
 
+	$(document).on("change", "#sale_discount", function(){
+		$.ajax({
+      type: "POST",
+      url: '/sales/sale_discount', //sumbits it to the given url of the form
+      data: {sale_discount: { discount: $(this).val(), sale_id: $(document).find('.sale_id').html() }},
+      dataType: "script",
+      success: function() {
+      	console.log('sale discounted');
+      }
+    });
+  	// alert('price');
+	});
+
 	$(document).on("change", "#sale_comments_comments", function(){
 		$('.sale_comments').click();
 	});

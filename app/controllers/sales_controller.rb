@@ -233,6 +233,19 @@ class SalesController < ApplicationController
     end
   end
 
+  def sale_discount
+    @sale = Sale.find(params[:sale_discount][:sale_id])
+
+    @sale.discount = params[:sale_discount][:discount]
+    @sale.save
+
+    update_totals
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   # Destroy Line Item
   def destroy_line_item
     @sale = Sale.find(params[:sale_id])
