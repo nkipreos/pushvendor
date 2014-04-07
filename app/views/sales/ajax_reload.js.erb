@@ -1,17 +1,20 @@
+// Modal Actions
 $('#customCustomer').modal('hide');
 $('#customItem').modal('hide');
 $('.modal-open').removeClass('modal-open');
 $('.modal-backdrop').removeClass('modal-backdrop');
 
 
+// Shared options
+// $('.added_items').html("<%= escape_javascript render(:file => 'sales/shared/_added_items.html.erb') %>");
+// $('.sale_totals').html("<%= escape_javascript render(:file => 'sales/shared/_sale_totals.html.erb') %>");
+// $('.sale_payments').html("<%= escape_javascript render(:file => 'sales/shared/_sale_payments.html.erb') %>");
+// $('.added_customer').html("<%= escape_javascript render(:file => 'sales/shared/_added_customer.html.erb') %>");
+// $('.searched_customers').html("<%= escape_javascript render(:file => 'sales/shared/_searched_customers.html.erb') %>");
+// $('.searched_items').html("<%= escape_javascript render(:file => 'sales/shared/_searched_items.html.erb') %>");
 
-$('.added_items').html("<%= escape_javascript render(:file => 'sales/shared/_added_items.html.erb') %>");
-$('.sale_totals').html("<%= escape_javascript render(:file => 'sales/shared/_sale_totals.html.erb') %>");
-$('.sale_payments').html("<%= escape_javascript render(:file => 'sales/shared/_sale_payments.html.erb') %>");
-$('.added_customer').html("<%= escape_javascript render(:file => 'sales/shared/_added_customer.html.erb') %>");
-$('.searched_customers').html("<%= escape_javascript render(:file => 'sales/shared/_searched_customers.html.erb') %>");
-$('.searched_items').html("<%= escape_javascript render(:file => 'sales/shared/_searched_items.html.erb') %>");
 
+// Form reload
 $('.sale_form_details').html("<%= escape_javascript render(:file => 'sales/shared/_form.html.erb') %>");
 
 $('.edit_sale').show();

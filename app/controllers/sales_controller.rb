@@ -1,5 +1,5 @@
 class SalesController < ApplicationController
-  before_action :set_sale, only: [:show, :edit, :update, :destroy]
+  # before_action :set_sale, only: [:show, :edit, :update, :destroy]
   before_action :set_configurations
 
   def index
@@ -12,35 +12,39 @@ class SalesController < ApplicationController
   end
 
   def edit
+    set_sale
+
     get_popular_items
     get_popular_customers
 
-    set_sale
     @sale.line_items.build
     @sale.payments.build
 
     @custom_item = Item.new
     @custom_customer = Customer.new
-    # @sale.items.build
+
   end
 
-  def update
-    get_popular_items
+  # def update
+  #   get_popular_items
 
-    params[:sale_id] = @sale.id
+  #   params[:sale_id] = @sale.id
 
-    respond_to do |format|
-      if @sale.update(sale_params)
+  #   respond_to do |format|
+  #     if @sale.update(sale_params)
         
-        update_totals
-        format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @sale.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #       update_totals
+  #       format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
+  #       format.json { head :no_content }
+  #     else
+  #       format.html { render action: 'edit' }
+  #       format.json { render json: @sale.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+
+  # def show
+  # end
 
   def destroy
 
@@ -54,6 +58,7 @@ class SalesController < ApplicationController
 
   # searched Items
   def update_line_item_options
+    set_sale
     get_popular_items
     @available_items = Item.find(:all, :conditions => ['name ILIKE ? OR description ILIKE ? OR sku ILIKE ?', "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%"], :limit => 5)
 
@@ -63,6 +68,7 @@ class SalesController < ApplicationController
   end
 
   def update_customer_options
+    set_sale
     get_popular_items
     @available_customers = Customer.find(:all, :conditions => ['last_name ILIKE ? OR first_name ILIKE ? OR email_address ILIKE ? OR phone_number ILIKE ?', "%#{params[:search][:customer_name]}%","%#{params[:search][:customer_name]}%", "%#{params[:search][:customer_name]}%", "%#{params[:search][:customer_name]}%"], :limit => 5)
 
@@ -73,7 +79,7 @@ class SalesController < ApplicationController
 
   def create_customer_association
     set_sale
-    
+
     unless @sale.blank? || params[:customer_id].blank?
       @sale.customer_id = params[:customer_id]
       @sale.save
@@ -87,8 +93,8 @@ class SalesController < ApplicationController
 
   # Add a searched Item
   def create_line_item
-    get_popular_items
     set_sale
+    get_popular_items
 
     existing_line_item = LineItem.where("item_id = ? AND sale_id = ?", params[:item_id], @sale.id).first
     
@@ -117,8 +123,8 @@ class SalesController < ApplicationController
 
   # Remove Item
   def remove_item
-    get_popular_items
     set_sale
+    get_popular_items
 
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
     line_item.quantity -= 1
@@ -140,8 +146,8 @@ class SalesController < ApplicationController
 
   # Add one Item
   def add_item
-    get_popular_items
     set_sale
+    get_popular_items
 
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
     line_item.quantity += 1
@@ -159,8 +165,8 @@ class SalesController < ApplicationController
   end
 
   def create_custom_item
-    get_popular_items
     set_sale
+    get_popular_items
 
     custom_item = Item.new
     custom_item.sku = "CI#{(rand(5..30) + rand(5..30)) * 11}_#{(rand(5..30) + rand(5..30)) * 11}"
@@ -183,8 +189,8 @@ class SalesController < ApplicationController
   end
 
   def create_custom_customer
-    get_popular_items
     set_sale
+    get_popular_items
 
     custom_customer = Customer.new
     custom_customer.first_name = params[:custom_customer][:first_name]
