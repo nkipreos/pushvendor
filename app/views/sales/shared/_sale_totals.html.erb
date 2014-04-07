@@ -1,0 +1,27 @@
+<h4 class="text-primary"><span class="glyphicon glyphicon-usd"></span> Sale Totals</h4>
+                <hr />
+
+<%= fields_for @sale do |f|%>  
+  <label>Base Price</label>
+  <div class="input-group">
+    <span class="input-group-addon">$</span>
+
+    <%= f.text_field :amount, :class => "form-control", :readonly => true %>
+  </div>
+  <label>Discount</label>
+  <div class="input-group">
+    <%= f.select :discount, [['0%',0.0], ['5%', 0.05], ['10%', 0.10], ['15%', 0.15], ['20%', 0.20], ['25%', 0.25], ['30%', 0.30], ['35%', 0.35], ['40%', 0.40], ['45%', 0.45], ['50%', 0.50], ['55%', 0.55], ['60%', 0.60], ['65%', 0.65], ['70%', 0.70], ['75%', 0.75]], {}, { :class => "form-control sale_discount" } %>
+    <span class="input-group-addon">$<%= @sale.discount.blank? ? 0 : @sale.get_discounted_amount %></span>
+  </div>
+  <label>Tax(<%= @configurations.tax_rate.blank? ? 'not configured' : @configurations.tax_rate %>)</label>
+  <div class="input-group">
+    <span class="input-group-addon">$</span>
+    <%= f.text_field :tax, :class => "form-control", :readonly => true %>
+  </div>
+  <hr />
+  <label class="text-success">Total Price</label>
+  <div class="input-group has-success total_price_output">
+    <span class="input-group-addon price_output">$</span>
+    <%= f.text_field :total_amount, :class => "form-control price_output", :readonly => true %>
+  </div> 
+<% end %>
