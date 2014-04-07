@@ -1,5 +1,4 @@
 class SalesController < ApplicationController
-  # before_action :set_sale, only: [:show, :edit, :update, :destroy]
   before_action :set_configurations
 
   def index
@@ -221,9 +220,6 @@ class SalesController < ApplicationController
     line_item.save
   end
 
-  # def update_line_item_price
-  #   line_item = LineItem.find(params[:line_item_id])
-  # end
 
   def override_price
     @sale = Sale.find(params[:override_price][:sale_id])
@@ -236,7 +232,7 @@ class SalesController < ApplicationController
     update_totals
 
     respond_to do |format|
-      format.js { ajax_refresh }
+      format.js
     end
   end
 
@@ -249,7 +245,7 @@ class SalesController < ApplicationController
     update_totals
 
     respond_to do |format|
-      format.js { ajax_refresh }
+      format.js
     end
   end
 
@@ -302,25 +298,21 @@ class SalesController < ApplicationController
   private
 
     def ajax_refresh
-      set_sale
-      get_popular_items
-      get_popular_customers
-
-      @sale.line_items.build
-      @sale.payments.build
-
-      @custom_item = Item.new
-      @custom_customer = Customer.new
-
       return render(:file => 'sales/ajax_reload.js.erb')
     end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_sale
-      if params[:sale_id].blank?
-        @sale = Sale.find(params[:id])
-      else 
-        @sale = Sale.find(params[:sale_id])
+      if @sale.blank?
+        if params[:sale_id].blank?
+          if params[:search].blank?
+            @sale = Sale.find(params[:id])
+          else
+            @sale = Sale.find(params[:search][:sale_id])
+          end
+        else 
+          @sale = Sale.find(params[:sale_id])
+        end
       end
     end
 

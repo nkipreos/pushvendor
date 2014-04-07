@@ -62,9 +62,6 @@
           </div>
 
 
-          <% if @sale.items.blank? %>
-            </div>
-          <% else %>
             <%= form_for(@sale) do |f| %>
               <% if @sale.errors.any? %>
                 <div id="error_explanation">
@@ -83,13 +80,11 @@
                 </div>
               <% end %>
 
-              <% unless @sale.items.blank? %>
-                <h4 class="text-primary"><span class="glyphicon glyphicon-tags"></span> Items</h4>
-                <hr />
-                <div class="added_items">
-                  <%= render :partial => 'sales/shared/added_items', :locals=>{:f=>f} %>
-                </div>
-              <% end %>
+              <h4 class="text-primary"><span class="glyphicon glyphicon-tags"></span> Items</h4>
+              <hr />
+              <div class="added_items">
+                <%= render :partial => 'sales/shared/added_items', :locals=>{:f=>f} %>
+              </div>
 
               <div class="row">
                 <div class="sale_totals col-sm-4">
@@ -102,7 +97,6 @@
           </div>
 
           <%= f.submit 'Update Sale', :class => "btn btn-success btn-lg sale_submit" %>
-          <% end %>
         <% end %>
         
         <div class="tab-pane" id="customer">
