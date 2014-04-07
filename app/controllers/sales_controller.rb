@@ -15,7 +15,7 @@ class SalesController < ApplicationController
     get_popular_items
     get_popular_customers
 
-    @sale = Sale.find(params[:id])
+    set_sale
     @sale.line_items.build
     @sale.payments.build
 
@@ -58,7 +58,7 @@ class SalesController < ApplicationController
     @available_items = Item.find(:all, :conditions => ['name ILIKE ? OR description ILIKE ? OR sku ILIKE ?', "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%"], :limit => 5)
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
@@ -67,12 +67,13 @@ class SalesController < ApplicationController
     @available_customers = Customer.find(:all, :conditions => ['last_name ILIKE ? OR first_name ILIKE ? OR email_address ILIKE ? OR phone_number ILIKE ?', "%#{params[:search][:customer_name]}%","%#{params[:search][:customer_name]}%", "%#{params[:search][:customer_name]}%", "%#{params[:search][:customer_name]}%"], :limit => 5)
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
   def create_customer_association
-    @sale = Sale.find(params[:sale_id])
+    set_sale
+    
     unless @sale.blank? || params[:customer_id].blank?
       @sale.customer_id = params[:customer_id]
       @sale.save
@@ -80,14 +81,16 @@ class SalesController < ApplicationController
 
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
   # Add a searched Item
   def create_line_item
     get_popular_items
-    existing_line_item = LineItem.where("item_id = ? AND sale_id = ?", params[:item_id], params[:sale_id]).first
+    set_sale
+
+    existing_line_item = LineItem.where("item_id = ? AND sale_id = ?", params[:item_id], @sale.id).first
     
     if existing_line_item.blank?
       line_item = LineItem.new(:item_id => params[:item_id], :sale_id => params[:sale_id], :quantity => params[:quantity])
@@ -104,12 +107,10 @@ class SalesController < ApplicationController
       update_line_item_totals(existing_line_item)
     end
 
-    @sale = Sale.find(params[:sale_id])
-
     update_totals
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
@@ -117,7 +118,7 @@ class SalesController < ApplicationController
   # Remove Item
   def remove_item
     get_popular_items
-    @sale = Sale.find(params[:sale_id])
+    set_sale
 
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
     line_item.quantity -= 1
@@ -133,14 +134,14 @@ class SalesController < ApplicationController
     update_totals
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
   # Add one Item
   def add_item
     get_popular_items
-    @sale = Sale.find(params[:sale_id])
+    set_sale
 
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
     line_item.quantity += 1
@@ -153,13 +154,13 @@ class SalesController < ApplicationController
     update_totals
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
   def create_custom_item
     get_popular_items
-    @sale = Sale.find(params[:sale_id])
+    set_sale
 
     custom_item = Item.new
     custom_item.sku = "CI#{(rand(5..30) + rand(5..30)) * 11}_#{(rand(5..30) + rand(5..30)) * 11}"
@@ -177,13 +178,13 @@ class SalesController < ApplicationController
     update_totals
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
   def create_custom_customer
     get_popular_items
-    @sale = Sale.find(params[:sale_id])
+    set_sale
 
     custom_customer = Customer.new
     custom_customer.first_name = params[:custom_customer][:first_name]
@@ -203,7 +204,7 @@ class SalesController < ApplicationController
     update_totals
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
@@ -229,7 +230,7 @@ class SalesController < ApplicationController
     update_totals
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
@@ -242,17 +243,17 @@ class SalesController < ApplicationController
     update_totals
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
   # Destroy Line Item
   def destroy_line_item
-    @sale = Sale.find(params[:sale_id])
+    set_sale
     update_totals
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
@@ -261,7 +262,7 @@ class SalesController < ApplicationController
 
     tax_amount = get_tax_rate
 
-    @sale ||= Sale.find(params[:sale_id])
+    set_sale
 
     @sale.amount = 0.00
 
@@ -283,20 +284,38 @@ class SalesController < ApplicationController
   end
 
   def add_comment
-    @sale = Sale.find(params[:sale_id])
+    set_sale
     @sale.comments = params[:sale_comments][:comments]
     @sale.save
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
   private
 
+    def ajax_refresh
+      set_sale
+      get_popular_items
+      get_popular_customers
+
+      @sale.line_items.build
+      @sale.payments.build
+
+      @custom_item = Item.new
+      @custom_customer = Customer.new
+
+      return render(:file => 'sales/ajax_reload.js.erb')
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_sale
-      @sale = Sale.find(params[:id])
+      if params[:sale_id].blank?
+        @sale = Sale.find(params[:id])
+      else 
+        @sale = Sale.find(params[:sale_id])
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
