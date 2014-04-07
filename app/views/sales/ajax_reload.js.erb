@@ -10,9 +10,14 @@ $('.added_items').html("<%= escape_javascript render(:file => 'sales/shared/_add
 $('.sale_totals').html("<%= escape_javascript render(:file => 'sales/shared/_sale_totals.html.erb') %>");
 $('.sale_payments').html("<%= escape_javascript render(:file => 'sales/shared/_sale_payments.html.erb') %>");
 $('.added_customer').html("<%= escape_javascript render(:file => 'sales/shared/_added_customer.html.erb') %>");
-$('.searched_customers').html("<%= escape_javascript render(:file => 'sales/shared/_searched_customers.html.erb') %>");
-$('.searched_items').html("<%= escape_javascript render(:file => 'sales/shared/_searched_items.html.erb') %>");
 
+if ($('#search_item_name').val() > 0) {
+	$('.searched_items').html("<%= escape_javascript render(:file => 'sales/shared/_searched_items.html.erb') %>");
+}
+
+if ($('#search_customer_name').val() > 0) {
+	$('.searched_customers').html("<%= escape_javascript render(:file => 'sales/shared/_searched_customers.html.erb') %>");
+}
 
 // Complete Form reload
 // $('.sale_form_details').html("<%= escape_javascript render(:file => 'sales/shared/_form.html.erb') %>");
