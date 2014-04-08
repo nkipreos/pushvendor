@@ -8,8 +8,8 @@ $(document).ready(function(){
 	  $('.customer_search').click();
 	});
 
-	$(document).on("click", '.close_custom_modal', function(){
-		$('#customItem').modal('hide');
+	$(document).on("change", "#sale_comments_comments", function(){
+		$('.sale_comments').click();
 	});
 
 
@@ -39,9 +39,20 @@ $(document).ready(function(){
   	// alert('price');
 	});
 
-	$(document).on("change", "#sale_comments_comments", function(){
-		$('.sale_comments').click();
+
+	// Jquery form validations
+	$(".form_custom_item").validate({
+		rules: {
+			"custom_item[name]": {required: true },
+			"custom_item[price]": {required: true, number: true},
+			"custom_item[stock_amount]": {required: true, number: true}
+		}
 	});
 
+	$(".edit_sale").validate({
+		rules: {
+			"line_item[price]": {required: true, number: true }
+		}
+	});
 
 });
