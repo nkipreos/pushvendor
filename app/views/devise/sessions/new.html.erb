@@ -2,7 +2,7 @@
 
 <%= form_for("user", :url => user_session_path, :html => { :class => "form-signin" }) do |f| %>
 	<h2 class="form-signin-heading"><a target="_blank" href="http://www.pushvendor.com">PushVendor.com</a></h2>
-  <%= f.text_field :email, :class => 'form-control', :placeholder => 'Email Address' %>
+  <%= f.text_field :username, :class => 'form-control', :placeholder => 'User Name' %>
   <%= f.password_field :password, :class => 'form-control', :placeholder => 'Password' %>
   <label class="checkbox">
   	<%= f.check_box :remember_me %> Remember me
