@@ -2,12 +2,13 @@ class DeviseCreateUsers < ActiveRecord::Migration
   def migrate(direction)
     super
     # Create a default user
-    User.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password', :can_update_users => true, :can_update_items => true, :can_update_configuration => true, :can_view_reports => true, :can_update_sale_discount => true, :can_remove_sales => true) if direction == :up
+    User.create!(:email => 'admin@example.com', :username => 'admin', :password => 'password', :password_confirmation => 'password', :can_update_users => true, :can_update_items => true, :can_update_configuration => true, :can_view_reports => true, :can_update_sale_discount => true, :can_remove_sales => true) if direction == :up
   end
 
   def change
     create_table(:users) do |t|
       ## Database authenticatable
+      t.string :username,           :null => false, :default => ""
       t.string :email,              :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
 
@@ -52,6 +53,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
     end
 
     add_index :users, :email,                :unique => true
+    add_index :users, :username,                :unique => true
     add_index :users, :reset_password_token, :unique => true
     # add_index :users, :confirmation_token,   :unique => true
     # add_index :users, :unlock_token,         :unique => true
