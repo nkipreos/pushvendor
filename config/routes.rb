@@ -1,5 +1,13 @@
 PushvendorPos::Application.routes.draw do
 
+  resources :reports do
+    collection do
+      get 'total_report'
+      get 'date_range_report'
+      get 'customer_report'
+      get 'item_report'
+    end
+  end
 
   resources :line_items
 
