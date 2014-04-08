@@ -27,7 +27,9 @@
 
 				<%= yield %>
 
-        <%= render :partial => 'template/footer' %>
+        <% if user_signed_in? %>
+          <%= render :partial => 'template/footer' %>
+        <% end %>
 			</div>
 
   
