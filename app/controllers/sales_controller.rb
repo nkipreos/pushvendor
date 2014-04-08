@@ -150,7 +150,6 @@ class SalesController < ApplicationController
 
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
     line_item.quantity += 1
-    line_item.price = line_item.item.price
     line_item.save
 
     remove_item_from_stock(params[:item_id], 1)
@@ -232,7 +231,7 @@ class SalesController < ApplicationController
     update_totals
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
@@ -245,7 +244,7 @@ class SalesController < ApplicationController
     update_totals
 
     respond_to do |format|
-      format.js
+      format.js { ajax_refresh }
     end
   end
 
