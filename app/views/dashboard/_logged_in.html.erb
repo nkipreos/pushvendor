@@ -32,10 +32,14 @@
   <!-- Default panel contents -->
   <div class="panel-heading">Popular Items</div>
 
-  <!-- Table -->
-  <table class="table">
-    
-  </table>
+  <div class="panel-body">
+    <% for item in @popular_items %>
+      <button type="button" class="btn btn-default">
+        <%= item.name %>
+      </button>
+    <% end %>
+  </div>
+
 </div>
 
 
