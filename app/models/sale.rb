@@ -3,10 +3,10 @@ class Sale < ActiveRecord::Base
 
 
 	belongs_to :customer
-	has_many :line_items
+	has_many :line_items, dependent: :destroy
 	has_many :items, :through => :line_items
 	has_many :connections, :through => :customer
-	has_many :payments
+	has_many :payments, dependent: :destroy
 
 	accepts_nested_attributes_for :line_items, :allow_destroy => true
 	accepts_nested_attributes_for :items, :allow_destroy => true
