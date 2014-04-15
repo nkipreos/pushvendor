@@ -16,7 +16,7 @@
 
       <tbody>
         <% @sales.each do |sale| %>
-          <tr>
+          <tr class="<%= sale.remaining_balance == 0.00 ? 'success' : '' %>">
             <td><%= sale.id %></td>
             <td><%= sale.customer.blank? ? '-' : sale.customer.last_name %></td>
             <td><%= number_to_currency sale.total_amount %></td>
@@ -30,6 +30,14 @@
     </table>
     <%= will_paginate @sales %>
   </div>
+</div>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Summary</div>
+
+  <!-- Table -->
+  <%= render :partial => 'template/sales_summary' %>
 </div>
 
 <br>
