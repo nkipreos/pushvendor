@@ -6,6 +6,7 @@ class CreateItems < ActiveRecord::Migration
     	t.text :description
     	t.decimal :price, :precision => 8, :scale => 2
     	t.integer :stock_amount
+      t.integer :amount_sold, :default => 0
       t.decimal :cost_price, :precision => 8, :scale => 2
 
       t.timestamps
