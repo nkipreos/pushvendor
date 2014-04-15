@@ -1,10 +1,4 @@
-<div class="dashboard_menu">
-	<ul class="nav nav-pills">
-	  <li><a href="/users"><span class="glyphicon glyphicon-user"></span> Users</a></li>
-	  <li><a href="#"><span class="glyphicon glyphicon-stats"></span> Reports</a></li>
-	  <li><a href="/configurations"><span class="glyphicon glyphicon-adjust"></span> Configuration</a></li>
-	</ul>
-</div>
+<%= render :partial => 'template/dashboard_menu' %>
 
 <div class="panel panel-default">
   <div class="panel-heading">Recent Sales</div>
@@ -29,6 +23,9 @@
 	    	</tr>
 	    <% end %>
 	  </table>
+	</div>
+	<div class="panel-body">
+		Total Sales: <%= get_all_sales %>
 	</div>
 </div>
 

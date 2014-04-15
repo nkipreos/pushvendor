@@ -46,11 +46,15 @@ class SalesController < ApplicationController
   # end
 
   def destroy
+    set_sale
 
-    authorize! :read, @sale
-    @sale.destroy
+    if current_user.can_update_items == true
+      @sale.destroy
+    else
+      redirect_to @sale, notice: 'You do not have permission to delete sales.'
+    end
     respond_to do |format|
-      format.html { redirect_to sales_url }
+      format.html { redirect_to sales_url, notice: 'Sale has been deleted.'}
       format.json { head :no_content }
     end
   end

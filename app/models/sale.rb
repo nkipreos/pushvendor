@@ -12,24 +12,11 @@ class Sale < ActiveRecord::Base
 	accepts_nested_attributes_for :items, :allow_destroy => true
 	accepts_nested_attributes_for :payments, :allow_destroy => true
 
-	def get_sale_totals
+	def remaining_balance
 		if self.total_amount.blank?
 			balance = 0.00
 		else
-			balance = 0.00
-			payment_total = 0.00
-
-			if self.payments.blank?
-				balance = self.total_amount
-			else
-				for payment in self.payments
-					unless payment.amount.blank?
-						payment_total += payment.amount
-					end
-				end
-
-				balance = self.total_amount - payment_total
-			end
+			balance = self.total_amount - paid_total
 		end
 
 		if balance < 0
@@ -42,5 +29,16 @@ class Sale < ActiveRecord::Base
 	def get_discounted_amount
 		self.total_amount * self.discount
 	end
+
+	def paid_total
+		paid_total = 0.00
+		unless self.payments.blank?
+			for payment in self.payments
+				paid_total += payment.amount.blank? ? 0.00 : payment.amount
+			end
+		end
+		return paid_total
+	end
+
 
 end
