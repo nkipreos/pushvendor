@@ -14,7 +14,7 @@
             <tr>
               <td><%= customer.last_name %></td>
               <td><%= customer.first_name %></td>
-              <td><%= link_to 'Show', customer %> | <%= link_to 'Edit', edit_customer_path(customer) %> | <%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Show', edit_customer_path(customer) %> | <%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
         </tbody>
