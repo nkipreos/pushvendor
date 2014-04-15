@@ -34,9 +34,11 @@
 
   <div class="panel-body">
     <% for item in @popular_items %>
-      <button type="button" class="btn btn-default">
-        <%= item.name %>
-      </button>
+      <%= link_to create_sale_with_product_dashboard_index_path(:item_id => item.id, :quantity => 1) do %>
+        <button type="button" class="btn btn-default">
+          <%= item.name %>
+        </button>
+      <% end %>
     <% end %>
   </div>
 

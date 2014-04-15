@@ -49,7 +49,12 @@ PushvendorPos::Application.routes.draw do
     end
   end
 
-  get "dashboard/index"
+  resources :dashboard do
+    collection do
+      get 'create_sale_with_product'
+    end
+  end
+
   devise_for :users
   resources :users do
     collection do
