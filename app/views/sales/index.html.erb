@@ -6,10 +6,11 @@
         <tr>
           <th>#</th>
           <th>Customer</th>
-          <th>Amount</th>
+          <th>Total</th>
           <th>Tax</th>
-          <th>Amount Paid</th>
-          <th>Actions</th>
+          <th>Paid</th>
+          <th>Balance</th>
+          <th></th>
         </tr>
       </thead>
 
@@ -18,10 +19,11 @@
           <tr>
             <td><%= sale.id %></td>
             <td><%= sale.customer.blank? ? '-' : sale.customer.last_name %></td>
-            <td><%= sale.total_amount %></td>
-            <td><%= sale.total_amount %></td>
-            <td><%= sale.total_amount %></td>
-            <td><%= link_to 'Show', sale %> | <%= link_to 'Edit', edit_sale_path(sale) %> | <%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= number_to_currency sale.total_amount %></td>
+            <td><%= number_to_currency sale.tax %></td>
+            <td><%= number_to_currency sale.paid_total %></td>
+            <td><%= sale.remaining_balance == 0.00 ? "Paid" : "#{number_to_currency sale.remaining_balance}" %></td>
+            <td><%= link_to 'Show', edit_sale_path(sale) %> | <%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>

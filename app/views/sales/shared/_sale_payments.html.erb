@@ -1,5 +1,5 @@
 <h4 class="text-primary"><span class="glyphicon glyphicon-credit-card"></span> Payments</h4>
-                 <hr />
+  <hr />
 
   <table class="table table-striped table-bordered table-hover">
     <thead>
@@ -31,13 +31,13 @@
 
   <h4 class="text-primary">
 
-<% if @sale.get_sale_totals <= 0.00 %>
+<% if @sale.remaining_balance <= 0.00 %>
   <div class="alert alert-success">Payment Complete</div>
 <% else %>
   <span class="glyphicon glyphicon-shopping-cart"></span> Balance</h4>
 
   <div class="alert alert-danger">
-    <%= "$#{@sale.get_sale_totals}" %>
+    <%= "$#{@sale.remaining_balance}" %>
   </div>
 
 
