@@ -45,7 +45,7 @@
     </div>
   </div>
 
-  <% unless @user.id.blank? %>
+  <% unless @user.id.blank? || @user.id == 1 %>
     <div class="panel panel-default">
       <div class="panel-heading">Permissions</div>
       <div class="panel-body">
