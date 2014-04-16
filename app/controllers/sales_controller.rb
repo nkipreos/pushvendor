@@ -228,7 +228,7 @@ class SalesController < ApplicationController
     @sale = Sale.find(params[:override_price][:sale_id])
     item = Item.where(:sku => params[:override_price][:line_item_sku] ).first
     line_item = LineItem.where(:sale_id => params[:override_price][:sale_id], :item_id => item.id).first
-    line_item.price = params[:override_price][:price]
+    line_item.price = params[:override_price][:price].gsub('$', '')
     line_item.save
 
     update_line_item_totals(line_item)
