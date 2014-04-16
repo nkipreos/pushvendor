@@ -1,7 +1,4 @@
 class Sale < ActiveRecord::Base
-	attr_accessible :amount, :tax, :discount, :total_amount, :tax_paid, :amount_paid, :paid, :payment_type_id, :customer_id, :comments, :line_items_attributes, :items_attributes
-
-
 	belongs_to :customer
 	has_many :line_items, dependent: :destroy
 	has_many :items, :through => :line_items
@@ -38,6 +35,18 @@ class Sale < ActiveRecord::Base
 			end
 		end
 		return paid_total
+	end
+
+	def change_due
+		if self.total_amount.blank?
+			return 0.00
+		else
+			if paid_total > self.total_amount
+				return paid_total - self.total_amount
+			else
+				return 0.00
+			end
+		end
 	end
 
 

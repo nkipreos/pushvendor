@@ -7,6 +7,7 @@
             <th>Item</th>
             <th>Description</th>
             <th>Available</th>
+            <th>Sold</th>
             <th>Price</th>
             <th>Actions</th>
           </tr>
@@ -14,18 +15,21 @@
 
         <tbody>
           <% @items.each do |item| %>
-            <tr>
+            <tr class="<%= item.stock_amount > 0 ? '' : 'danger' %>">
               <td><%= item.sku %></td>
               <td><%= item.name %></td>
               <td><%= item.description %></td>
               <td><%= item.stock_amount %></td>
-              <td><%= item.price %></td>
+              <td><%= item.amount_sold %></td>
+              <td><%= number_to_currency item.price %></td>
               <td><%= link_to 'Show', edit_item_path(item) %> | <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
         </tbody>
       </table>
-      <%= will_paginate @items %>
+      <div class="panel-body">
+        <%= will_paginate @items, renderer: BootstrapPagination::Rails %>
+      </div>
     </div>
   </div>
 </div>

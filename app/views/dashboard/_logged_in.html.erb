@@ -14,13 +14,13 @@
         <th></th>
 	  	</tr>
 	  	<% for sale in @recent_sales %>
-	    	<tr class="<%= sale.remaining_balance == 0.00 ? 'success' : '' %>">
+	    	<tr class="<%= sale.remaining_balance == 0.00 && !sale.total_amount.blank? ? 'success' : '' %>">
 	    		<td><%= sale.id %></td>
           <td><%= sale.customer.blank? ? '-' : sale.customer.last_name %></td>
           <td><%= number_to_currency sale.total_amount %></td>
           <td><%= number_to_currency sale.tax %></td>
           <td><%= number_to_currency sale.paid_total %></td>
-          <td><%= sale.remaining_balance == 0.00 ? "Paid" : "#{number_to_currency sale.remaining_balance}" %></td>
+          <td><%= sale.remaining_balance == 0.00 && sale.payments.count > 0 ? "Paid" : "#{number_to_currency sale.remaining_balance}" %></td>
           <td><%= link_to 'Show', edit_sale_path(sale) %> | <%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	    	</tr>
 	    <% end %>
@@ -32,10 +32,16 @@
   <!-- Default panel contents -->
   <div class="panel-heading">Popular Items</div>
 
-  <!-- Table -->
-  <table class="table">
-    
-  </table>
+  <div class="panel-body">
+    <% for item in @popular_items %>
+      <%= link_to create_sale_with_product_dashboard_index_path(:item_id => item.id, :quantity => 1) do %>
+        <button type="button" class="btn btn-default">
+          <%= item.name %>
+        </button>
+      <% end %>
+    <% end %>
+  </div>
+
 </div>
 
 
