@@ -31,8 +31,9 @@
 
   <h4 class="text-primary">
 
-<% if @sale.remaining_balance <= 0.00 %>
+<% if @sale.remaining_balance <= 0.00 && @sale.payments.count > 0 %>
   <div class="alert alert-success">Payment Complete</div>
+  Change Due: <%= number_to_currency @sale.change_due %>
 <% else %>
   <span class="glyphicon glyphicon-shopping-cart"></span> Balance</h4>
 
