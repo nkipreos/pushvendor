@@ -28,7 +28,7 @@ class ConfigurationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def configuration_params
-      params[:store_configuration]
+      params.require(:store_configuration).permit(:store_name, :store_description, :email_address, :phone_number, :website_url, :address, :city, :state, :zip, :currency, :tax_rate)
     end
 
 end

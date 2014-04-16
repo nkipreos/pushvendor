@@ -85,7 +85,7 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="makePayment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -93,9 +93,7 @@
                 <h4 class="modal-title" id="myModalLabel">Payment Options</h4>
               </div>
               <div class="modal-body">
-                <div class="make_payment">
-                  <%= render :partial => 'sales/shared/payment' %>
-                </div>
+                <%= render :partial => 'sales/shared/payment' %>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

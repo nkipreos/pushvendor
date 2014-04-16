@@ -228,7 +228,7 @@ class SalesController < ApplicationController
     @sale = Sale.find(params[:override_price][:sale_id])
     item = Item.where(:sku => params[:override_price][:line_item_sku] ).first
     line_item = LineItem.where(:sale_id => params[:override_price][:sale_id], :item_id => item.id).first
-    line_item.price = params[:override_price][:price]
+    line_item.price = params[:override_price][:price].gsub('$', '')
     line_item.save
 
     update_line_item_totals(line_item)
@@ -321,7 +321,7 @@ class SalesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sale_params
-      params[:sale]
+      params.require(:sale).permit(:amount, :tax, :discount, :total_amount, :tax_paid, :amount_paid, :paid, :payment_type_id, :customer_id, :comments, :line_items_attributes, :items_attributes)
     end
 
     def get_popular_items
@@ -335,6 +335,7 @@ class SalesController < ApplicationController
     def remove_item_from_stock(item_id, quantity)
       item = Item.find(item_id)
       item.stock_amount = item.stock_amount - quantity
+      item.amount_sold += quantity
       item.save
     end
 

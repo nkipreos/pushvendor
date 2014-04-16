@@ -15,19 +15,21 @@
 
       <tbody>
         <% @sales.each do |sale| %>
-          <tr class="<%= sale.remaining_balance == 0.00 ? 'success' : '' %>">
+          <tr class="<%= sale.remaining_balance == 0.00 && !sale.total_amount.blank? ? 'success' : '' %>">
             <td><%= sale.id %></td>
             <td><%= sale.customer.blank? ? '-' : sale.customer.last_name %></td>
             <td><%= number_to_currency sale.total_amount %></td>
             <td><%= number_to_currency sale.tax %></td>
             <td><%= number_to_currency sale.paid_total %></td>
-            <td><%= sale.remaining_balance == 0.00 ? "Paid" : "#{number_to_currency sale.remaining_balance}" %></td>
+            <td><%= sale.remaining_balance == 0.00 && sale.payments.count > 0 ? "Paid" : "#{number_to_currency sale.remaining_balance}" %></td>
             <td><%= link_to 'Show', edit_sale_path(sale) %> | <%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
-    <%= will_paginate @sales %>
+    <div class="panel-body">
+        <%= will_paginate @sales, renderer: BootstrapPagination::Rails %>
+      </div>
   </div>
 </div>
 
