@@ -40,3 +40,14 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 end
+
+def login(username, password)
+  visit new_user_url
+  fill_in 'user_username', :with => username
+  fill_in 'user_password', :with => password
+  click_on "Sign in"
+end
+
+def create_default_user
+  User.create!(:email => 'admin@example.com', :username => 'admin', :password => 'password', :password_confirmation => 'password', :can_update_users => true, :can_update_items => true, :can_update_configuration => true, :can_view_reports => true, :can_update_sale_discount => true, :can_remove_sales => true)
+end
