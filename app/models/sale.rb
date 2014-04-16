@@ -1,7 +1,4 @@
 class Sale < ActiveRecord::Base
-	attr_accessible :amount, :tax, :discount, :total_amount, :tax_paid, :amount_paid, :paid, :payment_type_id, :customer_id, :comments, :line_items_attributes, :items_attributes
-
-
 	belongs_to :customer
 	has_many :line_items, dependent: :destroy
 	has_many :items, :through => :line_items
