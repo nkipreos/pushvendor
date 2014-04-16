@@ -27,7 +27,9 @@
         <% end %>
       </tbody>
     </table>
-    <%= will_paginate @sales %>
+    <div class="panel-body">
+        <%= will_paginate @sales, renderer: BootstrapPagination::Rails %>
+      </div>
   </div>
 </div>
 
