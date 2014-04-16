@@ -8,4 +8,9 @@ class PaymentsController < ApplicationController
       format.js
     end
   end
+  
+  private
+  def payment_params
+    params.require(:payment).permit(:payment_type, :amount, :sale_id)
+  end
 end
