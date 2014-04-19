@@ -3,7 +3,7 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.1'
 gem 'devise'
-gem "cancan"
+gem 'cancancan', '~> 1.7'
 gem 'will_paginate-bootstrap'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
