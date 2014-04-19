@@ -7,3 +7,7 @@ There is no save button for making sales. All updates are made via AJAX. I wante
 --------
 
 Default Credentials: admin, password
+
+--------
+
+Demo Available @ demo.pushvendor.com
