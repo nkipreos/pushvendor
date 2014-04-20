@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.paginate(:page => params[:page], :per_page => 20)
+    @items = Item.paginate(:page => params[:page], :per_page => 20).where(:published => true)
   end
 
   # GET /items/1
@@ -27,6 +27,7 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(item_params)
+    @item.published = true
 
     respond_to do |format|
       if @item.save
@@ -57,7 +58,9 @@ class ItemsController < ApplicationController
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
-    @item.destroy
+    @item.published = false
+    @item.save
+
     respond_to do |format|
       format.html { redirect_to items_url }
       format.json { head :no_content }

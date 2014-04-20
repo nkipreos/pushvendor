@@ -13,14 +13,17 @@
 
 <div class="panel panel-default">
   <div class="panel-body">
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="form-group">
-          <label>Category</label>
-          <%= f.select :item_category_id, @categories.map { |cat| [cat.name, cat.id] }, :include_blank => true, :class => "form-control", :placeholder => "Item Sku" %>
+
+    <% unless @categories.blank? %>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>Category</label>
+            <%= f.select :item_category_id, @categories.map { |cat| [cat.name, cat.id] }, :include_blank => true, :class => "form-control", :placeholder => "Item Sku" %>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
 
     <div class="row">
       <div class="col-sm-6">
