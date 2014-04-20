@@ -5,7 +5,7 @@
           <tr>
             <th>#</th>
             <th>Item</th>
-            <th>Description</th>
+            <th>Category</th>
             <th>Available</th>
             <th>Sold</th>
             <th>Price</th>
@@ -18,7 +18,7 @@
             <tr class="<%= item.stock_amount > 0 ? '' : 'danger' %>">
               <td><%= item.sku %></td>
               <td><%= item.name %></td>
-              <td><%= item.description %></td>
+              <td><%= item.item_category.blank? ? '-' : item.item_category.name %></td>
               <td><%= item.stock_amount %></td>
               <td><%= item.amount_sold %></td>
               <td><%= number_to_currency item.price %></td>
