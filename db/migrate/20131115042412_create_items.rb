@@ -8,6 +8,7 @@ class CreateItems < ActiveRecord::Migration
     	t.integer :stock_amount
       t.integer :amount_sold, :default => 0
       t.decimal :cost_price, :precision => 8, :scale => 2
+      t.boolean :published, :default => true
 
       t.timestamps
     end

@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140420165735) do
     t.integer  "stock_amount"
     t.integer  "amount_sold",                              default: 0
     t.decimal  "cost_price",       precision: 8, scale: 2
+    t.boolean  "published"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "item_category_id"
