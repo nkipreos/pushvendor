@@ -1,5 +1,7 @@
 PushvendorPos::Application.routes.draw do
 
+  resources :item_categories
+
   resources :reports do
     collection do
       get 'total_report'

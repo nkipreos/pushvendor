@@ -74,10 +74,11 @@ class ItemsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.find(params[:id])
+      @categories = ItemCategory.find(:all)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:image_url, :sku, :name, :description, :price, :stock_amount, :cost_price)
+      params.require(:item).permit(:image_url, :sku, :name, :description, :price, :stock_amount, :cost_price, :item_category_id)
     end
 end
