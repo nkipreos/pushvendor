@@ -63,7 +63,7 @@ class SalesController < ApplicationController
   def update_line_item_options
     set_sale
     get_popular_items
-    @available_items = Item.find(:all, :conditions => ['name ILIKE ? OR description ILIKE ? OR sku ILIKE ?', "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%"], :limit => 5)
+    @available_items = Item.find(:all, :conditions => ['name ILIKE ? AND published = true OR description ILIKE ? AND published = true OR sku ILIKE ? AND published = true', "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%"], :limit => 5)
 
     respond_to do |format|
       format.js { ajax_refresh }
@@ -73,7 +73,7 @@ class SalesController < ApplicationController
   def update_customer_options
     set_sale
     get_popular_items
-    @available_customers = Customer.find(:all, :conditions => ['last_name ILIKE ? OR first_name ILIKE ? OR email_address ILIKE ? OR phone_number ILIKE ?', "%#{params[:search][:customer_name]}%","%#{params[:search][:customer_name]}%", "%#{params[:search][:customer_name]}%", "%#{params[:search][:customer_name]}%"], :limit => 5)
+    @available_customers = Customer.find(:all, :conditions => ['last_name ILIKE ? AND published = true OR first_name ILIKE ? AND published = true OR email_address ILIKE ? AND published = true OR phone_number ILIKE ? AND published = true', "%#{params[:search][:customer_name]}%","%#{params[:search][:customer_name]}%", "%#{params[:search][:customer_name]}%", "%#{params[:search][:customer_name]}%"], :limit => 5)
 
     respond_to do |format|
       format.js { ajax_refresh }
@@ -325,11 +325,11 @@ class SalesController < ApplicationController
     end
 
     def get_popular_items
-      @popular_items = Item.all(:limit => 5)
+      @popular_items = Item.all(:conditions => ['published', true], :limit => 5)
     end
 
     def get_popular_customers
-      @popular_customers = Customer.all(:limit => 5)
+      @popular_customers = Customer.all(:conditions => ['published', true], :limit => 5)
     end
 
     def remove_item_from_stock(item_id, quantity)
