@@ -2,10 +2,10 @@
 @import 'config';
 
 body {
-padding: 10px;
+  padding: 10px;
   background: #fff !important;
 .pos_wrapper {
-margin-top:60px !important;
+  margin-top:60px !important;
 
 }
   .navbar {
@@ -122,19 +122,18 @@ Login Form
 }
 
 .form-signin {
-margin-top:10%;
-background: #F0F0F0;
-border-radius: 12px;
-.form-signin-heading {
-position: absolute;
-margin-top:-60px;
-color:#777;
-}
-.copyright {
-position: absolute;
-margin-top:30px;
+  margin-top:10%;
+  background: #F0F0F0;
+  border-radius: 12px;
+  .form-signin-heading {
+    margin:10px auto 20px auto;
     color:#777;
-}
+  }
+  .copyright {
+  position: absolute;
+  margin-top:30px;
+      color:#777;
+  }
 }
 
 .clearboth {
