@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140420165735) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
+    t.boolean  "published",     default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,7 +45,7 @@ ActiveRecord::Schema.define(version: 20140420165735) do
     t.integer  "stock_amount"
     t.integer  "amount_sold",                              default: 0
     t.decimal  "cost_price",       precision: 8, scale: 2
-    t.boolean  "published"
+    t.boolean  "published",                                default: true
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "item_category_id"

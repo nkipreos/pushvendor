@@ -9,6 +9,7 @@ class CreateCustomers < ActiveRecord::Migration
     	t.string :city
     	t.string :state
     	t.string :zip
+      t.boolean :published, :default => true
     	
       t.timestamps
     end

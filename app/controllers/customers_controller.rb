@@ -4,7 +4,7 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.paginate(:page => params[:page], :per_page => 20)
+    @customers = Customer.paginate(:page => params[:page], :per_page => 20).where(:published => true)
   end
 
   # GET /customers/1
@@ -55,7 +55,9 @@ class CustomersController < ApplicationController
   # DELETE /customers/1
   # DELETE /customers/1.json
   def destroy
-    @customer.destroy
+    @customer.published = false
+    @customer.save
+
     respond_to do |format|
       format.html { redirect_to customers_url }
       format.json { head :no_content }
@@ -70,6 +72,6 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:first_name, :last_name, :phone_number, :email_address, :address, :city, :state, :zip)
+      params.require(:customer).permit(:first_name, :last_name, :phone_number, :email_address, :address, :city, :state, :zip, :published)
     end
 end
