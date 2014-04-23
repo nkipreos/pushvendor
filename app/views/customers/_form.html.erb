@@ -2,17 +2,7 @@
   <div class="panel-heading">Customer Details</div>
   <div class="panel-body">
   <%= form_for(@customer) do |f| %>
-    <% if @customer.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
-
-        <ul>
-          <% @customer.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+    <%= render :partial => 'template/form_errors', :object => @customer %>
 
       <div class="row">
         <div class="col-sm-6">
