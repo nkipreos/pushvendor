@@ -35,22 +35,7 @@
 
 
             <%= form_for(@sale) do |f| %>
-              <% if @sale.errors.any? %>
-                <div id="error_explanation">
-                  <div class="panel panel-danger">
-                    <div class="panel-heading">
-                      <h2><%= pluralize(@sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
-                    </div>
-                    <div class="panel-body">
-                      <ul>
-                      <% @sale.errors.full_messages.each do |msg| %>
-                        <li><%= msg %></li>
-                      <% end %>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              <% end %>
+              <%= render :partial => 'template/form_errors', :object => @sale %>
 
               <h4 class="text-primary"><span class="glyphicon glyphicon-tags"></span> Items</h4>
               <hr />
