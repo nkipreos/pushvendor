@@ -13,8 +13,8 @@ class SalesController < ApplicationController
   def edit
     set_sale
 
-    get_popular_items
-    get_popular_customers
+    populate_items
+    populate_customers
 
     @sale.line_items.build
     @sale.payments.build
@@ -23,27 +23,6 @@ class SalesController < ApplicationController
     @custom_customer = Customer.new
 
   end
-
-  # def update
-  #   get_popular_items
-
-  #   params[:sale_id] = @sale.id
-
-  #   respond_to do |format|
-  #     if @sale.update(sale_params)
-        
-  #       update_totals
-  #       format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
-  #       format.json { head :no_content }
-  #     else
-  #       format.html { render action: 'edit' }
-  #       format.json { render json: @sale.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
-  # def show
-  # end
 
   def destroy
     set_sale
@@ -62,7 +41,7 @@ class SalesController < ApplicationController
   # searched Items
   def update_line_item_options
     set_sale
-    get_popular_items
+    populate_items
     @available_items = Item.find(:all, :conditions => ['name ILIKE ? AND published = true OR description ILIKE ? AND published = true OR sku ILIKE ? AND published = true', "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%"], :limit => 5)
 
     respond_to do |format|
@@ -72,7 +51,7 @@ class SalesController < ApplicationController
 
   def update_customer_options
     set_sale
-    get_popular_items
+    populate_items
     @available_customers = Customer.find(:all, :conditions => ['last_name ILIKE ? AND published = true OR first_name ILIKE ? AND published = true OR email_address ILIKE ? AND published = true OR phone_number ILIKE ? AND published = true', "%#{params[:search][:customer_name]}%","%#{params[:search][:customer_name]}%", "%#{params[:search][:customer_name]}%", "%#{params[:search][:customer_name]}%"], :limit => 5)
 
     respond_to do |format|
@@ -97,7 +76,7 @@ class SalesController < ApplicationController
   # Add a searched Item
   def create_line_item
     set_sale
-    get_popular_items
+    populate_items
 
     existing_line_item = LineItem.where("item_id = ? AND sale_id = ?", params[:item_id], @sale.id).first
     
@@ -127,7 +106,7 @@ class SalesController < ApplicationController
   # Remove Item
   def remove_item
     set_sale
-    get_popular_items
+    populate_items
 
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
     line_item.quantity -= 1
@@ -150,7 +129,7 @@ class SalesController < ApplicationController
   # Add one Item
   def add_item
     set_sale
-    get_popular_items
+    populate_items
 
     line_item = LineItem.where(:sale_id => params[:sale_id], :item_id => params[:item_id]).first
     line_item.quantity += 1
@@ -168,7 +147,7 @@ class SalesController < ApplicationController
 
   def create_custom_item
     set_sale
-    get_popular_items
+    populate_items
 
     custom_item = Item.new
     custom_item.sku = "CI#{(rand(5..30) + rand(5..30)) * 11}_#{(rand(5..30) + rand(5..30)) * 11}"
@@ -192,7 +171,7 @@ class SalesController < ApplicationController
 
   def create_custom_customer
     set_sale
-    get_popular_items
+    populate_items
 
     custom_customer = Customer.new
     custom_customer.first_name = params[:custom_customer][:first_name]
@@ -324,12 +303,12 @@ class SalesController < ApplicationController
       params.require(:sale).permit(:amount, :tax, :discount, :total_amount, :tax_paid, :amount_paid, :paid, :payment_type_id, :customer_id, :comments, :line_items_attributes, :items_attributes)
     end
 
-    def get_popular_items
-      @popular_items = Item.all(:conditions => ['published', true], :limit => 5)
+    def populate_items
+      @available_items = Item.all(:conditions => ['published', true], :limit => 5)
     end
 
-    def get_popular_customers
-      @popular_customers = Customer.all(:conditions => ['published', true], :limit => 5)
+    def populate_customers
+      @available_customers = Customer.all(:conditions => ['published', true], :limit => 5)
     end
 
     def remove_item_from_stock(item_id, quantity)
