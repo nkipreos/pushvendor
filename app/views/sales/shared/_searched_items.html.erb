@@ -20,7 +20,7 @@
             <td><%= item.name %></td>
             <td><%= item.description %></td>
             <td><%= item.price %></td>
-            <td class="add_to_current_sale"><%= link_to url_for(:controller => 'sales', :action => 'create_line_item', :item_id => item.id, :sale_id => params[:search][:sale_id], :quantity => 1), :remote => true do %><p><span class="glyphicon glyphicon-plus"></span></p><% end %></td>
+            <td class="add_to_current_sale"><%= link_to url_for(:controller => 'sales', :action => 'create_line_item', :item_id => item.id, :sale_id => @sale.id, :quantity => 1), :remote => true do %><p><span class="glyphicon glyphicon-plus"></span></p><% end %></td>
           </tr>
         <% end %>
       <% end %>
