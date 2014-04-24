@@ -4,16 +4,16 @@
 <div class="panel panel-default">
   <div class="panel-body">
 
-    <% unless @categories.blank? %>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="form-group">
-            <label>Category</label>
-            <%= f.select :item_category_id, @categories.map { |cat| [cat.name, cat.id] }, :include_blank => true, :class => "form-control", :placeholder => "Item Sku" %>
-          </div>
+   
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Category</label>
+          <%= f.collection_select :item_category_id, ItemCategory.all, :id, :name, {prompt: "Select a category"}, {class: "form-control"}  %>
         </div>
       </div>
-    <% end %>
+    </div>
+
 
     <div class="row">
       <div class="col-sm-6">
