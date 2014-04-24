@@ -42,7 +42,7 @@ class SalesController < ApplicationController
   def update_line_item_options
     set_sale
     populate_items
-    
+
     if params[:search][:item_category].blank?
       @available_items = Item.find(:all, :conditions => ['name ILIKE ? AND published = true OR description ILIKE ? AND published = true OR sku ILIKE ? AND published = true', "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%", "%#{params[:search][:item_name]}%"], :limit => 5)
     elsif params[:search][:item_name].blank?
@@ -162,6 +162,7 @@ class SalesController < ApplicationController
     custom_item.description = params[:custom_item][:description]
     custom_item.price = params[:custom_item][:price]
     custom_item.stock_amount = params[:custom_item][:stock_amount]
+    custom_item.item_category_id = params[:custom_item][:item_category_id]
 
     custom_item.save
 

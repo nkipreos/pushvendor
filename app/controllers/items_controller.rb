@@ -16,7 +16,6 @@ class ItemsController < ApplicationController
   # GET /items/new
   def new
     @item = Item.new
-    @categories = ItemCategory.find(:all)
   end
 
   # GET /items/1/edit
