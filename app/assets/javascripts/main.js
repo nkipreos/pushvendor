@@ -4,6 +4,10 @@ $(document).ready(function(){
 	  $('.item_search').click();
 	});
 
+	$(document).on("change", '.item_category_search_input', function(){
+	  $('.item_search').click();
+	});
+
 	$(document).on("keypress", '.customer_search_input', function(){
 	  $('.customer_search').click();
 	});
