@@ -16,7 +16,7 @@ module ApplicationHelper
 		payments = Payment.find(:all)
 		payment_total = 0.00
 		for payment in payments
-			payment_total += payment.amount.blank? ? 0.00 : payment.amount
+			payment_total += payment.amount.blank? ? 0.00 : payment.amount_after_change
 		end
 		return payment_total
 	end
