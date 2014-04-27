@@ -25,7 +25,7 @@
               </td>
               <td class="amount">
                 <%= text_field(:line_item, :quantity, :class => 'form-control price_control', :readonly => 'readonly') %>
-                <div class="adjust">
+                <div class="adjust hidden-print">
                   <%= link_to url_for(:controller => 'sales', :action => 'add_item', :item_id => e.object.id, :sale_id => @sale.id), :remote => true do %>
                     <span class="glyphicon glyphicon-plus"></span>
 

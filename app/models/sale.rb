@@ -19,7 +19,7 @@ class Sale < ActiveRecord::Base
 		if balance < 0
 			return 0
 		else
-			return balance
+			return balance.round(2)
 		end
 	end
 
