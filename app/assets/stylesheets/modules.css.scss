@@ -161,13 +161,14 @@ form {
 
 
 @media print {
-  .tab-content > .tab-pane {display: block !important; opacity: 1 !important;}
-  table {
-    tr {
-      td {
-        input {
-        }
-      }
-    }
+  * {
+    font-size: 12px !important;
+  }
+  .tab-content > .tab-pane {
+    display: block !important; opacity: 1 !important;
+  }
+  input {
+    border: none !important;
+    box-shadow: none !important;
   }
 }
