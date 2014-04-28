@@ -1,5 +1,5 @@
 <h4 class="text-primary"><span class="glyphicon glyphicon-credit-card"></span> Payments</h4>
-  <hr />
+  <hr class="hidden-print" />
 
   <table class="table table-striped table-bordered table-hover">
     <thead>
@@ -29,20 +29,18 @@
     </tbody>
   </table>
 
-  <h4 class="text-primary">
-
 <% if @sale.remaining_balance <= 0.00 && @sale.payments.count > 0 %>
-  <div class="alert alert-success">Payment Complete</div>
+  <div class="alert alert-success hidden-print">Payment Complete</div>
   Change Due: <%= number_to_currency @sale.change_due %>
 <% else %>
-  <span class="glyphicon glyphicon-shopping-cart"></span> Balance</h4>
+  <h4 class="text-primary hidden-print"><span class="glyphicon glyphicon-shopping-cart"></span> Balance</h4>
 
-  <div class="alert alert-danger">
+  <div class="alert alert-danger hidden-print">
     <%= number_to_currency @sale.remaining_balance %>
   </div>
 
 
-  <hr />
+  <hr class="hidden-print" />
 
   <% unless @sale.total_amount.blank? %>
     <!-- Button trigger modal -->

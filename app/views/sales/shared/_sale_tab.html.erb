@@ -29,13 +29,13 @@
   <%= render :partial => 'template/form_errors', :object => @sale %>
 
   <h4 class="text-primary"><span class="glyphicon glyphicon-tags"></span> Items</h4>
-  <hr />
+  <hr class="hidden-print" />
   <div class="added_items">
     <%= render :partial => 'sales/shared/added_items', :locals=>{:f=>f} %>
   </div>
 
   <div class="row">
-    <div class="sale_totals col-sm-4">
+    <div class="sale_totals col-sm-4 hidden-print">
       <%= render :partial => 'sales/shared/sale_totals', :locals=>{:f=>f} %>
     </div>
     <div class="sale_payments col-sm-8">
@@ -43,4 +43,34 @@
     </div>  
   </div>
   <%= f.submit 'Update Sale', :class => "btn btn-success btn-lg sale_submit" %>
-<% end %> 
+<% end %>
+
+
+<div class="print_totals visible-print">
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td>Base Price: </td>
+        <td><%= number_to_currency(@sale.amount) %></td>
+      </tr>
+      <% unless @sale.discount.blank? %>
+        <tr>
+          <td>Discount: </td>
+          <td><%= number_to_currency(@sale.get_discounted_amount) %></td>
+        </tr>
+      <% end %>
+      <tr>
+        <td>Tax: </td>
+        <td><%= number_to_currency(@sale.tax) %></td>
+      </tr>
+      <tr>
+        <td>Total Price: </td>
+        <td><%= number_to_currency(@sale.amount) %></td>
+      </tr>
+      <tr>
+        <td>Balance: </td>
+        <td><%= number_to_currency(@sale.total_amount) %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

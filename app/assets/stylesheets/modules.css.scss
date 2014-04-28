@@ -162,13 +162,24 @@ form {
 
 @media print {
   * {
-    font-size: 12px !important;
+    font-size: 11px !important;
   }
   .tab-content > .tab-pane {
     display: block !important; opacity: 1 !important;
   }
+  td {
+    padding:5px !important;
+  }
   input {
     border: none !important;
     box-shadow: none !important;
+    margin:0 !important;
+  }
+  .text-primary {
+    padding:0px !important;
+    margin:0px !important;
+  }
+  .sale_payments {
+    padding:0px !important;
   }
 }
