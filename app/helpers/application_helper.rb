@@ -27,8 +27,13 @@ module ApplicationHelper
 	end
 
 
-	def get_todays_sale
-		
+	def sales_total_today
+		total = 0.00
+		sales = Payment.where("created_at >= ?", Time.zone.now.beginning_of_day)
+		for sale in sales
+			total += sale.amount
+		end
+		return total
 	end
 
 	def get_http(url)

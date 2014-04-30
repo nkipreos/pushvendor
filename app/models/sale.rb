@@ -49,5 +49,9 @@ class Sale < ActiveRecord::Base
 		end
 	end
 
+	def add_customer(customer_id)
+		self.customer_id = customer_id
+    self.save
+	end
 
 end
