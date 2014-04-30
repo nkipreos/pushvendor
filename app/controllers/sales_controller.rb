@@ -193,8 +193,7 @@ class SalesController < ApplicationController
 
     custom_customer.save
 
-    @sale.customer_id = custom_customer.id
-    @sale.save
+    @sale.add_customer(custom_customer.id)
 
     update_totals
 
