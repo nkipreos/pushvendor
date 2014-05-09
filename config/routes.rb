@@ -13,13 +13,6 @@ PushvendorPos::Application.routes.draw do
 
   resources :line_items
 
-  resources :items do
-    get 'search'
-    collection do
-      get 'search'
-    end
-  end
-
   resources :payments do
     collection do
       get 'make_payment'
@@ -33,6 +26,13 @@ PushvendorPos::Application.routes.draw do
   end
 
   resources :customers
+
+  resources :items do
+    get 'search'
+    collection do
+      get 'search'
+    end
+  end
 
   resources :sales do
     collection do
