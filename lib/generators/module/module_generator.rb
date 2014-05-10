@@ -12,6 +12,13 @@ class ModuleGenerator < Rails::Generators::NamedBase
     template "controllers/module_controller.erb", "app/controllers/#{parent_name}_controller.rb"
 
     directory "views/module/", "app/views/#{parent_name}/"
+
+    if child_name == 'items'
+
+    else
+      directory "views/module_child/", "app/views/#{child_name}/"
+    end
+
   end
 
   private
