@@ -1,8 +1,6 @@
 == PushVendor
 
-This is a point of sale built with Rails and Twitter Bootstrap. It is still very early in development but will soon be a full featured cloud based, point of sale.
-
-There is no save button for making sales. All updates are made via AJAX. I wanted to simulate desktop application behavior and not reload the page for every action but I also didn't want to rely on Javascript too much, as I did in the prototype. Using AJAX posts, I am able to use the server for calculations and then reload the relevant section on a successful callback. Using ruby instead of JS for calculations makes the system less susceptible to browser and system differences.
+This is an early version of the PushVendor system. The proprietary PushVendor system is a cleaned up fork of this repository with enhancements in reporting, code structure and performance. This early version is freely available for anyone to use. There are some bugs and some things that could be done a little better but it is generally stable.
 
 --------
 
