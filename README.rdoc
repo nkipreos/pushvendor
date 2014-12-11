@@ -1,6 +1,6 @@
 == PushVendor
 
-This is an early prototype of the PushVendor system. The proprietary PushVendor system is an entirely new code base but it is base off many of the concepts learned here. There are some bugs and some things that could be done a little better in this prototype but it is generally stable.
+This is an early prototype of the PushVendor system. The proprietary PushVendor system is an entirely new code base but it is based off many of the concepts learned here. There are some bugs and some things that could be done a little better in this prototype but it is generally stable.
 
 --------
 
