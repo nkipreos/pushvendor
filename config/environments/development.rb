@@ -28,15 +28,15 @@ PushvendorPos::Application.configure do
   config.assets.debug = true
 
   # for devise
-#  config.action_mailer.smtp_settings = {
-#    :address => 'smtp.mandrillapp.com',
-#    :authentication: :plain,
-#    :domain => 'localhost',
-#    :enable_starttls_auto: true,
-#    :password => ENV['MANDRILL_KEY'],
-#    :port => '587',
-#    :user_name => ENV['MANDRILL_USER']
-#  }
+ config.action_mailer.smtp_settings = {
+   :address => 'smtp.mandrillapp.com',
+   :authentication => :plain,
+   :domain => 'tulonga.cl',
+   :enable_starttls_auto => true,
+   :password => ENV['MANDRILL_KEY'],
+   :port => '587',
+   :user_name => ENV['MANDRILL_USER']
+ }
 #  config.action_mailer.default_url_options = { :host => 'localhost' }
 
 

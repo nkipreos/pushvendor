@@ -78,12 +78,8 @@ class SalesController < ApplicationController
       @sale.customer_id = params[:customer_id]
       @sale.save
       @customer = Customer.where('id = ?',params[:customer_id]).first
-     logger.debug "usuario a enviar email: #{@custom_customer.inspect}" 
-   
- logger.debug "usuario a enviar email: #{@custom_custome}"
-   OrderNotifier.send_order_email(@customer).deliver_now
-
-
+      logger.debug "usuario a enviar email: #{@customer.email_address}" 
+      OrderNotifier.send_order_email(@customer).deliver_now
     end
 
 
