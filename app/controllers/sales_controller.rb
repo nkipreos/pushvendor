@@ -21,8 +21,8 @@ class SalesController < ApplicationController
     @sale.payments.build
 
     @custom_item = Item.new
-    @custom_customer = Customer.new
-
+#    @custom_customer = Customer.new
+#    OrderNotifier.send_order_email(@custom_customer).deliver
 
   end
 
@@ -77,6 +77,13 @@ class SalesController < ApplicationController
     unless @sale.blank? || params[:customer_id].blank?
       @sale.customer_id = params[:customer_id]
       @sale.save
+      @customer = Customer.where('id = ?',params[:customer_id]).first
+     logger.debug "usuario a enviar email: #{@custom_customer.inspect}" 
+   
+ logger.debug "usuario a enviar email: #{@custom_custome}"
+   OrderNotifier.send_order_email(@customer).deliver_now
+
+
     end
 
 
