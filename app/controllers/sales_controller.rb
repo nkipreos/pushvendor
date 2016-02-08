@@ -73,19 +73,15 @@ class SalesController < ApplicationController
   def create_customer_association
     set_sale
     set_money_sources
-
-    unless @sale.blank? || params[:customer_id].blank?
-      @sale.customer_id = params[:customer_id]
-      @sale.save
-      @customer = Customer.where('id = ?',params[:customer_id]).first
-      logger.debug "usuario a enviar email: #{@customer.email_address}" 
-      OrderNotifier.send_order_email(@customer).deliver_now
-    end
-
-
     respond_to do |format|
       format.js { ajax_refresh }
     end
+  end
+
+  def send_sale_notification
+    sale = Sale.find(params[:sale_id])
+    customer = sale.customer
+    OrderNotifier.send_order_email(customer.attributes, sale.id).deliver_now
   end
 
   # Add a searched Item
