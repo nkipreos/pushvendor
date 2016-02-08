@@ -79,3 +79,6 @@ pickle-email-*.html
 
 # Ignore application configuration
 /config/application.yml
+
+/config/environment.rb
+/config/environments/*.rb
