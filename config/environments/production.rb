@@ -80,16 +80,6 @@ PushvendorPos::Application.configure do
 
   # for Devise
  # config.action_mailer.default_url_options = { :host => 'http://www.example.com' }
-  config.action_mailer.smtp_settings = {
-    address: "smtp.mandrillapp.com",
-    authentication: :plain
-    domain: "localhost",
-    enable_starttls_auto: true,
-    password: ENV['MANDRILL_KEY'],
-    port: "587",
-    user_name: ENV['MANDRILL_USER']
-  }
-  config.action_mailer.default_url_options = { host: ENV["localhost"] }
 
 
 end

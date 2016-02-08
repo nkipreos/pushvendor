@@ -34,14 +34,4 @@ PushvendorPos::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
- config.action_mailer.smtp_settings = {
-    address: "smtp.mandrillapp.com",
-    authentication: :plain
-    domain: "localhost",
-    enable_starttls_auto: true,
-    password: ENV['MANDRILL_PASS'],
-    port: "587",
-    user_name: ENV['MANDRILL_USER']
-  }
-  config.action_mailer.default_url_options = { host: ENV["localhost"] }
 end
