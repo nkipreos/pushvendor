@@ -10,6 +10,7 @@
           <th>Tax</th>
           <th>Paid</th>
           <th>Balance</th>
+          <th>E-mail</th>
           <th></th>
         </tr>
       </thead>
@@ -24,6 +25,7 @@
             <td><%= number_to_currency sale.tax %></td>
             <td><%= number_to_currency sale.paid_total %></td>
             <td><%= sale.remaining_balance == 0.00 && sale.payments.count > 0 ? "Paid" : "#{number_to_currency sale.remaining_balance}" %></td>
+            <td><% if sale.sent? %> 'Enviado' <% else %><%= link_to "Enviar Mail", :controller => :sales, :action => :send_sale_notification, :method => :post %> <% end %></td>
             <td><%= link_to 'Show', edit_sale_path(sale) %> | <%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>

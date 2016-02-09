@@ -82,7 +82,11 @@ class SalesController < ApplicationController
     sale = Sale.find(params[:sale_id])
     customer = sale.customer
     OrderNotifier.send_order_email(customer.attributes, sale.id).deliver_now
+  
+      respond_to do |format|
+      format.js { ajax_refresh }
   end
+end
 
   # Add a searched Item
   def create_line_item
@@ -354,5 +358,4 @@ class SalesController < ApplicationController
       @money_sources = []
       MoneySource.all.map {|x| @money_sources << [x.name, x.id] }
     end
-
 end
