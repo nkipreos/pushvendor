@@ -1,8 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "pedidos@tulonga.cl"
   layout 'mailer'
 end
 
-# app/mailers/user_mailer.rb
-class OrderNotifier < ApplicationMailer
-end

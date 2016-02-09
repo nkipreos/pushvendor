@@ -397,28 +397,28 @@
                     </td>
                   </tr>
 
-
-                  <tr>
-                    <td class="item-col item">
-                      <table cellspacing="0" cellpadding="0" width="100%">
-                        <tr>
-                          <td class="mobile-hide-img">
-                            <a href=""><img width="110" height="92" src="http://s3.amazonaws.com/swu-filepicker/RPezUIwPRv8pjatAAH1E_item_images_19.jpg" alt="item1"></a>
-                          </td>
-                          <td class="product">
-                            <span style="color: #4d4d4d; font-weight:bold;">Golden Earings</span> <br />
-                            Hot city looks
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                    <td class="item-col quantity">
-                      1
-                    </td>
-                    <td class="item-col">
-                      $3.50
-                    </td>
-                  </tr>
+                  <%= @items.each do |item| %>
+                    <tr>
+                      <td class="item-col item">
+                        <table cellspacing="0" cellpadding="0" width="100%">
+                          <tr>
+                            <td class="mobile-hide-img">
+                              <a href=""><img width="110" height="92" src="http://s3.amazonaws.com/swu-filepicker/RPezUIwPRv8pjatAAH1E_item_images_19.jpg" alt="item1"></a>
+                            </td>
+                            <td class="product">
+                              <span style="color: #4d4d4d; font-weight:bold;"><%= item.name %></span> <br />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td class="item-col quantity">
+                        1
+                      </td>
+                      <td class="item-col">
+                        $<%= item.price.to_i %>
+                      </td>
+                    </tr>
+                  <% end %>
 
 
                   <tr>

@@ -21,8 +21,6 @@ class SalesController < ApplicationController
     @sale.payments.build
 
     @custom_item = Item.new
-#    @custom_customer = Customer.new
-#    OrderNotifier.send_order_email(@custom_customer).deliver
 
   end
 
@@ -82,11 +80,14 @@ class SalesController < ApplicationController
     sale = Sale.find(params[:sale_id])
     customer = sale.customer
     OrderNotifier.send_order_email(customer.attributes, sale.id).deliver_now
-  
-      respond_to do |format|
-      format.js { ajax_refresh }
+    sale.sent = true
+    sale.save
+    set_sale
+    @sales = Sale.paginate(:page => params[:page], :per_page => 20).order(id: :desc)
+    respond_to do |format|
+      format.js { ajax_refresh_index }
+    end
   end
-end
 
   # Add a searched Item
   def create_line_item
@@ -303,6 +304,10 @@ end
 
     def ajax_refresh
       return render(:file => 'sales/ajax_reload.js.erb')
+    end
+
+    def ajax_refresh_index
+      return render(:file => 'sales/ajax_reload_index.js.erb')
     end
 
     # Use callbacks to share common setup or constraints between actions.
