@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160202012152) do
+ActiveRecord::Schema.define(version: 20160306231725) do
 
   create_table "customers", force: :cascade do |t|
     t.string   "first_name",    limit: 255
@@ -30,11 +30,12 @@ ActiveRecord::Schema.define(version: 20160202012152) do
   create_table "expenses", force: :cascade do |t|
     t.string   "name",            limit: 255
     t.text     "description",     limit: 65535
-    t.datetime "created_at",                                            null: false
-    t.datetime "updated_at",                                            null: false
-    t.decimal  "amount",                        precision: 8, scale: 2
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
+    t.decimal  "amount",                        precision: 8,  scale: 2
     t.integer  "money_source_id", limit: 4
     t.string   "made_by",         limit: 255
+    t.decimal  "quantity",                      precision: 10, scale: 3
   end
 
   add_index "expenses", ["money_source_id"], name: "index_expenses_on_money_source_id", using: :btree
@@ -97,6 +98,7 @@ ActiveRecord::Schema.define(version: 20160202012152) do
     t.text     "comments",         limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "sent",                                                    default: false
   end
 
   create_table "store_configurations", force: :cascade do |t|
