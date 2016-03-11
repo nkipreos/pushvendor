@@ -33,15 +33,17 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
 
-  config.action_mailer.smtp_settings = {
-    :address   => "smtp.mandrillapp.com",
-    :port      => 587,
-    :enable_starttls_auto => true,
-    :user_name => "pedidos@tulonga.cl",
-    :password  => ENV['MANDRILL_KEY'],
-    :authentication => 'login',
-    :domain => 'tulonga.cl',
-  }
+  # config.action_mailer.smtp_settings = {
+  #   :address   => "smtp.mandrillapp.com",
+  #   :port      => 587,
+  #   :enable_starttls_auto => true,
+  #   :user_name => "pedidos@tulonga.cl",
+  #   :password  => ENV['MANDRILL_KEY'],
+  #   :authentication => 'login',
+  #   :domain => 'tulonga.cl',
+  # }
+
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
 
 
 end
