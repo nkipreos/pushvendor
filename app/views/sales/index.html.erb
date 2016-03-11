@@ -29,7 +29,7 @@
               <% if sale.sent? %> 
                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
               <% else %>
-                <%= link_to url_for(:controller => 'sales', :action => 'send_sale_notification', :sale_id => sale.id), :method => :post, :remote => true do %>
+                <%= link_to url_for(:controller => 'sales', :action => 'send_sale_notification', :sale_id => sale.id), :method => :post, :remote => true, data: {confirm: 'Are you sure you want to send an email?'} do %>
                   <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                 <% end %>
               <% end %>
