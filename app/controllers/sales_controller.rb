@@ -71,7 +71,14 @@ class SalesController < ApplicationController
   def create_customer_association
     set_sale
     set_money_sources
-    respond_to do |format|
+  
+    unless @sale.blank? || params[:customer_id].blank?
+      @sale.customer_id = params[:customer_id]
+      @sale.save
+    end
+
+ 
+   respond_to do |format|
       format.js { ajax_refresh }
     end
   end
