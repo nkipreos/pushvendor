@@ -86,16 +86,15 @@ PushvendorPos::Application.configure do
 
   # for Devise
  # config.action_mailer.default_url_options = { :host => 'http://www.example.com' }
-  config.action_mailer.smtp_settings = {
-    :address => "smtp.mandrillapp.com",
-    :authentication => 'login',
+  ActionMailer::Base.smtp_settings = {
+    :user_name => ENV['SEND_GRID_USER'],
+    :password => ENV['SEND_GRID_PASS'],
     :domain => 'tulonga.cl',
-    :enable_starttls_auto => true,
-    :password => ENV['MANDRILL_KEY'],
+    :address => 'smtp.sendgrid.net',
     :port => 587,
-    :user_name => ENV['MANDRILL_USER']
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
-
 
 
 end
