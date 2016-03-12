@@ -87,7 +87,7 @@ PushvendorPos::Application.configure do
   # for Devise
  # config.action_mailer.default_url_options = { :host => 'http://www.example.com' }
   config.action_mailer.smtp_settings = {
-    :address => ENV.fetch("smtp.mandrillapp.com"),
+    :address => "smtp.mandrillapp.com",
     :authentication => 'login',
     :domain => 'tulonga.cl',
     :enable_starttls_auto => true,
