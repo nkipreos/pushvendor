@@ -86,7 +86,7 @@ PushvendorPos::Application.configure do
 
   # for Devise
  # config.action_mailer.default_url_options = { :host => 'http://www.example.com' }
-  ActionMailer::Base.smtp_settings = {
+  config.action_mailer.smtp_settings = {
     :user_name => ENV['SEND_GRID_USER'],
     :password => ENV['SEND_GRID_PASS'],
     :domain => 'tulonga.cl',
@@ -95,6 +95,7 @@ PushvendorPos::Application.configure do
     :authentication => :plain,
     :enable_starttls_auto => true
   }
+
 
 
 end
