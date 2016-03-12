@@ -21,8 +21,6 @@ class SalesController < ApplicationController
     @sale.payments.build
 
     @custom_item = Item.new
-    @custom_customer = Customer.new
-
 
   end
 
@@ -73,15 +71,21 @@ class SalesController < ApplicationController
   def create_customer_association
     set_sale
     set_money_sources
-
-    unless @sale.blank? || params[:customer_id].blank?
-      @sale.customer_id = params[:customer_id]
-      @sale.save
-    end
-
-
     respond_to do |format|
       format.js { ajax_refresh }
+    end
+  end
+
+  def send_sale_notification
+    sale = Sale.find(params[:sale_id])
+    customer = sale.customer
+    OrderNotifier.send_order_email(customer.attributes, sale.id).deliver_now
+    sale.sent = true
+    sale.save
+    set_sale
+    @sales = Sale.paginate(:page => params[:page], :per_page => 20).order(id: :desc)
+    respond_to do |format|
+      format.js { ajax_refresh_index }
     end
   end
 
@@ -302,6 +306,10 @@ class SalesController < ApplicationController
       return render(:file => 'sales/ajax_reload.js.erb')
     end
 
+    def ajax_refresh_index
+      return render(:file => 'sales/ajax_reload_index.js.erb')
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_sale
       if @sale.blank?
@@ -355,5 +363,4 @@ class SalesController < ApplicationController
       @money_sources = []
       MoneySource.all.map {|x| @money_sources << [x.name, x.id] }
     end
-
 end
