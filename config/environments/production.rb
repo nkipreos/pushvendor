@@ -78,18 +78,24 @@ PushvendorPos::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { :host => 'www.tulonga.cl' }
+
   # for Devise
  # config.action_mailer.default_url_options = { :host => 'http://www.example.com' }
   config.action_mailer.smtp_settings = {
-    address: ENV.fetch("smtp.mandrillapp.com"),
-    authentication: :plain
-    domain: ENV.fetch("localhost"),
-    enable_starttls_auto: true,
-    password: ENV['MANDRILL_KEY'],
-    port: "587",
-    user_name: ENV['MANDRILL_USER']
+    :address => ENV.fetch("smtp.mandrillapp.com"),
+    :authentication => 'login',
+    :domain => 'tulonga.cl',
+    :enable_starttls_auto => true,
+    :password => ENV['MANDRILL_KEY'],
+    :port => 587,
+    :user_name => ENV['MANDRILL_USER']
   }
-  config.action_mailer.default_url_options = { host: ENV["localhost"] }
+
 
 
 end
