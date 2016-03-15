@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "pedidos@tulonga.cl"
+  default from: "\"[Tulonga] Pedidos\" <pedidos@tulonga.cl>"
   layout 'mailer'
 end
 
