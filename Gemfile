@@ -18,6 +18,7 @@ gem 'capistrano-bundler', '~> 1.1.1'
 gem 'capistrano-rbenv', '~> 2.0'
 gem 'capistrano-rails', '~> 1.1'
 gem 'mailcatcher'
+gem 'premailer-rails'
 
 # for heroku demo site.
 gem 'rails_12factor', group: :production
