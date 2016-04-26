@@ -18,6 +18,7 @@ PushvendorPos::Application.routes.draw do
   resources :suppliers do
     collection do
       get 'index'
+      get 'new'
       get 'get_suppliers'
     end
   end
