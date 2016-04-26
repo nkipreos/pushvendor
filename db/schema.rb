@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160306231725) do
+ActiveRecord::Schema.define(version: 20160426020823) do
 
   create_table "customers", force: :cascade do |t|
     t.string   "first_name",    limit: 255
@@ -36,9 +36,11 @@ ActiveRecord::Schema.define(version: 20160306231725) do
     t.integer  "money_source_id", limit: 4
     t.string   "made_by",         limit: 255
     t.decimal  "quantity",                      precision: 10, scale: 3
+    t.integer  "supplier_id",     limit: 4
   end
 
   add_index "expenses", ["money_source_id"], name: "index_expenses_on_money_source_id", using: :btree
+  add_index "expenses", ["supplier_id"], name: "index_expenses_on_supplier_id", using: :btree
 
   create_table "item_categories", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -117,6 +119,19 @@ ActiveRecord::Schema.define(version: 20160306231725) do
     t.datetime "updated_at"
   end
 
+  create_table "suppliers", force: :cascade do |t|
+    t.string   "name",         limit: 255
+    t.string   "lastname",     limit: 255
+    t.string   "email",        limit: 255
+    t.string   "address",      limit: 255
+    t.string   "activity",     limit: 255
+    t.string   "company_name", limit: 255
+    t.string   "tax_id",       limit: 255
+    t.string   "phone",        limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "username",                 limit: 255, default: "",    null: false
     t.string   "email",                    limit: 255, default: "",    null: false
@@ -144,5 +159,6 @@ ActiveRecord::Schema.define(version: 20160306231725) do
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   add_foreign_key "expenses", "money_sources"
+  add_foreign_key "expenses", "suppliers"
   add_foreign_key "payments", "money_sources"
 end

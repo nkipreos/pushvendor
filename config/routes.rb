@@ -15,6 +15,13 @@ PushvendorPos::Application.routes.draw do
     end
   end
 
+  resources :suppliers do
+    collection do
+      get 'index'
+      get 'get_suppliers'
+    end
+  end
+
   resources :line_items
 
   resources :payments do
