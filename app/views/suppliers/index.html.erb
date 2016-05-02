@@ -16,17 +16,17 @@
           <% @suppliers.each do |supplier| %>
             <tr class='success'>
               <td><%= supplier.company_name %></td>
-              <td><%= supplier.tax_id %></td>
+              <td><%= tax_format(supplier.tax_id) %></td>
               <td><%= supplier.name %></td>
               <td><%= supplier.lastname %></td>
               <td><%= supplier.email %></td>
-              <td><%= link_to 'Show', edit_expense_path(expense) %> | <%= link_to 'Destroy', expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Show', edit_supplier_path(supplier) %> | <%= link_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
         </tbody>
       </table>
       <div class="panel-body">
-        <%= will_paginate @expenses, renderer: BootstrapPagination::Rails %>
+        <%= will_paginate @suppliers, renderer: BootstrapPagination::Rails %>
       </div>
     </div>
   </div>

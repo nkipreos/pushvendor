@@ -17,6 +17,7 @@ PushvendorPos::Application.routes.draw do
 
 
   resources :suppliers
+  match 'get_suppliers', to: 'suppliers#get_suppliers', via: :post
   # resources :suppliers do
   #   collection do
   #     get 'index'

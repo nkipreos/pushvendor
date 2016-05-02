@@ -20,6 +20,12 @@ module ApplicationHelper
 		raw_balance > 0 ? content_tag(:span, number_to_currency(raw_balance), class: 'label label-success') : content_tag(:span, number_to_currency(raw_balance), class: 'label label-danger')
 	end
 
+	def tax_format(tax_id)
+		no_vd = number_with_delimiter(tax_id[0..-2].to_i, :delimiter => '.')
+		vd = tax_id[-1]
+		"#{no_vd}-#{vd}"
+	end
+
 
 	def payment_total
 		payments = Payment.all
