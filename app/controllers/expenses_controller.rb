@@ -14,7 +14,7 @@ class ExpensesController < ApplicationController
   def new
     @expense = Expense.new
     set_money_sources
-  end
+   end
 
  def destroy
     @expense.destroy
@@ -65,7 +65,7 @@ class ExpensesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def expense_params
-      params.require(:expense).permit(:image_url, :name, :description, :amount, :money_source_id)
+      params.require(:expense).permit(:name, :description, :amount, :money_source_id, :attachment)
     end
 
     def set_money_sources

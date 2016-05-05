@@ -33,6 +33,13 @@
           <%= f.select :money_source_id, @money_sources, {}, :class => "form-control", :placeholder => "Expense made By..." %>
         </div>
       </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Attachment</label>
+         		<%= f.file_field :attachment %>
+			<%= f.submit "Adjuntar" %>
+        </div>
+      </div>
     </div>
 
     

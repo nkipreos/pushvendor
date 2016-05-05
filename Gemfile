@@ -38,3 +38,6 @@ group :test do
   gem 'capybara'
   gem 'rspec-rails'
 end  
+
+gem 'paperclip'
+gem 'aws-sdk', '< 2.0'
